@@ -8,7 +8,7 @@
 | Topics | Linked List, Two Pointers |
 | Solved | 2025-07-22 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 8.7 MB (beats 100%) |
+| Memory | 8.4 MB (beats 100%) |
 
 ## Problem Statement
 

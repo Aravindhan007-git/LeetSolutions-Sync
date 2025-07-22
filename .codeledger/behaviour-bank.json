@@ -53,6 +53,23 @@
       "Sliding Window"
     ]
   },
+  "leetcode::middle-of-the-linked-list": {
+    "difficulty": "Easy",
+    "lang": "C",
+    "platform": "leetcode",
+    "slug": "middle-of-the-linked-list",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "C",
+        "ts": 1788936558763
+      }
+    ],
+    "tags": [
+      "Linked List",
+      "Two Pointers"
+    ]
+  },
   "leetcode::missing-number": {
     "difficulty": "Easy",
     "lang": "Python3",
