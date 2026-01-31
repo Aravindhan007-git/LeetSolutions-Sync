@@ -1,23 +1,23 @@
 {
-  "updatedAt": "2026-09-09T06:51:22.574Z",
+  "updatedAt": "2026-09-09T06:52:08.276Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 90,
-    "easy": 65,
+    "total": 91,
+    "easy": 66,
     "medium": 23,
     "hard": 2,
     "unknownDifficulty": 0,
     "byPlatform": {
-      "leetcode": 90
+      "leetcode": 91
     },
     "byLang": {
-      "Python3": 81,
+      "Python3": 82,
       "C": 9
     },
     "byTopic": {
       "Math": 10,
       "Array": 50,
-      "Linked List": 7,
+      "Linked List": 8,
       "Hash Table": 2,
       "Two Pointers": 10,
       "String": 10,
@@ -2387,7 +2387,7 @@
       "methods": [],
       "manuallyEdited": false,
       "_committedPaths": [
-        "problems/lc-middle-of-the-linked-list/lc-middle-of-the-linked-list.c",
+        "problems/lc-middle-of-the-linked-list/lc-middle-of-the-linked-list.py",
         "problems/lc-middle-of-the-linked-list/README.md"
       ]
     },
@@ -4180,6 +4180,114 @@
         "problems/lc-reverse-integer/README.md"
       ],
       "notes": "",
+      "methods": [],
+      "manuallyEdited": false
+    },
+    {
+      "id": "lc-reverse-linked-list",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Reverse Linked List",
+      "titleSlug": "reverse-linked-list",
+      "difficulty": "Easy",
+      "topic": "Linked List",
+      "tags": [
+        "Linked List",
+        "Recursion"
+      ],
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 206,
+            "platform": "leetcode",
+            "slug": "reverse-linked-list"
+          }
+        ],
+        "canonicalId": "reverse-linked-list",
+        "canonicalTitle": "Reverse Linked List",
+        "confirmedBy": "system-init",
+        "difficulty": "easy",
+        "pattern": "iteration",
+        "tags": [
+          "linked-list"
+        ],
+        "topic": "linked-list",
+        "voteCount": 99
+      },
+      "readmeContent": "# [206] Reverse Linked List\n**Difficulty:** Easy  |  **Acceptance:** 81.0%  |  **Likes:** 24944 / **Dislikes:** 595\n**Tags:** `Linked List`, `Recursion`\n## Problem\nGiven the head of a singly linked list, reverse the list, and return the reversed list.\n\n&nbsp;\nExample 1:\n\nInput: head = [1,2,3,4,5]\nOutput: [5,4,3,2,1]\n\nExample 2:\n\nInput: head = [1,2]\nOutput: [2,1]\n\nExample 3:\n\nInput: head = []\nOutput: []\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in the list is the range [0, 5000].\n\t-5000 <= Node.val <= 5000\n\n&nbsp;\nFollow up: A linked list can be reversed either iteratively or recursively. Could you implement both?\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 20.5 MB (beats 66.3%)\n\n## Similar Problems\n\n- [Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/) — Medium\n- [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) — Easy\n- [Reverse Nodes in Even Length Groups](https://leetcode.com/problems/reverse-nodes-in-even-length-groups/) — Medium\n- [Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/) — Medium\n- [Remove Nodes From Linked List](https://leetcode.com/problems/remove-nodes-from-linked-list/) — Medium\n",
+      "code": "# Definition for singly-linked list.\n# class ListNode:\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution:\n    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:\n        prev=None\n        curr=head\n        while curr:\n            next=curr.next\n            curr.next=prev\n            prev=curr\n            curr=next\n\n        return prev",
+      "files": [
+        {
+          "path": "problems/reverse-linked-list/leetcode/lc-reverse-linked-list.py",
+          "content": "# Definition for singly-linked list.\n# class ListNode:\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution:\n    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:\n        prev=None\n        curr=head\n        while curr:\n            next=curr.next\n            curr.next=prev\n            prev=curr\n            curr=next\n\n        return prev"
+        },
+        {
+          "path": "problems/reverse-linked-list/README.md",
+          "content": "# [206] Reverse Linked List\n**Difficulty:** Easy  |  **Acceptance:** 81.0%  |  **Likes:** 24944 / **Dislikes:** 595\n**Tags:** `Linked List`, `Recursion`\n## Problem\nGiven the head of a singly linked list, reverse the list, and return the reversed list.\n\n&nbsp;\nExample 1:\n\nInput: head = [1,2,3,4,5]\nOutput: [5,4,3,2,1]\n\nExample 2:\n\nInput: head = [1,2]\nOutput: [2,1]\n\nExample 3:\n\nInput: head = []\nOutput: []\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in the list is the range [0, 5000].\n\t-5000 <= Node.val <= 5000\n\n&nbsp;\nFollow up: A linked list can be reversed either iteratively or recursively. Could you implement both?\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 20.5 MB (beats 66.3%)\n\n## Similar Problems\n\n- [Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/) — Medium\n- [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) — Easy\n- [Reverse Nodes in Even Length Groups](https://leetcode.com/problems/reverse-nodes-in-even-length-groups/) — Medium\n- [Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/) — Medium\n- [Remove Nodes From Linked List](https://leetcode.com/problems/remove-nodes-from-linked-list/) — Medium\n"
+        }
+      ],
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "runtime": "0 ms",
+      "memory": "20.5 MB",
+      "runtimePct": 100,
+      "memoryPct": 66.28429999999999,
+      "timestamp": 1769841651000,
+      "acRate": 81.03571826390726,
+      "likes": 24944,
+      "dislikes": 595,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "reverse-linked-list-ii",
+          "title": "Reverse Linked List II",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "palindrome-linked-list",
+          "title": "Palindrome Linked List",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "reverse-nodes-in-even-length-groups",
+          "title": "Reverse Nodes in Even Length Groups",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-twin-sum-of-a-linked-list",
+          "title": "Maximum Twin Sum of a Linked List",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "remove-nodes-from-linked-list",
+          "title": "Remove Nodes From Linked List",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "insert-greatest-common-divisors-in-linked-list",
+          "title": "Insert Greatest Common Divisors in Linked List",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>Given the <code>head</code> of a singly linked list, reverse the list, and return <em>the reversed list</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/02/19/rev1ex1.jpg\" style=\"width: 542px; height: 222px;\" />\n<pre>\n<strong>Input:</strong> head = [1,2,3,4,5]\n<strong>Output:</strong> [5,4,3,2,1]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/02/19/rev1ex2.jpg\" style=\"width: 182px; height: 222px;\" />\n<pre>\n<strong>Input:</strong> head = [1,2]\n<strong>Output:</strong> [2,1]\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> head = []\n<strong>Output:</strong> []\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the list is the range <code>[0, 5000]</code>.</li>\n\t<li><code>-5000 &lt;= Node.val &lt;= 5000</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong> A linked list can be reversed either iteratively or recursively. Could you implement both?</p>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/reverse-linked-list/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": true,
+      "duplicateOf": "lc-reverse-linked-list::1902695551",
+      "_requestAIReview": true,
+      "platform": "leetcode",
       "methods": [],
       "manuallyEdited": false
     },

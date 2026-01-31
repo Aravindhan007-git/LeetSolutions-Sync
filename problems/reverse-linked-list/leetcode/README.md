@@ -8,7 +8,7 @@
 | Topics | Linked List, Recursion |
 | Solved | 2026-01-31 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 20.5 MB (beats 66.34369999999998%) |
+| Memory | 20.5 MB (beats 66.28429999999999%) |
 
 ## Problem Statement
 

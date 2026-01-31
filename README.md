@@ -1,10 +1,10 @@
 <!-- codeledger:gamification:start -->
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/card-light.svg?v=1325-0-90-2026-09-09">
-  <img src="https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/card.svg?v=1325-0-90-2026-09-09" alt="Streak card" width="420">
+  <source media="(prefers-color-scheme: light)" srcset="https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/card-light.svg?v=1335-0-91-2026-09-09">
+  <img src="https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/card.svg?v=1335-0-91-2026-09-09" alt="Streak card" width="420">
 </picture>
 
-![Streak](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/streak.svg?v=1325-0-90-2026-09-09) ![Points](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/points.svg?v=1325-0-90-2026-09-09) ![Level](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/level.svg?v=1325-0-90-2026-09-09) ![Solved by difficulty](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/difficulty.svg?v=1325-0-90-2026-09-09) ![Freezes](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/freezes.svg?v=1325-0-90-2026-09-09)
+![Streak](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/streak.svg?v=1335-0-91-2026-09-09) ![Points](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/points.svg?v=1335-0-91-2026-09-09) ![Level](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/level.svg?v=1335-0-91-2026-09-09) ![Solved by difficulty](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/difficulty.svg?v=1335-0-91-2026-09-09) ![Freezes](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/freezes.svg?v=1335-0-91-2026-09-09)
 
 🩸 First Blood · 🔟 Ten Down · 🎯 Well Rounded · ⚡ Double Day · 🪃 Comeback
 <!-- codeledger:gamification:end -->
@@ -17,7 +17,7 @@
 
 # Aravindhan007-git's DSA Solutions
 
-[![Solutions](https://img.shields.io/badge/Solutions-90-06b6d4?style=flat-square&logo=github)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Easy](https://img.shields.io/badge/Easy-65-22c55e?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Medium](https://img.shields.io/badge/Medium-23-f59e0b?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Hard](https://img.shields.io/badge/Hard-2-ef4444?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Languages](https://img.shields.io/badge/Languages-2-8b5cf6?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Platforms](https://img.shields.io/badge/Platforms-1-64748b?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)
+[![Solutions](https://img.shields.io/badge/Solutions-91-06b6d4?style=flat-square&logo=github)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Easy](https://img.shields.io/badge/Easy-66-22c55e?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Medium](https://img.shields.io/badge/Medium-23-f59e0b?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Hard](https://img.shields.io/badge/Hard-2-ef4444?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Languages](https://img.shields.io/badge/Languages-2-8b5cf6?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Platforms](https://img.shields.io/badge/Platforms-1-64748b?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)
 
 > Automatically tracked by [CodeLedger](https://codeledger.vkrishna04.me) — every problem solved, committed to Git.
 
@@ -34,13 +34,13 @@
 
 | Total | Easy | Medium | Hard |
 |:-----:|:----:|:------:|:----:|
-| **90** | 65 | 23 | 2 |
+| **91** | 66 | 23 | 2 |
 
-**By Platform:** leetcode (90)
+**By Platform:** leetcode (91)
 
-**Top Languages:** Python3 (81) · C (9)
+**Top Languages:** Python3 (82) · C (9)
 
-**Top Topics:** Array (50) · Math (10) · Two Pointers (10) · String (10) · Linked List (7) · Hash Table (2) · Grid (1)
+**Top Topics:** Array (50) · Math (10) · Two Pointers (10) · String (10) · Linked List (8) · Hash Table (2) · Grid (1)
 
 ---
 
@@ -100,6 +100,7 @@ Built with [CodeLedger](https://codeledger.vkrishna04.me) · [⭐ Star the exten
 </div>
 
 <!-- CODELEDGER_AUTO_GENERATED_END -->
+
 
 
 

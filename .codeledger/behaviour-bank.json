@@ -68,6 +68,11 @@
         "elapsedSeconds": 0,
         "lang": "Python3",
         "ts": 1788936682427
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python3",
+        "ts": 1788936705520
       }
     ],
     "tags": [
@@ -177,6 +182,23 @@
     "tags": [
       "Math",
       "Bit Manipulation",
+      "Recursion"
+    ]
+  },
+  "leetcode::reverse-linked-list": {
+    "difficulty": "Easy",
+    "lang": "Python3",
+    "platform": "leetcode",
+    "slug": "reverse-linked-list",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python3",
+        "ts": 1788936728174
+      }
+    ],
+    "tags": [
+      "Linked List",
       "Recursion"
     ]
   },
