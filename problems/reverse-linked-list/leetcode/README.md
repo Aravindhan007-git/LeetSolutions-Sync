@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-reverse-linked-list` |
 | Topics | Linked List, Recursion |
-| Solved | 2025-07-22 |
+| Solved | 2026-01-31 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 10.6 MB (beats 100%) |
+| Memory | 20.5 MB (beats 66.34369999999998%) |
 
 ## Problem Statement
 
@@ -45,24 +45,21 @@ Given the `head` of a singly linked list, reverse the list, and return _the reve
 
 ## Solutions
 
-```C
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     struct ListNode *next;
- * };
- */
-struct ListNode* reverseList(struct ListNode* head) {
-    struct ListNode* current=head;
-    struct ListNode* next=NULL;
-    struct ListNode* prev=NULL;
-    while(current!=NULL){
-        next=current ->next;
-        current->next=prev;
-        prev=current;
-        current=next;
-    }
-    return prev;
-}
+```Python3
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        prev=None
+        curr=head
+        while curr:
+            next=curr.next
+            curr.next=prev
+            prev=curr
+            curr=next
+
+        return prev
 ```
