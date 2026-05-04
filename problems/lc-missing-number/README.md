@@ -7,7 +7,7 @@
 | Problem ID | `lc-missing-number` |
 | Topics | Array, Hash Table, Math, Binary Search, Bit Manipulation, Sorting |
 | Solved | 2026-05-04 |
-| Runtime | 1406 ms (beats 6.895399999999922%) |
+| Runtime | 1390 ms (beats 12.78139999999992%) |
 | Memory | 20.4 MB (beats 41.32810000000001%) |
 
 ## Problem Statement
