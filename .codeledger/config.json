@@ -10,6 +10,5 @@
   "github_repo": "LeetSolutions-Sync",
   "ollama_enabled": false,
   "openai_enabled": false,
-  "openrouter_enabled": false,
-  "__syncedAt": "2026-08-28T05:48:48.312Z"
+  "openrouter_enabled": false
 }

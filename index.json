@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-28T05:13:34.022Z",
+  "updatedAt": "2026-08-28T05:48:48.306Z",
   "layoutVersion": 3,
   "stats": {
     "total": 76,
@@ -110,7 +110,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-add-digits/lc-add-digits.py",
+        "problems/lc-add-digits/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-assign-cookies::2043676264",
@@ -153,7 +160,14 @@
       "hints": null,
       "acRate": 55.45625198738689,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-assign-cookies/lc-assign-cookies.py",
+        "problems/lc-assign-cookies/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-best-time-to-buy-and-sell-stock::2033352724",
@@ -262,7 +276,14 @@
         ],
         "topic": "sliding-window",
         "voteCount": 98
-      }
+      },
+      "_committedPaths": [
+        "problems/best-time-to-buy-and-sell-stock/leetcode/lc-best-time-to-buy-and-sell-stock.py",
+        "problems/best-time-to-buy-and-sell-stock/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-binary-search::2034213243",
@@ -329,7 +350,14 @@
         ],
         "topic": "binary-search",
         "voteCount": 90
-      }
+      },
+      "_committedPaths": [
+        "problems/binary-search/leetcode/lc-binary-search.py",
+        "problems/binary-search/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-build-array-from-permutation::2034981363",
@@ -372,7 +400,14 @@
       ],
       "acRate": 91.10067196501743,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-build-array-from-permutation/lc-build-array-from-permutation.py",
+        "problems/lc-build-array-from-permutation/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-container-with-most-water::2033744538",
@@ -456,7 +491,14 @@
         ],
         "topic": "two-pointers",
         "voteCount": 94
-      }
+      },
+      "_committedPaths": [
+        "problems/container-with-most-water/leetcode/lc-container-with-most-water.py",
+        "problems/container-with-most-water/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-contains-duplicate::2029587341",
@@ -543,7 +585,14 @@
         ],
         "topic": "arrays",
         "voteCount": 95
-      }
+      },
+      "_committedPaths": [
+        "problems/contains-duplicate/leetcode/lc-contains-duplicate.py",
+        "problems/contains-duplicate/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-delete-the-middle-node-of-a-linked-list::1706855323",
@@ -611,7 +660,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-delete-the-middle-node-of-a-linked-list/lc-delete-the-middle-node-of-a-linked-list.c",
+        "problems/lc-delete-the-middle-node-of-a-linked-list/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-fibonacci-number::2041999076",
@@ -678,7 +734,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-fibonacci-number/lc-fibonacci-number.py",
+        "problems/lc-fibonacci-number/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-find-all-anagrams-in-a-string::2045255335",
@@ -732,7 +795,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-find-all-anagrams-in-a-string/lc-find-all-anagrams-in-a-string.py",
+        "problems/lc-find-all-anagrams-in-a-string/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-find-first-palindromic-string-in-the-array::2037070307",
@@ -783,7 +853,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-find-first-palindromic-string-in-the-array/lc-find-first-palindromic-string-in-the-array.py",
+        "problems/lc-find-first-palindromic-string-in-the-array/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-find-numbers-with-even-number-of-digits::2030706461",
@@ -845,7 +922,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-find-numbers-with-even-number-of-digits/lc-find-numbers-with-even-number-of-digits.py",
+        "problems/lc-find-numbers-with-even-number-of-digits/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-find-the-difference::2040671927",
@@ -900,7 +984,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-find-the-difference/lc-find-the-difference.py",
+        "problems/lc-find-the-difference/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-find-the-duplicate-number::2043294195",
@@ -995,7 +1086,14 @@
         ],
         "topic": "two-pointers",
         "voteCount": 97
-      }
+      },
+      "_committedPaths": [
+        "problems/find-the-duplicate-number/leetcode/lc-find-the-duplicate-number.py",
+        "problems/find-the-duplicate-number/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-find-the-index-of-the-first-occurrence-in-a-string::1991877274",
@@ -1052,7 +1150,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-find-the-index-of-the-first-occurrence-in-a-string/lc-find-the-index-of-the-first-occurrence-in-a-string.py",
+        "problems/lc-find-the-index-of-the-first-occurrence-in-a-string/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-insert-interval::2110886480",
@@ -1134,7 +1239,14 @@
         ],
         "topic": "intervals",
         "voteCount": 96
-      }
+      },
+      "_committedPaths": [
+        "problems/insert-interval/leetcode/lc-insert-interval.py",
+        "problems/insert-interval/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-intersection-of-two-arrays::2035868757",
@@ -1214,7 +1326,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-intersection-of-two-arrays/lc-intersection-of-two-arrays.py",
+        "problems/lc-intersection-of-two-arrays/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-is-subsequence::2044102950",
@@ -1274,7 +1393,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-is-subsequence/lc-is-subsequence.py",
+        "problems/lc-is-subsequence/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-length-of-last-word::1998873436",
@@ -1313,7 +1439,14 @@
       "hints": null,
       "acRate": 59.59006017713908,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-length-of-last-word/lc-length-of-last-word.py",
+        "problems/lc-length-of-last-word/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-majority-element::2040643153",
@@ -1394,7 +1527,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-majority-element/lc-majority-element.py",
+        "problems/lc-majority-element/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-max-consecutive-ones::2034187703",
@@ -1466,7 +1606,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-max-consecutive-ones/lc-max-consecutive-ones.py",
+        "problems/lc-max-consecutive-ones/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-maximum-count-of-positive-integer-and-negative-integer::2030711056",
@@ -1523,7 +1670,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-maximum-count-of-positive-integer-and-negative-integer/lc-maximum-count-of-positive-integer-and-negative-integer.py",
+        "problems/lc-maximum-count-of-positive-integer-and-negative-integer/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-median-of-two-sorted-arrays::2051345272",
@@ -1564,7 +1718,14 @@
       "hints": null,
       "acRate": 47.4634041881396,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-median-of-two-sorted-arrays/lc-median-of-two-sorted-arrays.py",
+        "problems/lc-median-of-two-sorted-arrays/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-merge-intervals::2110879871",
@@ -1698,7 +1859,14 @@
         ],
         "topic": "intervals",
         "voteCount": 99
-      }
+      },
+      "_committedPaths": [
+        "problems/merge-intervals/leetcode/lc-merge-intervals.py",
+        "problems/merge-intervals/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-merge-sorted-array::1709143920",
@@ -1767,7 +1935,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-merge-sorted-array/lc-merge-sorted-array.c",
+        "problems/lc-merge-sorted-array/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-merge-strings-alternately::2035862963",
@@ -1816,7 +1991,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-merge-strings-alternately/lc-merge-strings-alternately.py",
+        "problems/lc-merge-strings-alternately/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-merge-two-sorted-lists::1706881750",
@@ -1901,7 +2083,14 @@
         ],
         "topic": "linked-list",
         "voteCount": 97
-      }
+      },
+      "_committedPaths": [
+        "problems/merge-two-sorted-lists/leetcode/lc-merge-two-sorted-lists.c",
+        "problems/merge-two-sorted-lists/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-middle-of-the-linked-list::1706801568",
@@ -1954,7 +2143,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-middle-of-the-linked-list/lc-middle-of-the-linked-list.c",
+        "problems/lc-middle-of-the-linked-list/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-missing-number::1994660459",
@@ -2068,7 +2264,14 @@
           "timestamp": 1781520717000,
           "submissionId": 2033840158
         }
-      ]
+      ],
+      "_committedPaths": [
+        "problems/lc-missing-number/lc-missing-number.py",
+        "problems/lc-missing-number/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-missing-number::1994660828",
@@ -2151,7 +2354,14 @@
       ],
       "hasSimilar": true,
       "isDuplicate": true,
-      "duplicateOf": "lc-missing-number::1994660459"
+      "duplicateOf": "lc-missing-number::1994660459",
+      "_committedPaths": [
+        "problems/lc-missing-number/lc-missing-number.py",
+        "problems/lc-missing-number/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-missing-number::2033840158",
@@ -2234,7 +2444,14 @@
       ],
       "hasSimilar": true,
       "isDuplicate": true,
-      "duplicateOf": "lc-missing-number::1994660459"
+      "duplicateOf": "lc-missing-number::1994660459",
+      "_committedPaths": [
+        "problems/lc-missing-number/lc-missing-number.py",
+        "problems/lc-missing-number/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-move-zeroes::1708151551",
@@ -2290,7 +2507,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-move-zeroes/lc-move-zeroes.c",
+        "problems/lc-move-zeroes/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-multiply-strings::2045692516",
@@ -2362,7 +2586,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-multiply-strings/lc-multiply-strings.py",
+        "problems/lc-multiply-strings/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-number-of-employees-who-met-the-target::2030713756",
@@ -2410,7 +2641,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-number-of-employees-who-met-the-target/lc-number-of-employees-who-met-the-target.py",
+        "problems/lc-number-of-employees-who-met-the-target/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-palindrome-number::1902720977",
@@ -2506,7 +2744,14 @@
           "timestamp": 1786687460000,
           "submissionId": 2106237992
         }
-      ]
+      ],
+      "_committedPaths": [
+        "problems/lc-palindrome-number/lc-palindrome-number.py",
+        "problems/lc-palindrome-number/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-palindrome-number::2106237992",
@@ -2586,7 +2831,14 @@
       ],
       "hasSimilar": true,
       "isDuplicate": true,
-      "duplicateOf": "lc-palindrome-number::1902720977"
+      "duplicateOf": "lc-palindrome-number::1902720977",
+      "_committedPaths": [
+        "problems/lc-palindrome-number/lc-palindrome-number.py",
+        "problems/lc-palindrome-number/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-permutation-in-string::2045203188",
@@ -2668,7 +2920,14 @@
         ],
         "topic": "sliding-window",
         "voteCount": 93
-      }
+      },
+      "_committedPaths": [
+        "problems/permutation-in-string/leetcode/lc-permutation-in-string.py",
+        "problems/permutation-in-string/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-plus-one",
@@ -2705,7 +2964,7 @@
       "runtimePct": 100,
       "memoryPct": 56.5939,
       "timestamp": 1778336710000,
-      "acRate": 50.50418534551262,
+      "acRate": 50.504375523192266,
       "likes": 12053,
       "dislikes": 5619,
       "similar": [
@@ -2740,10 +2999,16 @@
       "submissionsUrl": "https://leetcode.com/problems/plus-one/submissions/",
       "notes": "",
       "methodTitle": "",
-      "isDuplicate": false,
-      "duplicateOf": null,
+      "isDuplicate": true,
+      "duplicateOf": "lc-plus-one::1991888684",
       "_requestAIReview": true,
-      "platform": "leetcode"
+      "platform": "leetcode",
+      "_committedPaths": [
+        "problems/lc-plus-one/lc-plus-one.py",
+        "problems/lc-plus-one/README.md"
+      ],
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-plus-one::1991888684",
@@ -2808,7 +3073,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-plus-one/lc-plus-one.py",
+        "problems/lc-plus-one/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-power-of-three::2034226779",
@@ -2867,7 +3139,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-power-of-three/lc-power-of-three.py",
+        "problems/lc-power-of-three/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-power-of-two::2042811224",
@@ -2927,7 +3206,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-power-of-two/lc-power-of-two.py",
+        "problems/lc-power-of-two/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-powx-n::2036643928",
@@ -2986,7 +3272,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-powx-n/lc-powx-n.py",
+        "problems/lc-powx-n/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-remove-duplicates-from-sorted-array::1709265462",
@@ -3055,7 +3348,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-remove-duplicates-from-sorted-array/lc-remove-duplicates-from-sorted-array.c",
+        "problems/lc-remove-duplicates-from-sorted-array/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-remove-duplicates-from-sorted-array::2036262169",
@@ -3124,7 +3424,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-remove-duplicates-from-sorted-array/lc-remove-duplicates-from-sorted-array.py",
+        "problems/lc-remove-duplicates-from-sorted-array/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-remove-duplicates-from-sorted-list::1708120649",
@@ -3170,7 +3477,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-remove-duplicates-from-sorted-list/lc-remove-duplicates-from-sorted-list.c",
+        "problems/lc-remove-duplicates-from-sorted-list/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-remove-element::1991867590",
@@ -3233,7 +3547,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-remove-element/lc-remove-element.py",
+        "problems/lc-remove-element/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-reverse-integer::1994647257",
@@ -3297,7 +3618,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-reverse-integer/lc-reverse-integer.py",
+        "problems/lc-reverse-integer/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-reverse-linked-list::1706829960",
@@ -3394,7 +3722,14 @@
         ],
         "topic": "linked-list",
         "voteCount": 99
-      }
+      },
+      "_committedPaths": [
+        "problems/reverse-linked-list/leetcode/lc-reverse-linked-list.c",
+        "problems/reverse-linked-list/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-reverse-linked-list::1902695551",
@@ -3491,7 +3826,14 @@
         ],
         "topic": "linked-list",
         "voteCount": 99
-      }
+      },
+      "_committedPaths": [
+        "problems/reverse-linked-list/leetcode/lc-reverse-linked-list.py",
+        "problems/reverse-linked-list/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-reverse-only-letters::2035849156",
@@ -3564,7 +3906,14 @@
           "timestamp": 1781670990000,
           "submissionId": 2035850231
         }
-      ]
+      ],
+      "_committedPaths": [
+        "problems/lc-reverse-only-letters/lc-reverse-only-letters.py",
+        "problems/lc-reverse-only-letters/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-reverse-only-letters::2035850231",
@@ -3621,7 +3970,14 @@
       ],
       "hasSimilar": true,
       "isDuplicate": true,
-      "duplicateOf": "lc-reverse-only-letters::2035849156"
+      "duplicateOf": "lc-reverse-only-letters::2035849156",
+      "_committedPaths": [
+        "problems/lc-reverse-only-letters/lc-reverse-only-letters.py",
+        "problems/lc-reverse-only-letters/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-reverse-string::1709305048",
@@ -3676,7 +4032,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-reverse-string/lc-reverse-string.c",
+        "problems/lc-reverse-string/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-reverse-string::2027745747",
@@ -3749,7 +4112,14 @@
           "timestamp": 1781605536000,
           "submissionId": 2035029394
         }
-      ]
+      ],
+      "_committedPaths": [
+        "problems/lc-reverse-string/lc-reverse-string.py",
+        "problems/lc-reverse-string/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-reverse-string::2035029394",
@@ -3806,7 +4176,14 @@
       ],
       "hasSimilar": true,
       "isDuplicate": true,
-      "duplicateOf": "lc-reverse-string::2027745747"
+      "duplicateOf": "lc-reverse-string::2027745747",
+      "_committedPaths": [
+        "problems/lc-reverse-string/lc-reverse-string.py",
+        "problems/lc-reverse-string/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-reverse-vowels-of-a-string::2035044601",
@@ -3865,7 +4242,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-reverse-vowels-of-a-string/lc-reverse-vowels-of-a-string.py",
+        "problems/lc-reverse-vowels-of-a-string/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-reverse-words-in-a-string::1994635935",
@@ -3905,7 +4289,14 @@
       "hints": null,
       "acRate": 57.659476045551315,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-reverse-words-in-a-string/lc-reverse-words-in-a-string.py",
+        "problems/lc-reverse-words-in-a-string/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-richest-customer-wealth::2030719738",
@@ -3948,7 +4339,14 @@
       ],
       "acRate": 88.82022613005634,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-richest-customer-wealth/lc-richest-customer-wealth.py",
+        "problems/lc-richest-customer-wealth/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-robot-return-to-origin::2042051982",
@@ -4007,7 +4405,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-robot-return-to-origin/lc-robot-return-to-origin.py",
+        "problems/lc-robot-return-to-origin/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-rotate-array::2036607469",
@@ -4084,7 +4489,14 @@
           "timestamp": 1781714318000,
           "submissionId": 2036617327
         }
-      ]
+      ],
+      "_committedPaths": [
+        "problems/lc-rotate-array/lc-rotate-array.py",
+        "problems/lc-rotate-array/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-rotate-array::2036617327",
@@ -4145,7 +4557,14 @@
       ],
       "hasSimilar": true,
       "isDuplicate": true,
-      "duplicateOf": "lc-rotate-array::2036607469"
+      "duplicateOf": "lc-rotate-array::2036607469",
+      "_committedPaths": [
+        "problems/lc-rotate-array/lc-rotate-array.py",
+        "problems/lc-rotate-array/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-rotate-string::2029647621",
@@ -4185,7 +4604,14 @@
       "hints": null,
       "acRate": 66.61686249561134,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-rotate-string/lc-rotate-string.py",
+        "problems/lc-rotate-string/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-running-sum-of-1d-array::2030697806",
@@ -4227,7 +4653,14 @@
       ],
       "acRate": 87.08387635027182,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-running-sum-of-1d-array/lc-running-sum-of-1d-array.py",
+        "problems/lc-running-sum-of-1d-array/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-shortest-distance-to-a-character::2044005853",
@@ -4275,7 +4708,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-shortest-distance-to-a-character/lc-shortest-distance-to-a-character.py",
+        "problems/lc-shortest-distance-to-a-character/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-single-number::2029632290",
@@ -4354,7 +4794,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-single-number/lc-single-number.py",
+        "problems/lc-single-number/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-sort-an-array::2050983330",
@@ -4400,7 +4847,14 @@
       "hints": null,
       "acRate": 55.743057352396534,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-sort-an-array/lc-sort-an-array.py",
+        "problems/lc-sort-an-array/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-sort-colors::2041951669",
@@ -4460,7 +4914,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-sort-colors/lc-sort-colors.py",
+        "problems/lc-sort-colors/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-sort-even-and-odd-indices-independently::2045264607",
@@ -4517,7 +4978,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-sort-even-and-odd-indices-independently/lc-sort-even-and-odd-indices-independently.py",
+        "problems/lc-sort-even-and-odd-indices-independently/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-squares-of-a-sorted-array::2034927823",
@@ -4565,7 +5033,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-squares-of-a-sorted-array/lc-squares-of-a-sorted-array.py",
+        "problems/lc-squares-of-a-sorted-array/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-string-matching-in-an-array::2038640872",
@@ -4615,7 +5090,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-string-matching-in-an-array/lc-string-matching-in-an-array.py",
+        "problems/lc-string-matching-in-an-array/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-third-maximum-number::2034180357",
@@ -4668,7 +5150,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-third-maximum-number/lc-third-maximum-number.py",
+        "problems/lc-third-maximum-number/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-to-lower-case::2042058134",
@@ -4718,7 +5207,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-to-lower-case/lc-to-lower-case.py",
+        "problems/lc-to-lower-case/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-two-sum-ii-input-array-is-sorted::2033776628",
@@ -4792,7 +5288,14 @@
         ],
         "topic": "two-pointers",
         "voteCount": 89
-      }
+      },
+      "_committedPaths": [
+        "problems/two-sum-ii-input-array-is-sorted/leetcode/lc-two-sum-ii-input-array-is-sorted.py",
+        "problems/two-sum-ii-input-array-is-sorted/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-two-sum::1991850383",
@@ -4976,7 +5479,14 @@
         ],
         "topic": "arrays",
         "voteCount": 100
-      }
+      },
+      "_committedPaths": [
+        "problems/two-sum/leetcode/lc-two-sum.py",
+        "problems/two-sum/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-unique-paths-iii::2057914087",
@@ -5038,7 +5548,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-unique-paths-iii/lc-unique-paths-iii.py",
+        "problems/lc-unique-paths-iii/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-valid-anagram::2040652875",
@@ -5119,7 +5636,14 @@
         ],
         "topic": "arrays",
         "voteCount": 92
-      }
+      },
+      "_committedPaths": [
+        "problems/valid-anagram/leetcode/lc-valid-anagram.py",
+        "problems/valid-anagram/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-valid-palindrome::2027753563",
@@ -5210,7 +5734,14 @@
         ],
         "topic": "two-pointers",
         "voteCount": 91
-      }
+      },
+      "_committedPaths": [
+        "problems/valid-palindrome/leetcode/lc-valid-palindrome.py",
+        "problems/valid-palindrome/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     }
   ]
 }

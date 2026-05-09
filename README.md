@@ -48,16 +48,16 @@
 
 | Problem | Difficulty | Language | Platform | Date |
 |---------|-----------|----------|----------|------|
-| [Insert Interval](https://leetcode.com/problems/insert-interval/) | Medium | Python3 | leetcode | Aug 18 |
-| [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | Medium | Python3 | leetcode | Aug 18 |
-| [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Easy | Python3 | leetcode | Aug 14 |
-| [Unique Paths III](https://leetcode.com/problems/unique-paths-iii/) | Hard | Python3 | leetcode | Jul 6 |
-| [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | Hard | Python3 | leetcode | Jun 30 |
-| [Sort an Array](https://leetcode.com/problems/sort-an-array/) | Medium | Python3 | leetcode | Jun 30 |
-| [Multiply Strings](https://leetcode.com/problems/multiply-strings/) | Medium | Python3 | leetcode | Jun 25 |
-| [Sort Even and Odd Indices Independently](https://leetcode.com/problems/sort-even-and-odd-indices-independently/) | Easy | Python3 | leetcode | Jun 25 |
 | [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) | Medium | Python3 | leetcode | Jun 25 |
-| [Permutation in String](https://leetcode.com/problems/permutation-in-string/) | Medium | Python3 | leetcode | Jun 25 |
+| [Assign Cookies](https://leetcode.com/problems/assign-cookies/) | Easy | Python3 | leetcode | Jun 23 |
+| [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) | Easy | Python3 | leetcode | Jun 22 |
+| [Build Array from Permutation](https://leetcode.com/problems/build-array-from-permutation/) | Easy | Python3 | leetcode | Jun 16 |
+| [Binary Search](https://leetcode.com/problems/binary-search/) | Easy | Python3 | leetcode | Jun 15 |
+| [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | Medium | Python3 | leetcode | Jun 15 |
+| [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Easy | Python3 | leetcode | Jun 15 |
+| [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Easy | Python3 | leetcode | Jun 11 |
+| [Add Digits](https://leetcode.com/problems/add-digits/) | Easy | Python3 | leetcode | May 4 |
+| [Delete the Middle Node of a Linked List](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/) | Medium | C | leetcode | Jul 22, 2025 |
 
 ---
 
@@ -100,3 +100,4 @@ Built with [CodeLedger](https://codeledger.vkrishna04.me) · [⭐ Star the exten
 </div>
 
 <!-- CODELEDGER_AUTO_GENERATED_END -->
+
