@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-plus-one` |
 | Topics | Array, Math |
-| Solved | 2026-04-30 |
+| Solved | 2026-05-09 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 19.1 MB (beats 88.4529%) |
+| Memory | 19.3 MB (beats 56.5939%) |
 
 ## Problem Statement
 
