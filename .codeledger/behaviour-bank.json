@@ -38,5 +38,22 @@
       "Bit Manipulation",
       "Recursion"
     ]
+  },
+  "leetcode::single-number": {
+    "difficulty": "Easy",
+    "lang": "Python3",
+    "platform": "leetcode",
+    "slug": "single-number",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python3",
+        "ts": 1787913793491
+      }
+    ],
+    "tags": [
+      "Array",
+      "Bit Manipulation"
+    ]
   }
 }

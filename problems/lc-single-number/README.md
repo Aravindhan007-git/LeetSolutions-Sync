@@ -46,15 +46,6 @@ You must implement a solution with a linear runtime complexity and use only cons
 
 	- Each element in the array appears twice except for one element which appears only once.
 
-## Hints
-
-<details>
-<summary>Hint 1</summary>
-
-Think about the XOR (^) operator's property.
-
-</details>
-
 ## Solutions
 
 ```Python3
