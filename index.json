@@ -1,0 +1,2020 @@
+{
+  "updatedAt": "2026-08-28T05:14:51.833Z",
+  "layoutVersion": 3,
+  "stats": {
+    "total": 26,
+    "easy": 23,
+    "medium": 3,
+    "hard": 0,
+    "unknownDifficulty": 0,
+    "byPlatform": {
+      "leetcode": 26
+    },
+    "byLang": {
+      "C": 9,
+      "Python3": 17
+    },
+    "byTopic": {
+      "Linked List": 6,
+      "Array": 11,
+      "Two Pointers": 4,
+      "Math": 3,
+      "String": 2
+    }
+  },
+  "meta": {
+    "summary": null,
+    "summaryUpdatedAt": null,
+    "commitsSinceLastSummary": 0
+  },
+  "problems": [
+    {
+      "id": "lc-middle-of-the-linked-list::1706801568",
+      "submissionId": 1706801568,
+      "platform": "leetcode",
+      "title": "Middle of the Linked List",
+      "titleSlug": "middle-of-the-linked-list",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "C",
+        "ext": "c",
+        "slug": "c"
+      },
+      "tags": [
+        "Linked List",
+        "Two Pointers"
+      ],
+      "topic": "Linked List",
+      "code": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     struct ListNode *next;\n * };\n */\nstruct ListNode* middleNode(struct ListNode* head) {\n    struct ListNode* fast=head;\n    struct ListNode* slow=head;\n    struct ListNode* prev=NULL;\n    while(fast!=NULL && fast->next!=NULL){\n        prev=slow;\n        slow=slow->next;\n        fast=fast->next->next;\n    }\n    return slow;\n}",
+      "readmeContent": "# Middle of the Linked List\n\n**Difficulty:** Easy  |  **Acceptance:** 82.3%\n\n**Tags:** `Linked List`, `Two Pointers`\n\n## Problem\n\nGiven the head of a singly linked list, return the middle node of the linked list.\n\nIf there are two middle nodes, return the second middle node.\n\n&nbsp;\nExample 1:\n\nInput: head = [1,2,3,4,5]\nOutput: [3,4,5]\nExplanation: The middle node of the list is node 3.\n\nExample 2:\n\nInput: head = [1,2,3,4,5,6]\nOutput: [4,5,6]\nExplanation: Since the list has two middle nodes with values 3 and 4, we return the second one.\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in the list is in the range [1, 100].\n\t1 <= Node.val <= 100\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 8.7 MB\n\n## Similar Problems\n\n- [Delete the Middle Node of a Linked List](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/) — Medium\n- [Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/) — Medium\n",
+      "files": [
+        {
+          "path": "problems/lc-middle-of-the-linked-list/lc-middle-of-the-linked-list.c",
+          "content": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     struct ListNode *next;\n * };\n */\nstruct ListNode* middleNode(struct ListNode* head) {\n    struct ListNode* fast=head;\n    struct ListNode* slow=head;\n    struct ListNode* prev=NULL;\n    while(fast!=NULL && fast->next!=NULL){\n        prev=slow;\n        slow=slow->next;\n        fast=fast->next->next;\n    }\n    return slow;\n}"
+        },
+        {
+          "path": "problems/lc-middle-of-the-linked-list/README.md",
+          "content": "# Middle of the Linked List\n\n**Difficulty:** Easy  |  **Acceptance:** 82.3%\n\n**Tags:** `Linked List`, `Two Pointers`\n\n## Problem\n\nGiven the head of a singly linked list, return the middle node of the linked list.\n\nIf there are two middle nodes, return the second middle node.\n\n&nbsp;\nExample 1:\n\nInput: head = [1,2,3,4,5]\nOutput: [3,4,5]\nExplanation: The middle node of the list is node 3.\n\nExample 2:\n\nInput: head = [1,2,3,4,5,6]\nOutput: [4,5,6]\nExplanation: Since the list has two middle nodes with values 3 and 4, we return the second one.\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in the list is in the range [1, 100].\n\t1 <= Node.val <= 100\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 8.7 MB\n\n## Similar Problems\n\n- [Delete the Middle Node of a Linked List](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/) — Medium\n- [Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/) — Medium\n"
+        }
+      ],
+      "timestamp": 1753163166000,
+      "runtime": "0 ms",
+      "memory": "8.7 MB",
+      "runtimePct": 100,
+      "memoryPct": 100,
+      "problemStatement": "<p>Given the <code>head</code> of a singly linked list, return <em>the middle node of the linked list</em>.</p>\n\n<p>If there are two middle nodes, return <strong>the second middle</strong> node.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/07/23/lc-midlist1.jpg\" style=\"width: 544px; height: 65px;\" />\n<pre>\n<strong>Input:</strong> head = [1,2,3,4,5]\n<strong>Output:</strong> [3,4,5]\n<strong>Explanation:</strong> The middle node of the list is node 3.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/07/23/lc-midlist2.jpg\" style=\"width: 664px; height: 65px;\" />\n<pre>\n<strong>Input:</strong> head = [1,2,3,4,5,6]\n<strong>Output:</strong> [4,5,6]\n<strong>Explanation:</strong> Since the list has two middle nodes with values 3 and 4, we return the second one.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the list is in the range <code>[1, 100]</code>.</li>\n\t<li><code>1 &lt;= Node.val &lt;= 100</code></li>\n</ul>\n",
+      "hints": null,
+      "acRate": 82.32402196125025,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "delete-the-middle-node-of-a-linked-list",
+          "title": "Delete the Middle Node of a Linked List",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-twin-sum-of-a-linked-list",
+          "title": "Maximum Twin Sum of a Linked List",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true
+    },
+    {
+      "id": "lc-reverse-linked-list::1706829960",
+      "submissionId": 1706829960,
+      "platform": "leetcode",
+      "title": "Reverse Linked List",
+      "titleSlug": "reverse-linked-list",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "C",
+        "ext": "c",
+        "slug": "c"
+      },
+      "tags": [
+        "Linked List",
+        "Recursion"
+      ],
+      "topic": "Linked List",
+      "code": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     struct ListNode *next;\n * };\n */\nstruct ListNode* reverseList(struct ListNode* head) {\n    struct ListNode* current=head;\n    struct ListNode* next=NULL;\n    struct ListNode* prev=NULL;\n    while(current!=NULL){\n        next=current ->next;\n        current->next=prev;\n        prev=current;\n        current=next;\n    }\n    return prev;\n}",
+      "readmeContent": "# Reverse Linked List\n\n**Difficulty:** Easy  |  **Acceptance:** 81.0%\n\n**Tags:** `Linked List`, `Recursion`\n\n## Problem\n\nGiven the head of a singly linked list, reverse the list, and return the reversed list.\n\n&nbsp;\nExample 1:\n\nInput: head = [1,2,3,4,5]\nOutput: [5,4,3,2,1]\n\nExample 2:\n\nInput: head = [1,2]\nOutput: [2,1]\n\nExample 3:\n\nInput: head = []\nOutput: []\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in the list is the range [0, 5000].\n\t-5000 <= Node.val <= 5000\n\n&nbsp;\nFollow up: A linked list can be reversed either iteratively or recursively. Could you implement both?\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 10.6 MB\n\n## Similar Problems\n\n- [Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/) — Medium\n- [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) — Easy\n- [Reverse Nodes in Even Length Groups](https://leetcode.com/problems/reverse-nodes-in-even-length-groups/) — Medium\n- [Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/) — Medium\n- [Remove Nodes From Linked List](https://leetcode.com/problems/remove-nodes-from-linked-list/) — Medium\n",
+      "files": [
+        {
+          "path": "problems/lc-reverse-linked-list/lc-reverse-linked-list.c",
+          "content": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     struct ListNode *next;\n * };\n */\nstruct ListNode* reverseList(struct ListNode* head) {\n    struct ListNode* current=head;\n    struct ListNode* next=NULL;\n    struct ListNode* prev=NULL;\n    while(current!=NULL){\n        next=current ->next;\n        current->next=prev;\n        prev=current;\n        current=next;\n    }\n    return prev;\n}"
+        },
+        {
+          "path": "problems/lc-reverse-linked-list/README.md",
+          "content": "# Reverse Linked List\n\n**Difficulty:** Easy  |  **Acceptance:** 81.0%\n\n**Tags:** `Linked List`, `Recursion`\n\n## Problem\n\nGiven the head of a singly linked list, reverse the list, and return the reversed list.\n\n&nbsp;\nExample 1:\n\nInput: head = [1,2,3,4,5]\nOutput: [5,4,3,2,1]\n\nExample 2:\n\nInput: head = [1,2]\nOutput: [2,1]\n\nExample 3:\n\nInput: head = []\nOutput: []\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in the list is the range [0, 5000].\n\t-5000 <= Node.val <= 5000\n\n&nbsp;\nFollow up: A linked list can be reversed either iteratively or recursively. Could you implement both?\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 10.6 MB\n\n## Similar Problems\n\n- [Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/) — Medium\n- [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) — Easy\n- [Reverse Nodes in Even Length Groups](https://leetcode.com/problems/reverse-nodes-in-even-length-groups/) — Medium\n- [Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/) — Medium\n- [Remove Nodes From Linked List](https://leetcode.com/problems/remove-nodes-from-linked-list/) — Medium\n"
+        }
+      ],
+      "timestamp": 1753164596000,
+      "runtime": "0 ms",
+      "memory": "10.6 MB",
+      "runtimePct": 100,
+      "memoryPct": 100,
+      "problemStatement": "<p>Given the <code>head</code> of a singly linked list, reverse the list, and return <em>the reversed list</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/02/19/rev1ex1.jpg\" style=\"width: 542px; height: 222px;\" />\n<pre>\n<strong>Input:</strong> head = [1,2,3,4,5]\n<strong>Output:</strong> [5,4,3,2,1]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/02/19/rev1ex2.jpg\" style=\"width: 182px; height: 222px;\" />\n<pre>\n<strong>Input:</strong> head = [1,2]\n<strong>Output:</strong> [2,1]\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> head = []\n<strong>Output:</strong> []\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the list is the range <code>[0, 5000]</code>.</li>\n\t<li><code>-5000 &lt;= Node.val &lt;= 5000</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong> A linked list can be reversed either iteratively or recursively. Could you implement both?</p>\n",
+      "hints": null,
+      "acRate": 80.98993814664608,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "reverse-linked-list-ii",
+          "title": "Reverse Linked List II",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "palindrome-linked-list",
+          "title": "Palindrome Linked List",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "reverse-nodes-in-even-length-groups",
+          "title": "Reverse Nodes in Even Length Groups",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-twin-sum-of-a-linked-list",
+          "title": "Maximum Twin Sum of a Linked List",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "remove-nodes-from-linked-list",
+          "title": "Remove Nodes From Linked List",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "insert-greatest-common-divisors-in-linked-list",
+          "title": "Insert Greatest Common Divisors in Linked List",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 206,
+            "platform": "leetcode",
+            "slug": "reverse-linked-list"
+          }
+        ],
+        "canonicalId": "reverse-linked-list",
+        "canonicalTitle": "Reverse Linked List",
+        "confirmedBy": "system-init",
+        "difficulty": "easy",
+        "pattern": "iteration",
+        "tags": [
+          "linked-list"
+        ],
+        "topic": "linked-list",
+        "voteCount": 99
+      }
+    },
+    {
+      "id": "lc-delete-the-middle-node-of-a-linked-list::1706855323",
+      "submissionId": 1706855323,
+      "platform": "leetcode",
+      "title": "Delete the Middle Node of a Linked List",
+      "titleSlug": "delete-the-middle-node-of-a-linked-list",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "C",
+        "ext": "c",
+        "slug": "c"
+      },
+      "tags": [
+        "Linked List",
+        "Two Pointers"
+      ],
+      "topic": "Linked List",
+      "code": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     struct ListNode *next;\n * };\n */\nstruct ListNode* deleteMiddle(struct ListNode* head) {\n    if(head==NULL|| head->next==NULL)\n        return NULL;\n    struct ListNode* fast=head;\n    struct ListNode* slow=head;\n    struct ListNode* prev=NULL;\n    while(fast!=NULL && fast->next!=NULL){\n        fast=fast->next->next;\n        prev=slow;\n        slow=slow->next;\n    }\n    prev->next=slow->next;\n    free(slow);\n    return head;\n}",
+      "readmeContent": "# Delete the Middle Node of a Linked List\n\n**Difficulty:** Medium  |  **Acceptance:** 60.9%\n\n**Tags:** `Linked List`, `Two Pointers`\n\n## Problem\n\nYou are given the head of a linked list. Delete the middle node, and return the head of the modified linked list.\n\nThe middle node of a linked list of size n is the &lfloor;n / 2&rfloor;th node from the start using 0-based indexing, where &lfloor;x&rfloor; denotes the largest integer less than or equal to x.\n\n\tFor n = 1, 2, 3, 4, and 5, the middle nodes are 0, 1, 1, 2, and 2, respectively.\n\n&nbsp;\nExample 1:\n\nInput: head = [1,3,4,7,1,2,6]\nOutput: [1,3,4,1,2,6]\nExplanation:\nThe above figure represents the given linked list. The indices of the nodes are written below.\nSince n = 7, node 3 with value 7 is the middle node, which is marked in red.\nWe return the new list after removing this node. \n\nExample 2:\n\nInput: head = [1,2,3,4]\nOutput: [1,2,4]\nExplanation:\nThe above figure represents the given linked list.\nFor n = 4, node 2 with value 3 is the middle node, which is marked in red.\n\nExample 3:\n\nInput: head = [2,1]\nOutput: [2]\nExplanation:\nThe above figure represents the given linked list.\nFor n = 2, node 1 with value 1 is the middle node, which is marked in red.\nNode 0 with value 2 is the only node remaining after removing node 1.\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in the list is in the range [1, 105].\n\t1 <= Node.val <= 105\n\n## My Submission\n\n- Runtime: 8 ms\n- Memory: 82.5 MB\n\n## Similar Problems\n\n- [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) — Medium\n- [Reorder List](https://leetcode.com/problems/reorder-list/) — Medium\n- [Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/) — Easy\n- [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/) — Easy\n",
+      "files": [
+        {
+          "path": "problems/lc-delete-the-middle-node-of-a-linked-list/lc-delete-the-middle-node-of-a-linked-list.c",
+          "content": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     struct ListNode *next;\n * };\n */\nstruct ListNode* deleteMiddle(struct ListNode* head) {\n    if(head==NULL|| head->next==NULL)\n        return NULL;\n    struct ListNode* fast=head;\n    struct ListNode* slow=head;\n    struct ListNode* prev=NULL;\n    while(fast!=NULL && fast->next!=NULL){\n        fast=fast->next->next;\n        prev=slow;\n        slow=slow->next;\n    }\n    prev->next=slow->next;\n    free(slow);\n    return head;\n}"
+        },
+        {
+          "path": "problems/lc-delete-the-middle-node-of-a-linked-list/README.md",
+          "content": "# Delete the Middle Node of a Linked List\n\n**Difficulty:** Medium  |  **Acceptance:** 60.9%\n\n**Tags:** `Linked List`, `Two Pointers`\n\n## Problem\n\nYou are given the head of a linked list. Delete the middle node, and return the head of the modified linked list.\n\nThe middle node of a linked list of size n is the &lfloor;n / 2&rfloor;th node from the start using 0-based indexing, where &lfloor;x&rfloor; denotes the largest integer less than or equal to x.\n\n\tFor n = 1, 2, 3, 4, and 5, the middle nodes are 0, 1, 1, 2, and 2, respectively.\n\n&nbsp;\nExample 1:\n\nInput: head = [1,3,4,7,1,2,6]\nOutput: [1,3,4,1,2,6]\nExplanation:\nThe above figure represents the given linked list. The indices of the nodes are written below.\nSince n = 7, node 3 with value 7 is the middle node, which is marked in red.\nWe return the new list after removing this node. \n\nExample 2:\n\nInput: head = [1,2,3,4]\nOutput: [1,2,4]\nExplanation:\nThe above figure represents the given linked list.\nFor n = 4, node 2 with value 3 is the middle node, which is marked in red.\n\nExample 3:\n\nInput: head = [2,1]\nOutput: [2]\nExplanation:\nThe above figure represents the given linked list.\nFor n = 2, node 1 with value 1 is the middle node, which is marked in red.\nNode 0 with value 2 is the only node remaining after removing node 1.\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in the list is in the range [1, 105].\n\t1 <= Node.val <= 105\n\n## My Submission\n\n- Runtime: 8 ms\n- Memory: 82.5 MB\n\n## Similar Problems\n\n- [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) — Medium\n- [Reorder List](https://leetcode.com/problems/reorder-list/) — Medium\n- [Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/) — Easy\n- [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/) — Easy\n"
+        }
+      ],
+      "timestamp": 1753165995000,
+      "runtime": "8 ms",
+      "memory": "82.5 MB",
+      "runtimePct": 6.875,
+      "memoryPct": 100,
+      "problemStatement": "<p>You are given the <code>head</code> of a linked list. <strong>Delete</strong> the <strong>middle node</strong>, and return <em>the</em> <code>head</code> <em>of the modified linked list</em>.</p>\n\n<p>The <strong>middle node</strong> of a linked list of size <code>n</code> is the <code>&lfloor;n / 2&rfloor;<sup>th</sup></code> node from the <b>start</b> using <strong>0-based indexing</strong>, where <code>&lfloor;x&rfloor;</code> denotes the largest integer less than or equal to <code>x</code>.</p>\n\n<ul>\n\t<li>For <code>n</code> = <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, and <code>5</code>, the middle nodes are <code>0</code>, <code>1</code>, <code>1</code>, <code>2</code>, and <code>2</code>, respectively.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/11/16/eg1drawio.png\" style=\"width: 500px; height: 77px;\" />\n<pre>\n<strong>Input:</strong> head = [1,3,4,7,1,2,6]\n<strong>Output:</strong> [1,3,4,1,2,6]\n<strong>Explanation:</strong>\nThe above figure represents the given linked list. The indices of the nodes are written below.\nSince n = 7, node 3 with value 7 is the middle node, which is marked in red.\nWe return the new list after removing this node. \n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/11/16/eg2drawio.png\" style=\"width: 250px; height: 43px;\" />\n<pre>\n<strong>Input:</strong> head = [1,2,3,4]\n<strong>Output:</strong> [1,2,4]\n<strong>Explanation:</strong>\nThe above figure represents the given linked list.\nFor n = 4, node 2 with value 3 is the middle node, which is marked in red.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/11/16/eg3drawio.png\" style=\"width: 150px; height: 58px;\" />\n<pre>\n<strong>Input:</strong> head = [2,1]\n<strong>Output:</strong> [2]\n<strong>Explanation:</strong>\nThe above figure represents the given linked list.\nFor n = 2, node 1 with value 1 is the middle node, which is marked in red.\nNode 0 with value 2 is the only node remaining after removing node 1.</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the list is in the range <code>[1, 10<sup>5</sup>]</code>.</li>\n\t<li><code>1 &lt;= Node.val &lt;= 10<sup>5</sup></code></li>\n</ul>\n",
+      "hints": [
+        "If a point with a speed s moves n units in a given time, a point with speed 2 * s will move 2 * n units at the same time. Can you use this to find the middle node of a linked list?",
+        "If you are given the middle node, the node before it, and the node after it, how can you modify the linked list?"
+      ],
+      "acRate": 60.9096837163564,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "remove-nth-node-from-end-of-list",
+          "title": "Remove Nth Node From End of List",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "reorder-list",
+          "title": "Reorder List",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "remove-linked-list-elements",
+          "title": "Remove Linked List Elements",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "middle-of-the-linked-list",
+          "title": "Middle of the Linked List",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true
+    },
+    {
+      "id": "lc-merge-two-sorted-lists::1706881750",
+      "submissionId": 1706881750,
+      "platform": "leetcode",
+      "title": "Merge Two Sorted Lists",
+      "titleSlug": "merge-two-sorted-lists",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "C",
+        "ext": "c",
+        "slug": "c"
+      },
+      "tags": [
+        "Linked List",
+        "Recursion"
+      ],
+      "topic": "Linked List",
+      "code": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     struct ListNode *next;\n * };\n */\nstruct ListNode* mergeTwoLists(struct ListNode* list1, struct ListNode* list2) {\n    struct ListNode* result = NULL;\n    struct ListNode** lastPtrRef = &result;\n\n    while (list1 != NULL && list2 != NULL) {\n        if (list1->val <= list2->val) {\n            *lastPtrRef = list1;\n            list1 = list1->next;\n        } else {\n            *lastPtrRef = list2;\n            list2 = list2->next;\n        }\n        lastPtrRef = &((*lastPtrRef)->next);\n    }\n\n    *lastPtrRef = (list1 != NULL) ? list1 : list2;\n\n    return result;\n    \n}",
+      "readmeContent": "# Merge Two Sorted Lists\n\n**Difficulty:** Easy  |  **Acceptance:** 68.8%\n\n**Tags:** `Linked List`, `Recursion`\n\n## Problem\n\nYou are given the heads of two sorted linked lists list1 and list2.\n\nMerge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.\n\nReturn the head of the merged linked list.\n\n&nbsp;\nExample 1:\n\nInput: list1 = [1,2,4], list2 = [1,3,4]\nOutput: [1,1,2,3,4,4]\n\nExample 2:\n\nInput: list1 = [], list2 = []\nOutput: []\n\nExample 3:\n\nInput: list1 = [], list2 = [0]\nOutput: [0]\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in both lists is in the range [0, 50].\n\t-100 <= Node.val <= 100\n\tBoth list1 and list2 are sorted in non-decreasing order.\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 10.7 MB\n\n## Similar Problems\n\n- [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) — Hard\n- [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) — Easy\n- [Sort List](https://leetcode.com/problems/sort-list/) — Medium\n- [Merge Two 2D Arrays by Summing Values](https://leetcode.com/problems/merge-two-2d-arrays-by-summing-values/) — Easy\n",
+      "files": [
+        {
+          "path": "problems/lc-merge-two-sorted-lists/lc-merge-two-sorted-lists.c",
+          "content": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     struct ListNode *next;\n * };\n */\nstruct ListNode* mergeTwoLists(struct ListNode* list1, struct ListNode* list2) {\n    struct ListNode* result = NULL;\n    struct ListNode** lastPtrRef = &result;\n\n    while (list1 != NULL && list2 != NULL) {\n        if (list1->val <= list2->val) {\n            *lastPtrRef = list1;\n            list1 = list1->next;\n        } else {\n            *lastPtrRef = list2;\n            list2 = list2->next;\n        }\n        lastPtrRef = &((*lastPtrRef)->next);\n    }\n\n    *lastPtrRef = (list1 != NULL) ? list1 : list2;\n\n    return result;\n    \n}"
+        },
+        {
+          "path": "problems/lc-merge-two-sorted-lists/README.md",
+          "content": "# Merge Two Sorted Lists\n\n**Difficulty:** Easy  |  **Acceptance:** 68.8%\n\n**Tags:** `Linked List`, `Recursion`\n\n## Problem\n\nYou are given the heads of two sorted linked lists list1 and list2.\n\nMerge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.\n\nReturn the head of the merged linked list.\n\n&nbsp;\nExample 1:\n\nInput: list1 = [1,2,4], list2 = [1,3,4]\nOutput: [1,1,2,3,4,4]\n\nExample 2:\n\nInput: list1 = [], list2 = []\nOutput: []\n\nExample 3:\n\nInput: list1 = [], list2 = [0]\nOutput: [0]\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in both lists is in the range [0, 50].\n\t-100 <= Node.val <= 100\n\tBoth list1 and list2 are sorted in non-decreasing order.\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 10.7 MB\n\n## Similar Problems\n\n- [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) — Hard\n- [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) — Easy\n- [Sort List](https://leetcode.com/problems/sort-list/) — Medium\n- [Merge Two 2D Arrays by Summing Values](https://leetcode.com/problems/merge-two-2d-arrays-by-summing-values/) — Easy\n"
+        }
+      ],
+      "timestamp": 1753167405000,
+      "runtime": "0 ms",
+      "memory": "10.7 MB",
+      "runtimePct": 100,
+      "memoryPct": 100,
+      "problemStatement": "<p>You are given the heads of two sorted linked lists <code>list1</code> and <code>list2</code>.</p>\n\n<p>Merge the two lists into one <strong>sorted</strong> list. The list should be made by splicing together the nodes of the first two lists.</p>\n\n<p>Return <em>the head of the merged linked list</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/10/03/merge_ex1.jpg\" style=\"width: 662px; height: 302px;\" />\n<pre>\n<strong>Input:</strong> list1 = [1,2,4], list2 = [1,3,4]\n<strong>Output:</strong> [1,1,2,3,4,4]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> list1 = [], list2 = []\n<strong>Output:</strong> []\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> list1 = [], list2 = [0]\n<strong>Output:</strong> [0]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in both lists is in the range <code>[0, 50]</code>.</li>\n\t<li><code>-100 &lt;= Node.val &lt;= 100</code></li>\n\t<li>Both <code>list1</code> and <code>list2</code> are sorted in <strong>non-decreasing</strong> order.</li>\n</ul>\n",
+      "hints": null,
+      "acRate": 68.80017849339869,
+      "similar": [
+        {
+          "difficulty": "Hard",
+          "titleSlug": "merge-k-sorted-lists",
+          "title": "Merge k Sorted Lists",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "merge-sorted-array",
+          "title": "Merge Sorted Array",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "sort-list",
+          "title": "Sort List",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "merge-two-2d-arrays-by-summing-values",
+          "title": "Merge Two 2D Arrays by Summing Values",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 21,
+            "platform": "leetcode",
+            "slug": "merge-two-sorted-lists"
+          }
+        ],
+        "canonicalId": "merge-two-sorted-lists",
+        "canonicalTitle": "Merge Two Sorted Lists",
+        "confirmedBy": "system-init",
+        "difficulty": "easy",
+        "pattern": "merge",
+        "tags": [
+          "linked-list"
+        ],
+        "topic": "linked-list",
+        "voteCount": 97
+      }
+    },
+    {
+      "id": "lc-remove-duplicates-from-sorted-list::1708120649",
+      "submissionId": 1708120649,
+      "platform": "leetcode",
+      "title": "Remove Duplicates from Sorted List",
+      "titleSlug": "remove-duplicates-from-sorted-list",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "C",
+        "ext": "c",
+        "slug": "c"
+      },
+      "tags": [
+        "Linked List"
+      ],
+      "topic": "Linked List",
+      "code": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     struct ListNode *next;\n * };\n */\nstruct ListNode* deleteDuplicates(struct ListNode* head) {\n    if (head == NULL)\n        return NULL;\n    struct ListNode* temp = head;\n    while (temp != NULL && temp->next != NULL) {\n        if (temp->val == temp->next->val) {\n            temp->next = temp->next->next;\n        } else {\n            temp = temp->next;\n        }\n    }\n    return head;\n}",
+      "readmeContent": "# Remove Duplicates from Sorted List\n\n**Difficulty:** Easy  |  **Acceptance:** 57.4%\n\n**Tags:** `Linked List`\n\n## Problem\n\nGiven the head of a sorted linked list, delete all duplicates such that each element appears only once. Return the linked list sorted as well.\n\n&nbsp;\nExample 1:\n\nInput: head = [1,1,2]\nOutput: [1,2]\n\nExample 2:\n\nInput: head = [1,1,2,3,3]\nOutput: [1,2,3]\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in the list is in the range [0, 300].\n\t-100 <= Node.val <= 100\n\tThe list is guaranteed to be sorted in ascending order.\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 10.9 MB\n\n## Similar Problems\n\n- [Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/) — Medium\n",
+      "files": [
+        {
+          "path": "problems/lc-remove-duplicates-from-sorted-list/lc-remove-duplicates-from-sorted-list.c",
+          "content": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     struct ListNode *next;\n * };\n */\nstruct ListNode* deleteDuplicates(struct ListNode* head) {\n    if (head == NULL)\n        return NULL;\n    struct ListNode* temp = head;\n    while (temp != NULL && temp->next != NULL) {\n        if (temp->val == temp->next->val) {\n            temp->next = temp->next->next;\n        } else {\n            temp = temp->next;\n        }\n    }\n    return head;\n}"
+        },
+        {
+          "path": "problems/lc-remove-duplicates-from-sorted-list/README.md",
+          "content": "# Remove Duplicates from Sorted List\n\n**Difficulty:** Easy  |  **Acceptance:** 57.4%\n\n**Tags:** `Linked List`\n\n## Problem\n\nGiven the head of a sorted linked list, delete all duplicates such that each element appears only once. Return the linked list sorted as well.\n\n&nbsp;\nExample 1:\n\nInput: head = [1,1,2]\nOutput: [1,2]\n\nExample 2:\n\nInput: head = [1,1,2,3,3]\nOutput: [1,2,3]\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in the list is in the range [0, 300].\n\t-100 <= Node.val <= 100\n\tThe list is guaranteed to be sorted in ascending order.\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 10.9 MB\n\n## Similar Problems\n\n- [Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/) — Medium\n"
+        }
+      ],
+      "timestamp": 1753251950000,
+      "runtime": "0 ms",
+      "memory": "10.9 MB",
+      "runtimePct": 100,
+      "memoryPct": 100,
+      "problemStatement": "<p>Given the <code>head</code> of a sorted linked list, <em>delete all duplicates such that each element appears only once</em>. Return <em>the linked list <strong>sorted</strong> as well</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/01/04/list1.jpg\" style=\"width: 302px; height: 242px;\" />\n<pre>\n<strong>Input:</strong> head = [1,1,2]\n<strong>Output:</strong> [1,2]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/01/04/list2.jpg\" style=\"width: 542px; height: 222px;\" />\n<pre>\n<strong>Input:</strong> head = [1,1,2,3,3]\n<strong>Output:</strong> [1,2,3]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the list is in the range <code>[0, 300]</code>.</li>\n\t<li><code>-100 &lt;= Node.val &lt;= 100</code></li>\n\t<li>The list is guaranteed to be <strong>sorted</strong> in ascending order.</li>\n</ul>\n",
+      "hints": null,
+      "acRate": 57.405392353797225,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "remove-duplicates-from-sorted-list-ii",
+          "title": "Remove Duplicates from Sorted List II",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true
+    },
+    {
+      "id": "lc-move-zeroes::1708151551",
+      "submissionId": 1708151551,
+      "platform": "leetcode",
+      "title": "Move Zeroes",
+      "titleSlug": "move-zeroes",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "C",
+        "ext": "c",
+        "slug": "c"
+      },
+      "tags": [
+        "Array",
+        "Two Pointers"
+      ],
+      "topic": "Two Pointers",
+      "code": "void moveZeroes(int* nums, int numsSize) {\n    int c=0,i;\n    int d=0;\n    for(i=0;i<numsSize;i++){\n        if(nums[i]!=0)\n            nums[c++]=nums[i];\n        else\n            d++;\n    }\n    for(i=0;i<d;i++){\n        nums[c++]=0;\n    }\n}",
+      "readmeContent": "# Move Zeroes\n\n**Difficulty:** Easy  |  **Acceptance:** 64.3%\n\n**Tags:** `Array`, `Two Pointers`\n\n## Problem\n\nGiven an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.\n\nNote that you must do this in-place without making a copy of the array.\n\n&nbsp;\nExample 1:\nInput: nums = [0,1,0,3,12]\nOutput: [1,3,12,0,0]\nExample 2:\nInput: nums = [0]\nOutput: [0]\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 104\n\t-231 <= nums[i] <= 231 - 1\n\n&nbsp;\nFollow up: Could you minimize the total number of operations done?\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 19.5 MB\n\n## Similar Problems\n\n- [Remove Element](https://leetcode.com/problems/remove-element/) — Easy\n- [Apply Operations to an Array](https://leetcode.com/problems/apply-operations-to-an-array/) — Easy\n",
+      "files": [
+        {
+          "path": "problems/lc-move-zeroes/lc-move-zeroes.c",
+          "content": "void moveZeroes(int* nums, int numsSize) {\n    int c=0,i;\n    int d=0;\n    for(i=0;i<numsSize;i++){\n        if(nums[i]!=0)\n            nums[c++]=nums[i];\n        else\n            d++;\n    }\n    for(i=0;i<d;i++){\n        nums[c++]=0;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-move-zeroes/README.md",
+          "content": "# Move Zeroes\n\n**Difficulty:** Easy  |  **Acceptance:** 64.3%\n\n**Tags:** `Array`, `Two Pointers`\n\n## Problem\n\nGiven an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.\n\nNote that you must do this in-place without making a copy of the array.\n\n&nbsp;\nExample 1:\nInput: nums = [0,1,0,3,12]\nOutput: [1,3,12,0,0]\nExample 2:\nInput: nums = [0]\nOutput: [0]\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 104\n\t-231 <= nums[i] <= 231 - 1\n\n&nbsp;\nFollow up: Could you minimize the total number of operations done?\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 19.5 MB\n\n## Similar Problems\n\n- [Remove Element](https://leetcode.com/problems/remove-element/) — Easy\n- [Apply Operations to an Array](https://leetcode.com/problems/apply-operations-to-an-array/) — Easy\n"
+        }
+      ],
+      "timestamp": 1753253562000,
+      "runtime": "0 ms",
+      "memory": "19.5 MB",
+      "runtimePct": 100,
+      "memoryPct": 100,
+      "problemStatement": "<p>Given an integer array <code>nums</code>, move all <code>0</code>&#39;s to the end of it while maintaining the relative order of the non-zero elements.</p>\n\n<p><strong>Note</strong> that you must do this in-place without making a copy of the array.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> nums = [0,1,0,3,12]\n<strong>Output:</strong> [1,3,12,0,0]\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> nums = [0]\n<strong>Output:</strong> [0]\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>-2<sup>31</sup> &lt;= nums[i] &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow up:</strong> Could you minimize the total number of operations done?",
+      "hints": [
+        "<b>In-place</b> means we should not be allocating any space for extra array. But we are allowed to modify the existing array. However, as a first step, try coming up with a solution that makes use of additional space. For this problem as well, first apply the idea discussed using an additional array and the in-place solution will pop up eventually.",
+        "A <b>two-pointer</b> approach could be helpful here. The idea would be to have one pointer for iterating the array and another pointer that just works on the non-zero elements of the array."
+      ],
+      "acRate": 64.30889268016323,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "remove-element",
+          "title": "Remove Element",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "apply-operations-to-an-array",
+          "title": "Apply Operations to an Array",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true
+    },
+    {
+      "id": "lc-merge-sorted-array::1709143920",
+      "submissionId": 1709143920,
+      "platform": "leetcode",
+      "title": "Merge Sorted Array",
+      "titleSlug": "merge-sorted-array",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "C",
+        "ext": "c",
+        "slug": "c"
+      },
+      "tags": [
+        "Array",
+        "Two Pointers",
+        "Sorting"
+      ],
+      "topic": "Two Pointers",
+      "code": "void merge(int* nums1, int nums1Size, int m, int* nums2, int nums2Size, int n) {\n    if(n == 0)return;\n    int len1 = nums1Size;\n    int end_idx = len1-1;\n    while(n > 0 && m > 0){\n        if(nums2[n-1] >= nums1[m-1]){\n        nums1[end_idx] = nums2[n-1];\n        n--;\n        }else{\n            nums1[end_idx] = nums1[m-1];\n            m--;\n        }\n        end_idx--;\n    }\n    while (n > 0) {\n        nums1[end_idx] = nums2[n-1];\n        n--;\n        end_idx--;\n    }\n}",
+      "readmeContent": "# Merge Sorted Array\n\n**Difficulty:** Easy  |  **Acceptance:** 55.6%\n\n**Tags:** `Array`, `Two Pointers`, `Sorting`\n\n## Problem\n\nYou are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.\n\nMerge nums1 and nums2 into a single array sorted in non-decreasing order.\n\nThe final sorted array should not be returned by the function, but instead be stored inside the array nums1. To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged, and the last n elements are set to 0 and should be ignored. nums2 has a length of n.\n\n&nbsp;\nExample 1:\n\nInput: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3\nOutput: [1,2,2,3,5,6]\nExplanation: The arrays we are merging are [1,2,3] and [2,5,6].\nThe result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.\n\nExample 2:\n\nInput: nums1 = [1], m = 1, nums2 = [], n = 0\nOutput: [1]\nExplanation: The arrays we are merging are [1] and [].\nThe result of the merge is [1].\n\nExample 3:\n\nInput: nums1 = [0], m = 0, nums2 = [1], n = 1\nOutput: [1]\nExplanation: The arrays we are merging are [] and [1].\nThe result of the merge is [1].\nNote that because m = 0, there are no elements in nums1. The 0 is only there to ensure the merge result can fit in nums1.\n\n&nbsp;\nConstraints:\n\n\tnums1.length == m + n\n\tnums2.length == n\n\t0 <= m, n <= 200\n\t1 <= m + n <= 200\n\t-109 <= nums1[i], nums2[j] <= 109\n\n&nbsp;\nFollow up: Can you come up with an algorithm that runs in O(m + n) time?\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 10 MB\n\n## Similar Problems\n\n- [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) — Easy\n- [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/) — Easy\n- [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/) — Medium\n- [Take K of Each Character From Left and Right](https://leetcode.com/problems/take-k-of-each-character-from-left-and-right/) — Medium\n",
+      "files": [
+        {
+          "path": "problems/lc-merge-sorted-array/lc-merge-sorted-array.c",
+          "content": "void merge(int* nums1, int nums1Size, int m, int* nums2, int nums2Size, int n) {\n    if(n == 0)return;\n    int len1 = nums1Size;\n    int end_idx = len1-1;\n    while(n > 0 && m > 0){\n        if(nums2[n-1] >= nums1[m-1]){\n        nums1[end_idx] = nums2[n-1];\n        n--;\n        }else{\n            nums1[end_idx] = nums1[m-1];\n            m--;\n        }\n        end_idx--;\n    }\n    while (n > 0) {\n        nums1[end_idx] = nums2[n-1];\n        n--;\n        end_idx--;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-merge-sorted-array/README.md",
+          "content": "# Merge Sorted Array\n\n**Difficulty:** Easy  |  **Acceptance:** 55.6%\n\n**Tags:** `Array`, `Two Pointers`, `Sorting`\n\n## Problem\n\nYou are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.\n\nMerge nums1 and nums2 into a single array sorted in non-decreasing order.\n\nThe final sorted array should not be returned by the function, but instead be stored inside the array nums1. To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged, and the last n elements are set to 0 and should be ignored. nums2 has a length of n.\n\n&nbsp;\nExample 1:\n\nInput: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3\nOutput: [1,2,2,3,5,6]\nExplanation: The arrays we are merging are [1,2,3] and [2,5,6].\nThe result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.\n\nExample 2:\n\nInput: nums1 = [1], m = 1, nums2 = [], n = 0\nOutput: [1]\nExplanation: The arrays we are merging are [1] and [].\nThe result of the merge is [1].\n\nExample 3:\n\nInput: nums1 = [0], m = 0, nums2 = [1], n = 1\nOutput: [1]\nExplanation: The arrays we are merging are [] and [1].\nThe result of the merge is [1].\nNote that because m = 0, there are no elements in nums1. The 0 is only there to ensure the merge result can fit in nums1.\n\n&nbsp;\nConstraints:\n\n\tnums1.length == m + n\n\tnums2.length == n\n\t0 <= m, n <= 200\n\t1 <= m + n <= 200\n\t-109 <= nums1[i], nums2[j] <= 109\n\n&nbsp;\nFollow up: Can you come up with an algorithm that runs in O(m + n) time?\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 10 MB\n\n## Similar Problems\n\n- [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) — Easy\n- [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/) — Easy\n- [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/) — Medium\n- [Take K of Each Character From Left and Right](https://leetcode.com/problems/take-k-of-each-character-from-left-and-right/) — Medium\n"
+        }
+      ],
+      "timestamp": 1753323334000,
+      "runtime": "0 ms",
+      "memory": "10 MB",
+      "runtimePct": 100,
+      "memoryPct": 100,
+      "problemStatement": "<p>You are given two integer arrays <code>nums1</code> and <code>nums2</code>, sorted in <strong>non-decreasing order</strong>, and two integers <code>m</code> and <code>n</code>, representing the number of elements in <code>nums1</code> and <code>nums2</code> respectively.</p>\n\n<p><strong>Merge</strong> <code>nums1</code> and <code>nums2</code> into a single array sorted in <strong>non-decreasing order</strong>.</p>\n\n<p>The final sorted array should not be returned by the function, but instead be <em>stored inside the array </em><code>nums1</code>. To accommodate this, <code>nums1</code> has a length of <code>m + n</code>, where the first <code>m</code> elements denote the elements that should be merged, and the last <code>n</code> elements are set to <code>0</code> and should be ignored. <code>nums2</code> has a length of <code>n</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3\n<strong>Output:</strong> [1,2,2,3,5,6]\n<strong>Explanation:</strong> The arrays we are merging are [1,2,3] and [2,5,6].\nThe result of the merge is [<u>1</u>,<u>2</u>,2,<u>3</u>,5,6] with the underlined elements coming from nums1.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums1 = [1], m = 1, nums2 = [], n = 0\n<strong>Output:</strong> [1]\n<strong>Explanation:</strong> The arrays we are merging are [1] and [].\nThe result of the merge is [1].\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums1 = [0], m = 0, nums2 = [1], n = 1\n<strong>Output:</strong> [1]\n<strong>Explanation:</strong> The arrays we are merging are [] and [1].\nThe result of the merge is [1].\nNote that because m = 0, there are no elements in nums1. The 0 is only there to ensure the merge result can fit in nums1.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>nums1.length == m + n</code></li>\n\t<li><code>nums2.length == n</code></li>\n\t<li><code>0 &lt;= m, n &lt;= 200</code></li>\n\t<li><code>1 &lt;= m + n &lt;= 200</code></li>\n\t<li><code>-10<sup>9</sup> &lt;= nums1[i], nums2[j] &lt;= 10<sup>9</sup></code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up: </strong>Can you come up with an algorithm that runs in <code>O(m + n)</code> time?</p>\n",
+      "hints": [
+        "You can easily solve this problem if you simply think about two elements at a time rather than two arrays. We know that each of the individual arrays is sorted. What we don't know is how they will intertwine. Can we take a local decision and arrive at an optimal solution?",
+        "If you simply consider one element each at a time from the two arrays and make a decision and proceed accordingly, you will arrive at the optimal solution."
+      ],
+      "acRate": 55.60193717013865,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "merge-two-sorted-lists",
+          "title": "Merge Two Sorted Lists",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "squares-of-a-sorted-array",
+          "title": "Squares of a Sorted Array",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "interval-list-intersections",
+          "title": "Interval List Intersections",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "take-k-of-each-character-from-left-and-right",
+          "title": "Take K of Each Character From Left and Right",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true
+    },
+    {
+      "id": "lc-remove-duplicates-from-sorted-array::1709265462",
+      "submissionId": 1709265462,
+      "platform": "leetcode",
+      "title": "Remove Duplicates from Sorted Array",
+      "titleSlug": "remove-duplicates-from-sorted-array",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "C",
+        "ext": "c",
+        "slug": "c"
+      },
+      "tags": [
+        "Array",
+        "Two Pointers"
+      ],
+      "topic": "Two Pointers",
+      "code": "int removeDuplicates(int* nums, int numsSize) {\n    int i=0;\n    for(int j=0;j<numsSize;j++){\n        if(nums[i]!=nums[j]){\n            i++;\n            nums[i]=nums[j];\n        }\n    }\n    return i+1;\n}",
+      "readmeContent": "# Remove Duplicates from Sorted Array\n\n**Difficulty:** Easy  |  **Acceptance:** 63.6%\n\n**Tags:** `Array`, `Two Pointers`\n\n## Problem\n\nGiven an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same.\n\nConsider the number of unique elements in&nbsp;nums to be k​​​​​​​​​​​​​​. After removing duplicates, return the number of unique elements&nbsp;k.\n\nThe first&nbsp;k&nbsp;elements of&nbsp;nums&nbsp;should contain the unique numbers in sorted order. The remaining elements beyond index&nbsp;k - 1&nbsp;can be ignored.\n\nCustom Judge:\n\nThe judge will test your solution with the following code:\n\nint[] nums = [...]; // Input array\nint[] expectedNums = [...]; // The expected answer with correct length\n\nint k = removeDuplicates(nums); // Calls your implementation\n\nassert k == expectedNums.length;\nfor (int i = 0; i < k; i++) {\n    assert nums[i] == expectedNums[i];\n}\n\nIf all assertions pass, then your solution will be accepted.\n\n&nbsp;\nExample 1:\n\nInput: nums = [1,1,2]\nOutput: 2, nums = [1,2,_]\nExplanation: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n\nExample 2:\n\nInput: nums = [0,0,1,1,1,2,2,3,3,4]\nOutput: 5, nums = [0,1,2,3,4,_,_,_,_,_]\nExplanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 3 * 104\n\t-100 <= nums[i] <= 100\n\tnums is sorted in non-decreasing order.\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 12.2 MB\n\n## Similar Problems\n\n- [Remove Element](https://leetcode.com/problems/remove-element/) — Easy\n- [Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/) — Medium\n- [Apply Operations to an Array](https://leetcode.com/problems/apply-operations-to-an-array/) — Easy\n- [Sum of Distances](https://leetcode.com/problems/sum-of-distances/) — Medium\n",
+      "files": [
+        {
+          "path": "problems/lc-remove-duplicates-from-sorted-array/lc-remove-duplicates-from-sorted-array.c",
+          "content": "int removeDuplicates(int* nums, int numsSize) {\n    int i=0;\n    for(int j=0;j<numsSize;j++){\n        if(nums[i]!=nums[j]){\n            i++;\n            nums[i]=nums[j];\n        }\n    }\n    return i+1;\n}"
+        },
+        {
+          "path": "problems/lc-remove-duplicates-from-sorted-array/README.md",
+          "content": "# Remove Duplicates from Sorted Array\n\n**Difficulty:** Easy  |  **Acceptance:** 63.6%\n\n**Tags:** `Array`, `Two Pointers`\n\n## Problem\n\nGiven an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same.\n\nConsider the number of unique elements in&nbsp;nums to be k​​​​​​​​​​​​​​. After removing duplicates, return the number of unique elements&nbsp;k.\n\nThe first&nbsp;k&nbsp;elements of&nbsp;nums&nbsp;should contain the unique numbers in sorted order. The remaining elements beyond index&nbsp;k - 1&nbsp;can be ignored.\n\nCustom Judge:\n\nThe judge will test your solution with the following code:\n\nint[] nums = [...]; // Input array\nint[] expectedNums = [...]; // The expected answer with correct length\n\nint k = removeDuplicates(nums); // Calls your implementation\n\nassert k == expectedNums.length;\nfor (int i = 0; i < k; i++) {\n    assert nums[i] == expectedNums[i];\n}\n\nIf all assertions pass, then your solution will be accepted.\n\n&nbsp;\nExample 1:\n\nInput: nums = [1,1,2]\nOutput: 2, nums = [1,2,_]\nExplanation: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n\nExample 2:\n\nInput: nums = [0,0,1,1,1,2,2,3,3,4]\nOutput: 5, nums = [0,1,2,3,4,_,_,_,_,_]\nExplanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 3 * 104\n\t-100 <= nums[i] <= 100\n\tnums is sorted in non-decreasing order.\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 12.2 MB\n\n## Similar Problems\n\n- [Remove Element](https://leetcode.com/problems/remove-element/) — Easy\n- [Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/) — Medium\n- [Apply Operations to an Array](https://leetcode.com/problems/apply-operations-to-an-array/) — Easy\n- [Sum of Distances](https://leetcode.com/problems/sum-of-distances/) — Medium\n"
+        }
+      ],
+      "timestamp": 1753333502000,
+      "runtime": "0 ms",
+      "memory": "12.2 MB",
+      "runtimePct": 100,
+      "memoryPct": 100,
+      "problemStatement": "<p>Given an integer array <code>nums</code> sorted in <strong>non-decreasing order</strong>, remove the duplicates <a href=\"https://en.wikipedia.org/wiki/In-place_algorithm\" target=\"_blank\"><strong>in-place</strong></a> such that each unique element appears only <strong>once</strong>. The <strong>relative order</strong> of the elements should be kept the <strong>same</strong>.</p>\n\n<p>Consider the number of <em>unique elements</em> in&nbsp;<code>nums</code> to be <code>k<strong>​​​​​​​</strong></code>​​​​​​​. <meta charset=\"UTF-8\" />After removing duplicates, return the number of unique elements&nbsp;<code>k</code>.</p>\n\n<p><meta charset=\"UTF-8\" />The first&nbsp;<code>k</code>&nbsp;elements of&nbsp;<code>nums</code>&nbsp;should contain the unique numbers in <strong>sorted order</strong>. The remaining elements beyond index&nbsp;<code>k - 1</code>&nbsp;can be ignored.</p>\n\n<p><strong>Custom Judge:</strong></p>\n\n<p>The judge will test your solution with the following code:</p>\n\n<pre>\nint[] nums = [...]; // Input array\nint[] expectedNums = [...]; // The expected answer with correct length\n\nint k = removeDuplicates(nums); // Calls your implementation\n\nassert k == expectedNums.length;\nfor (int i = 0; i &lt; k; i++) {\n    assert nums[i] == expectedNums[i];\n}\n</pre>\n\n<p>If all assertions pass, then your solution will be <strong>accepted</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,1,2]\n<strong>Output:</strong> 2, nums = [1,2,_]\n<strong>Explanation:</strong> Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [0,0,1,1,1,2,2,3,3,4]\n<strong>Output:</strong> 5, nums = [0,1,2,3,4,_,_,_,_,_]\n<strong>Explanation:</strong> Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 3 * 10<sup>4</sup></code></li>\n\t<li><code>-100 &lt;= nums[i] &lt;= 100</code></li>\n\t<li><code>nums</code> is sorted in <strong>non-decreasing</strong> order.</li>\n</ul>\n",
+      "hints": [
+        "In this problem, the key point to focus on is the input array being sorted. As far as duplicate elements are concerned, what is their positioning in the array when the given array is sorted? Look at the image below for the answer. If we know the position of one of the elements, do we also know the positioning of all the duplicate elements?\r\n\r\n<br>\r\n<img src=\"https://assets.leetcode.com/uploads/2019/10/20/hint_rem_dup.png\" width=\"500\"/>",
+        "We need to modify the array in-place and the size of the final array would potentially be smaller than the size of the input array. So, we ought to use a two-pointer approach here. One, that would keep track of the current element in the original array and another one for just the unique elements.",
+        "Essentially, once an element is encountered, you simply need to <b>bypass</b> its duplicates and move on to the next unique element."
+      ],
+      "acRate": 63.64943638433602,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "remove-element",
+          "title": "Remove Element",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "remove-duplicates-from-sorted-array-ii",
+          "title": "Remove Duplicates from Sorted Array II",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "apply-operations-to-an-array",
+          "title": "Apply Operations to an Array",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "sum-of-distances",
+          "title": "Sum of Distances",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true
+    },
+    {
+      "id": "lc-reverse-string::1709305048",
+      "submissionId": 1709305048,
+      "platform": "leetcode",
+      "title": "Reverse String",
+      "titleSlug": "reverse-string",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "C",
+        "ext": "c",
+        "slug": "c"
+      },
+      "tags": [
+        "Two Pointers",
+        "String"
+      ],
+      "topic": "Two Pointers",
+      "code": "void reverseString(char* s, int sSize) {\n    \n    int j=sSize-1;\n    for(int i=0;i<sSize/2;i++){\n        int temp=s[i];\n        s[i]=s[j];\n        s[j]=temp;\n        j--;\n    }\n}",
+      "readmeContent": "# Reverse String\n\n**Difficulty:** Easy  |  **Acceptance:** 81.2%\n\n**Tags:** `Two Pointers`, `String`\n\n## Problem\n\nWrite a function that reverses a string. The input string is given as an array of characters s.\n\nYou must do this by modifying the input array in-place with O(1) extra memory.\n\n&nbsp;\nExample 1:\nInput: s = [\"h\",\"e\",\"l\",\"l\",\"o\"]\nOutput: [\"o\",\"l\",\"l\",\"e\",\"h\"]\nExample 2:\nInput: s = [\"H\",\"a\",\"n\",\"n\",\"a\",\"h\"]\nOutput: [\"h\",\"a\",\"n\",\"n\",\"a\",\"H\"]\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 105\n\ts[i] is a printable ascii character.\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 17.1 MB\n\n## Similar Problems\n\n- [Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/) — Easy\n- [Reverse String II](https://leetcode.com/problems/reverse-string-ii/) — Easy\n",
+      "files": [
+        {
+          "path": "problems/lc-reverse-string/lc-reverse-string.c",
+          "content": "void reverseString(char* s, int sSize) {\n    \n    int j=sSize-1;\n    for(int i=0;i<sSize/2;i++){\n        int temp=s[i];\n        s[i]=s[j];\n        s[j]=temp;\n        j--;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-reverse-string/README.md",
+          "content": "# Reverse String\n\n**Difficulty:** Easy  |  **Acceptance:** 81.2%\n\n**Tags:** `Two Pointers`, `String`\n\n## Problem\n\nWrite a function that reverses a string. The input string is given as an array of characters s.\n\nYou must do this by modifying the input array in-place with O(1) extra memory.\n\n&nbsp;\nExample 1:\nInput: s = [\"h\",\"e\",\"l\",\"l\",\"o\"]\nOutput: [\"o\",\"l\",\"l\",\"e\",\"h\"]\nExample 2:\nInput: s = [\"H\",\"a\",\"n\",\"n\",\"a\",\"h\"]\nOutput: [\"h\",\"a\",\"n\",\"n\",\"a\",\"H\"]\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 105\n\ts[i] is a printable ascii character.\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 17.1 MB\n\n## Similar Problems\n\n- [Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/) — Easy\n- [Reverse String II](https://leetcode.com/problems/reverse-string-ii/) — Easy\n"
+        }
+      ],
+      "timestamp": 1753335959000,
+      "runtime": "0 ms",
+      "memory": "17.1 MB",
+      "runtimePct": 100,
+      "memoryPct": 100,
+      "problemStatement": "<p>Write a function that reverses a string. The input string is given as an array of characters <code>s</code>.</p>\n\n<p>You must do this by modifying the input array <a href=\"https://en.wikipedia.org/wiki/In-place_algorithm\" target=\"_blank\">in-place</a> with <code>O(1)</code> extra memory.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> s = [\"h\",\"e\",\"l\",\"l\",\"o\"]\n<strong>Output:</strong> [\"o\",\"l\",\"l\",\"e\",\"h\"]\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> s = [\"H\",\"a\",\"n\",\"n\",\"a\",\"h\"]\n<strong>Output:</strong> [\"h\",\"a\",\"n\",\"n\",\"a\",\"H\"]\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>s[i]</code> is a <a href=\"https://en.wikipedia.org/wiki/ASCII#Printable_characters\" target=\"_blank\">printable ascii character</a>.</li>\n</ul>\n",
+      "hints": [
+        "The entire logic for reversing a string is based on using the opposite directional two-pointer approach!"
+      ],
+      "acRate": 81.24912448347004,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "reverse-vowels-of-a-string",
+          "title": "Reverse Vowels of a String",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "reverse-string-ii",
+          "title": "Reverse String II",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true
+    },
+    {
+      "id": "lc-reverse-linked-list::1902695551",
+      "submissionId": 1902695551,
+      "platform": "leetcode",
+      "title": "Reverse Linked List",
+      "titleSlug": "reverse-linked-list",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Linked List",
+        "Recursion"
+      ],
+      "topic": "Linked List",
+      "code": "# Definition for singly-linked list.\n# class ListNode:\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution:\n    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:\n        prev=None\n        curr=head\n        while curr:\n            next=curr.next\n            curr.next=prev\n            prev=curr\n            curr=next\n\n        return prev",
+      "readmeContent": "# Reverse Linked List\n\n**Difficulty:** Easy  |  **Acceptance:** 81.0%\n\n**Tags:** `Linked List`, `Recursion`\n\n## Problem\n\nGiven the head of a singly linked list, reverse the list, and return the reversed list.\n\n&nbsp;\nExample 1:\n\nInput: head = [1,2,3,4,5]\nOutput: [5,4,3,2,1]\n\nExample 2:\n\nInput: head = [1,2]\nOutput: [2,1]\n\nExample 3:\n\nInput: head = []\nOutput: []\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in the list is the range [0, 5000].\n\t-5000 <= Node.val <= 5000\n\n&nbsp;\nFollow up: A linked list can be reversed either iteratively or recursively. Could you implement both?\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 20.5 MB\n\n## Similar Problems\n\n- [Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/) — Medium\n- [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) — Easy\n- [Reverse Nodes in Even Length Groups](https://leetcode.com/problems/reverse-nodes-in-even-length-groups/) — Medium\n- [Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/) — Medium\n- [Remove Nodes From Linked List](https://leetcode.com/problems/remove-nodes-from-linked-list/) — Medium\n",
+      "files": [
+        {
+          "path": "problems/lc-reverse-linked-list/lc-reverse-linked-list.py",
+          "content": "# Definition for singly-linked list.\n# class ListNode:\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution:\n    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:\n        prev=None\n        curr=head\n        while curr:\n            next=curr.next\n            curr.next=prev\n            prev=curr\n            curr=next\n\n        return prev"
+        },
+        {
+          "path": "problems/lc-reverse-linked-list/README.md",
+          "content": "# Reverse Linked List\n\n**Difficulty:** Easy  |  **Acceptance:** 81.0%\n\n**Tags:** `Linked List`, `Recursion`\n\n## Problem\n\nGiven the head of a singly linked list, reverse the list, and return the reversed list.\n\n&nbsp;\nExample 1:\n\nInput: head = [1,2,3,4,5]\nOutput: [5,4,3,2,1]\n\nExample 2:\n\nInput: head = [1,2]\nOutput: [2,1]\n\nExample 3:\n\nInput: head = []\nOutput: []\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in the list is the range [0, 5000].\n\t-5000 <= Node.val <= 5000\n\n&nbsp;\nFollow up: A linked list can be reversed either iteratively or recursively. Could you implement both?\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 20.5 MB\n\n## Similar Problems\n\n- [Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/) — Medium\n- [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) — Easy\n- [Reverse Nodes in Even Length Groups](https://leetcode.com/problems/reverse-nodes-in-even-length-groups/) — Medium\n- [Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/) — Medium\n- [Remove Nodes From Linked List](https://leetcode.com/problems/remove-nodes-from-linked-list/) — Medium\n"
+        }
+      ],
+      "timestamp": 1769841651000,
+      "runtime": "0 ms",
+      "memory": "20.5 MB",
+      "runtimePct": 100,
+      "memoryPct": 66.34369999999998,
+      "problemStatement": "<p>Given the <code>head</code> of a singly linked list, reverse the list, and return <em>the reversed list</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/02/19/rev1ex1.jpg\" style=\"width: 542px; height: 222px;\" />\n<pre>\n<strong>Input:</strong> head = [1,2,3,4,5]\n<strong>Output:</strong> [5,4,3,2,1]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/02/19/rev1ex2.jpg\" style=\"width: 182px; height: 222px;\" />\n<pre>\n<strong>Input:</strong> head = [1,2]\n<strong>Output:</strong> [2,1]\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> head = []\n<strong>Output:</strong> []\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the list is the range <code>[0, 5000]</code>.</li>\n\t<li><code>-5000 &lt;= Node.val &lt;= 5000</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong> A linked list can be reversed either iteratively or recursively. Could you implement both?</p>\n",
+      "hints": null,
+      "acRate": 80.98993814664608,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "reverse-linked-list-ii",
+          "title": "Reverse Linked List II",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "palindrome-linked-list",
+          "title": "Palindrome Linked List",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "reverse-nodes-in-even-length-groups",
+          "title": "Reverse Nodes in Even Length Groups",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-twin-sum-of-a-linked-list",
+          "title": "Maximum Twin Sum of a Linked List",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "remove-nodes-from-linked-list",
+          "title": "Remove Nodes From Linked List",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "insert-greatest-common-divisors-in-linked-list",
+          "title": "Insert Greatest Common Divisors in Linked List",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 206,
+            "platform": "leetcode",
+            "slug": "reverse-linked-list"
+          }
+        ],
+        "canonicalId": "reverse-linked-list",
+        "canonicalTitle": "Reverse Linked List",
+        "confirmedBy": "system-init",
+        "difficulty": "easy",
+        "pattern": "iteration",
+        "tags": [
+          "linked-list"
+        ],
+        "topic": "linked-list",
+        "voteCount": 99
+      }
+    },
+    {
+      "id": "lc-palindrome-number::1902720977",
+      "submissionId": 1902720977,
+      "platform": "leetcode",
+      "title": "Palindrome Number",
+      "titleSlug": "palindrome-number",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Math"
+      ],
+      "topic": "Math",
+      "code": "class Solution:\n    def isPalindrome(self, x: int) -> bool:\n        x=str(x)\n        if x==x[::-1]:\n            return True\n        else:\n            return False",
+      "readmeContent": "# Palindrome Number\n\n**Difficulty:** Easy  |  **Acceptance:** 60.9%\n\n**Tags:** `Math`\n\n## Problem\n\nGiven an integer x, return true if x is a palindrome, and false otherwise.\n\n&nbsp;\nExample 1:\n\nInput: x = 121\nOutput: true\nExplanation: 121 reads as 121 from left to right and from right to left.\n\nExample 2:\n\nInput: x = -121\nOutput: false\nExplanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.\n\nExample 3:\n\nInput: x = 10\nOutput: false\nExplanation: Reads 01 from right to left. Therefore it is not a palindrome.\n\n&nbsp;\nConstraints:\n\n\t-231&nbsp;<= x <= 231&nbsp;- 1\n\n&nbsp;\nFollow up: Could you solve it without converting the integer to a string?\n\n## My Submission\n\n- Runtime: 1 ms\n- Memory: 19.4 MB\n\n## Similar Problems\n\n- [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) — Easy\n- [Find Palindrome With Fixed Length](https://leetcode.com/problems/find-palindrome-with-fixed-length/) — Medium\n- [Strictly Palindromic Number](https://leetcode.com/problems/strictly-palindromic-number/) — Medium\n- [  Count Symmetric Integers](https://leetcode.com/problems/count-symmetric-integers/) — Easy\n- [Find the Count of Good Integers](https://leetcode.com/problems/find-the-count-of-good-integers/) — Hard\n",
+      "files": [
+        {
+          "path": "problems/lc-palindrome-number/lc-palindrome-number.py",
+          "content": "class Solution:\n    def isPalindrome(self, x: int) -> bool:\n        x=str(x)\n        if x==x[::-1]:\n            return True\n        else:\n            return False"
+        },
+        {
+          "path": "problems/lc-palindrome-number/README.md",
+          "content": "# Palindrome Number\n\n**Difficulty:** Easy  |  **Acceptance:** 60.9%\n\n**Tags:** `Math`\n\n## Problem\n\nGiven an integer x, return true if x is a palindrome, and false otherwise.\n\n&nbsp;\nExample 1:\n\nInput: x = 121\nOutput: true\nExplanation: 121 reads as 121 from left to right and from right to left.\n\nExample 2:\n\nInput: x = -121\nOutput: false\nExplanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.\n\nExample 3:\n\nInput: x = 10\nOutput: false\nExplanation: Reads 01 from right to left. Therefore it is not a palindrome.\n\n&nbsp;\nConstraints:\n\n\t-231&nbsp;<= x <= 231&nbsp;- 1\n\n&nbsp;\nFollow up: Could you solve it without converting the integer to a string?\n\n## My Submission\n\n- Runtime: 1 ms\n- Memory: 19.4 MB\n\n## Similar Problems\n\n- [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) — Easy\n- [Find Palindrome With Fixed Length](https://leetcode.com/problems/find-palindrome-with-fixed-length/) — Medium\n- [Strictly Palindromic Number](https://leetcode.com/problems/strictly-palindromic-number/) — Medium\n- [  Count Symmetric Integers](https://leetcode.com/problems/count-symmetric-integers/) — Easy\n- [Find the Count of Good Integers](https://leetcode.com/problems/find-the-count-of-good-integers/) — Hard\n"
+        }
+      ],
+      "timestamp": 1769843221000,
+      "runtime": "1 ms",
+      "memory": "19.4 MB",
+      "runtimePct": 93.3008,
+      "memoryPct": 19.249600000000015,
+      "problemStatement": "<p>Given an integer <code>x</code>, return <code>true</code> if <code>x</code> is a <span data-keyword=\"palindrome-integer\"><strong>palindrome</strong></span>, and <code>false</code> otherwise.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = 121\n<strong>Output:</strong> true\n<strong>Explanation:</strong> 121 reads as 121 from left to right and from right to left.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = -121\n<strong>Output:</strong> false\n<strong>Explanation:</strong> From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = 10\n<strong>Output:</strong> false\n<strong>Explanation:</strong> Reads 01 from right to left. Therefore it is not a palindrome.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>-2<sup>31</sup>&nbsp;&lt;= x &lt;= 2<sup>31</sup>&nbsp;- 1</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow up:</strong> Could you solve it without converting the integer to a string?",
+      "hints": [
+        "Beware of overflow when you reverse the integer."
+      ],
+      "acRate": 60.91102029808272,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "palindrome-linked-list",
+          "title": "Palindrome Linked List",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "find-palindrome-with-fixed-length",
+          "title": "Find Palindrome With Fixed Length",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "strictly-palindromic-number",
+          "title": "Strictly Palindromic Number",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "count-symmetric-integers",
+          "title": "  Count Symmetric Integers",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "find-the-count-of-good-integers",
+          "title": "Find the Count of Good Integers",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "find-the-largest-palindrome-divisible-by-k",
+          "title": "Find the Largest Palindrome Divisible by K",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "conflictPending": true,
+      "conflictCandidates": [
+        {
+          "id": "lc-palindrome-number::2106237992",
+          "code": "class Solution:\n    def isPalindrome(self, x: int) -> bool:\n        s=str(x)\n        if s==s[::-1]:\n            return True\n        else:\n            return False",
+          "lang": {
+            "name": "Python3",
+            "ext": "py",
+            "slug": "python3"
+          },
+          "runtime": "1 ms",
+          "memory": "19.2 MB",
+          "runtimePct": 93.3008,
+          "memoryPct": 87.22680000000001,
+          "timestamp": 1786687460000,
+          "submissionId": 2106237992
+        }
+      ]
+    },
+    {
+      "id": "lc-two-sum::1991850383",
+      "submissionId": 1991850383,
+      "platform": "leetcode",
+      "title": "Two Sum",
+      "titleSlug": "two-sum",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "topic": "Array",
+      "code": "class Solution:\n    def twoSum(self, nums: List[int], target: int) -> List[int]:\n        for i in range(len(nums)):\n            for j in range(i+1,len(nums)):\n                if nums[j]==target-nums[i]:\n                    return [i,j]\n        return []",
+      "readmeContent": "# Two Sum\n\n**Difficulty:** Easy  |  **Acceptance:** 58.1%\n\n**Tags:** `Array`, `Hash Table`\n\n## Problem\n\nYou are given an array of integers nums&nbsp;and an integer target, return indices of the two numbers such that they add up to target.\n\nYou may assume that each input would have exactly one solution, and you may not use the same element twice.\n\nYou can return the answer in any order.\n\n&nbsp;\nExample 1:\n\nInput: nums = [2,7,11,15], target = 9\nOutput: [0,1]\nExplanation: Because nums[0] + nums[1] == 9, we return [0, 1].\n\nExample 2:\n\nInput: nums = [3,2,4], target = 6\nOutput: [1,2]\n\nExample 3:\n\nInput: nums = [3,3], target = 6\nOutput: [0,1]\n\n&nbsp;\nConstraints:\n\n\t2 <= nums.length <= 104\n\t-109 <= nums[i] <= 109\n\t-109 <= target <= 109\n\tOnly one valid answer exists.\n\n&nbsp;\nFollow-up:&nbsp;Can you come up with an algorithm that is less than O(n2)&nbsp;time complexity?\n\n## My Submission\n\n- Runtime: 1737 ms\n- Memory: 19.6 MB\n\n## Similar Problems\n\n- [3Sum](https://leetcode.com/problems/3sum/) — Medium\n- [4Sum](https://leetcode.com/problems/4sum/) — Medium\n- [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) — Medium\n- [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) — Medium\n- [Two Sum IV - Input is a BST](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/) — Easy\n",
+      "files": [
+        {
+          "path": "problems/lc-two-sum/lc-two-sum.py",
+          "content": "class Solution:\n    def twoSum(self, nums: List[int], target: int) -> List[int]:\n        for i in range(len(nums)):\n            for j in range(i+1,len(nums)):\n                if nums[j]==target-nums[i]:\n                    return [i,j]\n        return []"
+        },
+        {
+          "path": "problems/lc-two-sum/README.md",
+          "content": "# Two Sum\n\n**Difficulty:** Easy  |  **Acceptance:** 58.1%\n\n**Tags:** `Array`, `Hash Table`\n\n## Problem\n\nYou are given an array of integers nums&nbsp;and an integer target, return indices of the two numbers such that they add up to target.\n\nYou may assume that each input would have exactly one solution, and you may not use the same element twice.\n\nYou can return the answer in any order.\n\n&nbsp;\nExample 1:\n\nInput: nums = [2,7,11,15], target = 9\nOutput: [0,1]\nExplanation: Because nums[0] + nums[1] == 9, we return [0, 1].\n\nExample 2:\n\nInput: nums = [3,2,4], target = 6\nOutput: [1,2]\n\nExample 3:\n\nInput: nums = [3,3], target = 6\nOutput: [0,1]\n\n&nbsp;\nConstraints:\n\n\t2 <= nums.length <= 104\n\t-109 <= nums[i] <= 109\n\t-109 <= target <= 109\n\tOnly one valid answer exists.\n\n&nbsp;\nFollow-up:&nbsp;Can you come up with an algorithm that is less than O(n2)&nbsp;time complexity?\n\n## My Submission\n\n- Runtime: 1737 ms\n- Memory: 19.6 MB\n\n## Similar Problems\n\n- [3Sum](https://leetcode.com/problems/3sum/) — Medium\n- [4Sum](https://leetcode.com/problems/4sum/) — Medium\n- [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) — Medium\n- [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) — Medium\n- [Two Sum IV - Input is a BST](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/) — Easy\n"
+        }
+      ],
+      "timestamp": 1777557008000,
+      "runtime": "1737 ms",
+      "memory": "19.6 MB",
+      "runtimePct": 19.649399999999183,
+      "memoryPct": 95.06409999999998,
+      "problemStatement": "<p>You are given an array of integers <code>nums</code>&nbsp;and an integer <code>target</code>, return <em>indices of the two numbers such that they add up to <code>target</code></em>.</p>\n\n<p>You may assume that each input would have <strong><em>exactly</em> one solution</strong>, and you may not use the <em>same</em> element twice.</p>\n\n<p>You can return the answer in any order.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [2,7,11,15], target = 9\n<strong>Output:</strong> [0,1]\n<strong>Explanation:</strong> Because nums[0] + nums[1] == 9, we return [0, 1].\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,2,4], target = 6\n<strong>Output:</strong> [1,2]\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,3], target = 6\n<strong>Output:</strong> [0,1]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>2 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>\n\t<li><code>-10<sup>9</sup> &lt;= target &lt;= 10<sup>9</sup></code></li>\n\t<li><strong>Only one valid answer exists.</strong></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow-up:&nbsp;</strong>Can you come up with an algorithm that is less than <code>O(n<sup>2</sup>)</code><font face=\"monospace\">&nbsp;</font>time complexity?",
+      "hints": [
+        "A really brute force way would be to search for all possible pairs of numbers but that would be too slow. Again, it's best to try out brute force solutions just for completeness. It is from these brute force solutions that you can come up with optimizations.",
+        "So, if we fix one of the numbers, say <code>x</code>, we have to scan the entire array to find the next number <code>y</code> which is <code>value - x</code> where value is the input parameter. Can we change our array somehow so that this search becomes faster?",
+        "The second train of thought is, without changing the array, can we use additional space somehow? Like maybe a hash map to speed up the search?"
+      ],
+      "acRate": 58.07139565033408,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "3sum",
+          "title": "3Sum",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "4sum",
+          "title": "4Sum",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "two-sum-ii-input-array-is-sorted",
+          "title": "Two Sum II - Input Array Is Sorted",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "subarray-sum-equals-k",
+          "title": "Subarray Sum Equals K",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "two-sum-iv-input-is-a-bst",
+          "title": "Two Sum IV - Input is a BST",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "max-number-of-k-sum-pairs",
+          "title": "Max Number of K-Sum Pairs",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "count-good-meals",
+          "title": "Count Good Meals",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "count-number-of-pairs-with-absolute-difference-k",
+          "title": "Count Number of Pairs With Absolute Difference K",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "number-of-pairs-of-strings-with-concatenation-equal-to-target",
+          "title": "Number of Pairs of Strings With Concatenation Equal to Target",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "find-all-k-distant-indices-in-an-array",
+          "title": "Find All K-Distant Indices in an Array",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "first-letter-to-appear-twice",
+          "title": "First Letter to Appear Twice",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "number-of-excellent-pairs",
+          "title": "Number of Excellent Pairs",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "number-of-arithmetic-triplets",
+          "title": "Number of Arithmetic Triplets",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "node-with-highest-edge-score",
+          "title": "Node With Highest Edge Score",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "check-distances-between-same-letters",
+          "title": "Check Distances Between Same Letters",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "find-subarrays-with-equal-sum",
+          "title": "Find Subarrays With Equal Sum",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "largest-positive-integer-that-exists-with-its-negative",
+          "title": "Largest Positive Integer That Exists With Its Negative",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "number-of-distinct-averages",
+          "title": "Number of Distinct Averages",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "count-pairs-whose-sum-is-less-than-target",
+          "title": "Count Pairs Whose Sum is Less than Target",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 1,
+            "platform": "leetcode",
+            "slug": "two-sum"
+          },
+          {
+            "platform": "geeksforgeeks",
+            "slug": "key-pair5616"
+          }
+        ],
+        "canonicalId": "two-sum",
+        "canonicalTitle": "Two Sum",
+        "confirmedBy": "system-init",
+        "difficulty": "easy",
+        "pattern": "hash-map",
+        "tags": [
+          "array",
+          "hash-table"
+        ],
+        "topic": "arrays",
+        "voteCount": 100
+      }
+    },
+    {
+      "id": "lc-remove-element::1991867590",
+      "submissionId": 1991867590,
+      "platform": "leetcode",
+      "title": "Remove Element",
+      "titleSlug": "remove-element",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Two Pointers"
+      ],
+      "topic": "Two Pointers",
+      "code": "class Solution:\n    def removeElement(self, nums: List[int], val: int) -> int:\n        k=0\n        for i in range(len(nums)):\n            if nums[i]!=val:\n                nums[k]=nums[i]\n                k+=1\n        return k",
+      "readmeContent": "# Remove Element\n\n**Difficulty:** Easy  |  **Acceptance:** 62.4%\n\n**Tags:** `Array`, `Two Pointers`\n\n## Problem\n\nGiven an integer array nums and an integer val, remove all occurrences of val in nums in-place. The order of the elements may be changed. Then return the number of elements in nums which are not equal to val.\n\nConsider the number of elements in nums which are not equal to val be k, to get accepted, you need to do the following things:\n\n\tChange the array nums such that the first k elements of nums contain the elements which are not equal to val. The remaining elements of nums are not important as well as the size of nums.\n\tReturn k.\n\nCustom Judge:\n\nThe judge will test your solution with the following code:\n\nint[] nums = [...]; // Input array\nint val = ...; // Value to remove\nint[] expectedNums = [...]; // The expected answer with correct length.\n                            // It is sorted with no values equaling val.\n\nint k = removeElement(nums, val); // Calls your implementation\n\nassert k == expectedNums.length;\nsort(nums, 0, k); // Sort the first k elements of nums\nfor (int i = 0; i < actualLength; i++) {\n    assert nums[i] == expectedNums[i];\n}\n\nIf all assertions pass, then your solution will be accepted.\n\n&nbsp;\nExample 1:\n\nInput: nums = [3,2,2,3], val = 3\nOutput: 2, nums = [2,2,_,_]\nExplanation: Your function should return k = 2, with the first two elements of nums being 2.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n\nExample 2:\n\nInput: nums = [0,1,2,2,3,0,4,2], val = 2\nOutput: 5, nums = [0,1,4,0,3,_,_,_]\nExplanation: Your function should return k = 5, with the first five elements of nums containing 0, 0, 1, 3, and 4.\nNote that the five elements can be returned in any order.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n\n&nbsp;\nConstraints:\n\n\t0 <= nums.length <= 100\n\t0 <= nums[i] <= 50\n\t0 <= val <= 100\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 19.2 MB\n\n## Similar Problems\n\n- [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) — Easy\n- [Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/) — Easy\n- [Move Zeroes](https://leetcode.com/problems/move-zeroes/) — Easy\n",
+      "files": [
+        {
+          "path": "problems/lc-remove-element/lc-remove-element.py",
+          "content": "class Solution:\n    def removeElement(self, nums: List[int], val: int) -> int:\n        k=0\n        for i in range(len(nums)):\n            if nums[i]!=val:\n                nums[k]=nums[i]\n                k+=1\n        return k"
+        },
+        {
+          "path": "problems/lc-remove-element/README.md",
+          "content": "# Remove Element\n\n**Difficulty:** Easy  |  **Acceptance:** 62.4%\n\n**Tags:** `Array`, `Two Pointers`\n\n## Problem\n\nGiven an integer array nums and an integer val, remove all occurrences of val in nums in-place. The order of the elements may be changed. Then return the number of elements in nums which are not equal to val.\n\nConsider the number of elements in nums which are not equal to val be k, to get accepted, you need to do the following things:\n\n\tChange the array nums such that the first k elements of nums contain the elements which are not equal to val. The remaining elements of nums are not important as well as the size of nums.\n\tReturn k.\n\nCustom Judge:\n\nThe judge will test your solution with the following code:\n\nint[] nums = [...]; // Input array\nint val = ...; // Value to remove\nint[] expectedNums = [...]; // The expected answer with correct length.\n                            // It is sorted with no values equaling val.\n\nint k = removeElement(nums, val); // Calls your implementation\n\nassert k == expectedNums.length;\nsort(nums, 0, k); // Sort the first k elements of nums\nfor (int i = 0; i < actualLength; i++) {\n    assert nums[i] == expectedNums[i];\n}\n\nIf all assertions pass, then your solution will be accepted.\n\n&nbsp;\nExample 1:\n\nInput: nums = [3,2,2,3], val = 3\nOutput: 2, nums = [2,2,_,_]\nExplanation: Your function should return k = 2, with the first two elements of nums being 2.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n\nExample 2:\n\nInput: nums = [0,1,2,2,3,0,4,2], val = 2\nOutput: 5, nums = [0,1,4,0,3,_,_,_]\nExplanation: Your function should return k = 5, with the first five elements of nums containing 0, 0, 1, 3, and 4.\nNote that the five elements can be returned in any order.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n\n&nbsp;\nConstraints:\n\n\t0 <= nums.length <= 100\n\t0 <= nums[i] <= 50\n\t0 <= val <= 100\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 19.2 MB\n\n## Similar Problems\n\n- [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) — Easy\n- [Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/) — Easy\n- [Move Zeroes](https://leetcode.com/problems/move-zeroes/) — Easy\n"
+        }
+      ],
+      "timestamp": 1777558650000,
+      "runtime": "0 ms",
+      "memory": "19.2 MB",
+      "runtimePct": 100,
+      "memoryPct": 57.5634,
+      "problemStatement": "<p>Given an integer array <code>nums</code> and an integer <code>val</code>, remove all occurrences of <code>val</code> in <code>nums</code> <a href=\"https://en.wikipedia.org/wiki/In-place_algorithm\" target=\"_blank\"><strong>in-place</strong></a>. The order of the elements may be changed. Then return <em>the number of elements in </em><code>nums</code><em> which are not equal to </em><code>val</code>.</p>\n\n<p>Consider the number of elements in <code>nums</code> which are not equal to <code>val</code> be <code>k</code>, to get accepted, you need to do the following things:</p>\n\n<ul>\n\t<li>Change the array <code>nums</code> such that the first <code>k</code> elements of <code>nums</code> contain the elements which are not equal to <code>val</code>. The remaining elements of <code>nums</code> are not important as well as the size of <code>nums</code>.</li>\n\t<li>Return <code>k</code>.</li>\n</ul>\n\n<p><strong>Custom Judge:</strong></p>\n\n<p>The judge will test your solution with the following code:</p>\n\n<pre>\nint[] nums = [...]; // Input array\nint val = ...; // Value to remove\nint[] expectedNums = [...]; // The expected answer with correct length.\n                            // It is sorted with no values equaling val.\n\nint k = removeElement(nums, val); // Calls your implementation\n\nassert k == expectedNums.length;\nsort(nums, 0, k); // Sort the first k elements of nums\nfor (int i = 0; i &lt; actualLength; i++) {\n    assert nums[i] == expectedNums[i];\n}\n</pre>\n\n<p>If all assertions pass, then your solution will be <strong>accepted</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,2,2,3], val = 3\n<strong>Output:</strong> 2, nums = [2,2,_,_]\n<strong>Explanation:</strong> Your function should return k = 2, with the first two elements of nums being 2.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [0,1,2,2,3,0,4,2], val = 2\n<strong>Output:</strong> 5, nums = [0,1,4,0,3,_,_,_]\n<strong>Explanation:</strong> Your function should return k = 5, with the first five elements of nums containing 0, 0, 1, 3, and 4.\nNote that the five elements can be returned in any order.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= nums.length &lt;= 100</code></li>\n\t<li><code>0 &lt;= nums[i] &lt;= 50</code></li>\n\t<li><code>0 &lt;= val &lt;= 100</code></li>\n</ul>\n",
+      "hints": [
+        "The problem statement clearly asks us to modify the array in-place and it also says that the element beyond the new length of the array can be anything. Given an element, we need to remove all the occurrences of it from the array. We don't technically need to <b>remove</b> that element per se, right?",
+        "We can move all the occurrences of this element to the end of the array. Use two pointers!\r\n<br><img src=\"https://assets.leetcode.com/uploads/2019/10/20/hint_remove_element.png\" width=\"500\"/>",
+        "Yet another direction of thought is to consider the elements to be removed as non-existent. In a single pass, if we keep copying the visible elements in-place, that should also solve this problem for us."
+      ],
+      "acRate": 62.43647410713239,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "remove-duplicates-from-sorted-array",
+          "title": "Remove Duplicates from Sorted Array",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "remove-linked-list-elements",
+          "title": "Remove Linked List Elements",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "move-zeroes",
+          "title": "Move Zeroes",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true
+    },
+    {
+      "id": "lc-find-the-index-of-the-first-occurrence-in-a-string::1991877274",
+      "submissionId": 1991877274,
+      "platform": "leetcode",
+      "title": "Find the Index of the First Occurrence in a String",
+      "titleSlug": "find-the-index-of-the-first-occurrence-in-a-string",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Two Pointers",
+        "String",
+        "String Matching",
+        "Z Algorithm",
+        "Knuth–morris–pratt Algorithm",
+        "Boyer–moore String Search Algorithm"
+      ],
+      "topic": "Two Pointers",
+      "code": "class Solution:\n    def strStr(self, haystack: str, needle: str) -> int:\n        if len(haystack)<len(needle):\n            return -1\n        for i in range(len(haystack)):\n            if haystack[i:i+len(needle)]==needle:\n                return i\n        return -1",
+      "readmeContent": "# Find the Index of the First Occurrence in a String\n\n**Difficulty:** Easy  |  **Acceptance:** 47.2%\n\n**Tags:** `Two Pointers`, `String`, `String Matching`, `Z Algorithm`, `Knuth–Morris–Pratt Algorithm`, `Boyer–Moore String-Search Algorithm`\n\n## Problem\n\nGiven two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.\n\n&nbsp;\nExample 1:\n\nInput: haystack = \"sadbutsad\", needle = \"sad\"\nOutput: 0\nExplanation: \"sad\" occurs at index 0 and 6.\nThe first occurrence is at index 0, so we return 0.\n\nExample 2:\n\nInput: haystack = \"leetcode\", needle = \"leeto\"\nOutput: -1\nExplanation: \"leeto\" did not occur in \"leetcode\", so we return -1.\n\n&nbsp;\nConstraints:\n\n\t1 <= haystack.length, needle.length <= 104\n\thaystack and needle consist of only lowercase English characters.\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 19.1 MB\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Repeated Substring Pattern](https://leetcode.com/problems/repeated-substring-pattern/) — Easy\n",
+      "files": [
+        {
+          "path": "problems/lc-find-the-index-of-the-first-occurrence-in-a-string/lc-find-the-index-of-the-first-occurrence-in-a-string.py",
+          "content": "class Solution:\n    def strStr(self, haystack: str, needle: str) -> int:\n        if len(haystack)<len(needle):\n            return -1\n        for i in range(len(haystack)):\n            if haystack[i:i+len(needle)]==needle:\n                return i\n        return -1"
+        },
+        {
+          "path": "problems/lc-find-the-index-of-the-first-occurrence-in-a-string/README.md",
+          "content": "# Find the Index of the First Occurrence in a String\n\n**Difficulty:** Easy  |  **Acceptance:** 47.2%\n\n**Tags:** `Two Pointers`, `String`, `String Matching`, `Z Algorithm`, `Knuth–Morris–Pratt Algorithm`, `Boyer–Moore String-Search Algorithm`\n\n## Problem\n\nGiven two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.\n\n&nbsp;\nExample 1:\n\nInput: haystack = \"sadbutsad\", needle = \"sad\"\nOutput: 0\nExplanation: \"sad\" occurs at index 0 and 6.\nThe first occurrence is at index 0, so we return 0.\n\nExample 2:\n\nInput: haystack = \"leetcode\", needle = \"leeto\"\nOutput: -1\nExplanation: \"leeto\" did not occur in \"leetcode\", so we return -1.\n\n&nbsp;\nConstraints:\n\n\t1 <= haystack.length, needle.length <= 104\n\thaystack and needle consist of only lowercase English characters.\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 19.1 MB\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Repeated Substring Pattern](https://leetcode.com/problems/repeated-substring-pattern/) — Easy\n"
+        }
+      ],
+      "timestamp": 1777559585000,
+      "runtime": "0 ms",
+      "memory": "19.1 MB",
+      "runtimePct": 100,
+      "memoryPct": 91.528,
+      "problemStatement": "<p>Given two strings <code>needle</code> and <code>haystack</code>, return the index of the first occurrence of <code>needle</code> in <code>haystack</code>, or <code>-1</code> if <code>needle</code> is not part of <code>haystack</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> haystack = &quot;sadbutsad&quot;, needle = &quot;sad&quot;\n<strong>Output:</strong> 0\n<strong>Explanation:</strong> &quot;sad&quot; occurs at index 0 and 6.\nThe first occurrence is at index 0, so we return 0.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> haystack = &quot;leetcode&quot;, needle = &quot;leeto&quot;\n<strong>Output:</strong> -1\n<strong>Explanation:</strong> &quot;leeto&quot; did not occur in &quot;leetcode&quot;, so we return -1.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= haystack.length, needle.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>haystack</code> and <code>needle</code> consist of only lowercase English characters.</li>\n</ul>\n",
+      "hints": null,
+      "acRate": 47.230544732829365,
+      "similar": [
+        {
+          "difficulty": "Hard",
+          "titleSlug": "shortest-palindrome",
+          "title": "Shortest Palindrome",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "repeated-substring-pattern",
+          "title": "Repeated Substring Pattern",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true
+    },
+    {
+      "id": "lc-plus-one::1991888684",
+      "submissionId": 1991888684,
+      "platform": "leetcode",
+      "title": "Plus One",
+      "titleSlug": "plus-one",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "topic": "Math",
+      "code": "class Solution:\n    def plusOne(self, digits: List[int]) -> List[int]:\n        for i in range(len(digits)-1,-1,-1):\n            if digits[i]<9:\n                digits[i]+=1\n                return digits\n            digits[i]=0\n        return [1]+digits",
+      "readmeContent": "# Plus One\n\n**Difficulty:** Easy  |  **Acceptance:** 50.5%\n\n**Tags:** `Array`, `Math`\n\n## Problem\n\nYou are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.\n\nIncrement the large integer by one and return the resulting array of digits.\n\n&nbsp;\nExample 1:\n\nInput: digits = [1,2,3]\nOutput: [1,2,4]\nExplanation: The array represents the integer 123.\nIncrementing by one gives 123 + 1 = 124.\nThus, the result should be [1,2,4].\n\nExample 2:\n\nInput: digits = [4,3,2,1]\nOutput: [4,3,2,2]\nExplanation: The array represents the integer 4321.\nIncrementing by one gives 4321 + 1 = 4322.\nThus, the result should be [4,3,2,2].\n\nExample 3:\n\nInput: digits = [9]\nOutput: [1,0]\nExplanation: The array represents the integer 9.\nIncrementing by one gives 9 + 1 = 10.\nThus, the result should be [1,0].\n\n&nbsp;\nConstraints:\n\n\t1 <= digits.length <= 100\n\t0 <= digits[i] <= 9\n\tdigits does not contain any leading 0's.\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 19.1 MB\n\n## Similar Problems\n\n- [Multiply Strings](https://leetcode.com/problems/multiply-strings/) — Medium\n- [Add Binary](https://leetcode.com/problems/add-binary/) — Easy\n- [Add to Array-Form of Integer](https://leetcode.com/problems/add-to-array-form-of-integer/) — Easy\n- [Minimum Operations to Reduce an Integer to 0](https://leetcode.com/problems/minimum-operations-to-reduce-an-integer-to-0/) — Medium\n",
+      "files": [
+        {
+          "path": "problems/lc-plus-one/lc-plus-one.py",
+          "content": "class Solution:\n    def plusOne(self, digits: List[int]) -> List[int]:\n        for i in range(len(digits)-1,-1,-1):\n            if digits[i]<9:\n                digits[i]+=1\n                return digits\n            digits[i]=0\n        return [1]+digits"
+        },
+        {
+          "path": "problems/lc-plus-one/README.md",
+          "content": "# Plus One\n\n**Difficulty:** Easy  |  **Acceptance:** 50.5%\n\n**Tags:** `Array`, `Math`\n\n## Problem\n\nYou are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.\n\nIncrement the large integer by one and return the resulting array of digits.\n\n&nbsp;\nExample 1:\n\nInput: digits = [1,2,3]\nOutput: [1,2,4]\nExplanation: The array represents the integer 123.\nIncrementing by one gives 123 + 1 = 124.\nThus, the result should be [1,2,4].\n\nExample 2:\n\nInput: digits = [4,3,2,1]\nOutput: [4,3,2,2]\nExplanation: The array represents the integer 4321.\nIncrementing by one gives 4321 + 1 = 4322.\nThus, the result should be [4,3,2,2].\n\nExample 3:\n\nInput: digits = [9]\nOutput: [1,0]\nExplanation: The array represents the integer 9.\nIncrementing by one gives 9 + 1 = 10.\nThus, the result should be [1,0].\n\n&nbsp;\nConstraints:\n\n\t1 <= digits.length <= 100\n\t0 <= digits[i] <= 9\n\tdigits does not contain any leading 0's.\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 19.1 MB\n\n## Similar Problems\n\n- [Multiply Strings](https://leetcode.com/problems/multiply-strings/) — Medium\n- [Add Binary](https://leetcode.com/problems/add-binary/) — Easy\n- [Add to Array-Form of Integer](https://leetcode.com/problems/add-to-array-form-of-integer/) — Easy\n- [Minimum Operations to Reduce an Integer to 0](https://leetcode.com/problems/minimum-operations-to-reduce-an-integer-to-0/) — Medium\n"
+        }
+      ],
+      "timestamp": 1777560693000,
+      "runtime": "0 ms",
+      "memory": "19.1 MB",
+      "runtimePct": 100,
+      "memoryPct": 88.4529,
+      "problemStatement": "<p>You are given a <strong>large integer</strong> represented as an integer array <code>digits</code>, where each <code>digits[i]</code> is the <code>i<sup>th</sup></code> digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading <code>0</code>&#39;s.</p>\n\n<p>Increment the large integer by one and return <em>the resulting array of digits</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> digits = [1,2,3]\n<strong>Output:</strong> [1,2,4]\n<strong>Explanation:</strong> The array represents the integer 123.\nIncrementing by one gives 123 + 1 = 124.\nThus, the result should be [1,2,4].\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> digits = [4,3,2,1]\n<strong>Output:</strong> [4,3,2,2]\n<strong>Explanation:</strong> The array represents the integer 4321.\nIncrementing by one gives 4321 + 1 = 4322.\nThus, the result should be [4,3,2,2].\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> digits = [9]\n<strong>Output:</strong> [1,0]\n<strong>Explanation:</strong> The array represents the integer 9.\nIncrementing by one gives 9 + 1 = 10.\nThus, the result should be [1,0].\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= digits.length &lt;= 100</code></li>\n\t<li><code>0 &lt;= digits[i] &lt;= 9</code></li>\n\t<li><code>digits</code> does not contain any leading <code>0</code>&#39;s.</li>\n</ul>\n",
+      "hints": null,
+      "acRate": 50.50419732892381,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "multiply-strings",
+          "title": "Multiply Strings",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "add-binary",
+          "title": "Add Binary",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "add-to-array-form-of-integer",
+          "title": "Add to Array-Form of Integer",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "minimum-operations-to-reduce-an-integer-to-0",
+          "title": "Minimum Operations to Reduce an Integer to 0",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true
+    },
+    {
+      "id": "lc-reverse-words-in-a-string::1994635935",
+      "submissionId": 1994635935,
+      "platform": "leetcode",
+      "title": "Reverse Words in a String",
+      "titleSlug": "reverse-words-in-a-string",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Two Pointers",
+        "String"
+      ],
+      "topic": "Two Pointers",
+      "code": "class Solution:\n    def reverseWords(self, s: str) -> str:\n        sp=s.split()\n        clean=\" \".join(sp)\n        rev=clean.split()[::-1]\n        fin=\" \".join(rev)\n        return fin",
+      "readmeContent": "# Reverse Words in a String\n\n**Difficulty:** Medium  |  **Acceptance:** 57.7%\n\n**Tags:** `Two Pointers`, `String`\n\n## Problem\n\nGiven an input string s, reverse the order of the words.\n\nA word is defined as a sequence of non-space characters. The words in s will be separated by at least one space.\n\nReturn a string of the words in reverse order concatenated by a single space.\n\nNote that s may contain leading or trailing spaces or multiple spaces between two words. The returned string should only have a single space separating the words. Do not include any extra spaces.\n\n&nbsp;\nExample 1:\n\nInput: s = \"the sky is blue\"\nOutput: \"blue is sky the\"\n\nExample 2:\n\nInput: s = \"  hello world  \"\nOutput: \"world hello\"\nExplanation: Your reversed string should not contain leading or trailing spaces.\n\nExample 3:\n\nInput: s = \"a good   example\"\nOutput: \"example good a\"\nExplanation: You need to reduce multiple spaces between two words to a single space in the reversed string.\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 104\n\ts contains English letters (upper-case and lower-case), digits, and spaces ' '.\n\tThere is at least one word in s.\n\n&nbsp;\nFollow-up:&nbsp;If the string data type is mutable in your language, can&nbsp;you solve it&nbsp;in-place&nbsp;with&nbsp;O(1)&nbsp;extra space?\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 19.4 MB\n",
+      "files": [
+        {
+          "path": "problems/lc-reverse-words-in-a-string/lc-reverse-words-in-a-string.py",
+          "content": "class Solution:\n    def reverseWords(self, s: str) -> str:\n        sp=s.split()\n        clean=\" \".join(sp)\n        rev=clean.split()[::-1]\n        fin=\" \".join(rev)\n        return fin"
+        },
+        {
+          "path": "problems/lc-reverse-words-in-a-string/README.md",
+          "content": "# Reverse Words in a String\n\n**Difficulty:** Medium  |  **Acceptance:** 57.7%\n\n**Tags:** `Two Pointers`, `String`\n\n## Problem\n\nGiven an input string s, reverse the order of the words.\n\nA word is defined as a sequence of non-space characters. The words in s will be separated by at least one space.\n\nReturn a string of the words in reverse order concatenated by a single space.\n\nNote that s may contain leading or trailing spaces or multiple spaces between two words. The returned string should only have a single space separating the words. Do not include any extra spaces.\n\n&nbsp;\nExample 1:\n\nInput: s = \"the sky is blue\"\nOutput: \"blue is sky the\"\n\nExample 2:\n\nInput: s = \"  hello world  \"\nOutput: \"world hello\"\nExplanation: Your reversed string should not contain leading or trailing spaces.\n\nExample 3:\n\nInput: s = \"a good   example\"\nOutput: \"example good a\"\nExplanation: You need to reduce multiple spaces between two words to a single space in the reversed string.\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 104\n\ts contains English letters (upper-case and lower-case), digits, and spaces ' '.\n\tThere is at least one word in s.\n\n&nbsp;\nFollow-up:&nbsp;If the string data type is mutable in your language, can&nbsp;you solve it&nbsp;in-place&nbsp;with&nbsp;O(1)&nbsp;extra space?\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 19.4 MB\n"
+        }
+      ],
+      "timestamp": 1777867353000,
+      "runtime": "0 ms",
+      "memory": "19.4 MB",
+      "runtimePct": 100,
+      "memoryPct": 10.962400000000002,
+      "problemStatement": "<p>Given an input string <code>s</code>, reverse the order of the <strong>words</strong>.</p>\n\n<p>A <strong>word</strong> is defined as a sequence of non-space characters. The <strong>words</strong> in <code>s</code> will be separated by at least one space.</p>\n\n<p>Return <em>a string of the words in reverse order concatenated by a single space.</em></p>\n\n<p><b>Note</b> that <code>s</code> may contain leading or trailing spaces or multiple spaces between two words. The returned string should only have a single space separating the words. Do not include any extra spaces.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;the sky is blue&quot;\n<strong>Output:</strong> &quot;blue is sky the&quot;\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;  hello world  &quot;\n<strong>Output:</strong> &quot;world hello&quot;\n<strong>Explanation:</strong> Your reversed string should not contain leading or trailing spaces.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;a good   example&quot;\n<strong>Output:</strong> &quot;example good a&quot;\n<strong>Explanation:</strong> You need to reduce multiple spaces between two words to a single space in the reversed string.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>s</code> contains English letters (upper-case and lower-case), digits, and spaces <code>&#39; &#39;</code>.</li>\n\t<li>There is <strong>at least one</strong> word in <code>s</code>.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><b data-stringify-type=\"bold\">Follow-up:&nbsp;</b>If the string data type is mutable in your language, can&nbsp;you solve it&nbsp;<b data-stringify-type=\"bold\">in-place</b>&nbsp;with&nbsp;<code data-stringify-type=\"code\">O(1)</code>&nbsp;extra space?</p>\n",
+      "hints": null,
+      "acRate": 57.659476045551315,
+      "similar": null,
+      "hasSimilar": null
+    },
+    {
+      "id": "lc-reverse-integer::1994647257",
+      "submissionId": 1994647257,
+      "platform": "leetcode",
+      "title": "Reverse Integer",
+      "titleSlug": "reverse-integer",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Math"
+      ],
+      "topic": "Math",
+      "code": "class Solution:\n    def reverse(self, x: int) -> int:\n        sign=-1 if x<0 else 1\n        rev=0\n        x=abs(x)\n        while x>0:\n            d=x%10\n            rev=rev*10+d\n            x//=10\n        rev=rev*sign\n        if rev>(2**31)-1 or rev<(-2**31):\n            return 0\n        else :\n            return rev",
+      "readmeContent": "# Reverse Integer\n\n**Difficulty:** Medium  |  **Acceptance:** 32.4%\n\n**Tags:** `Math`\n\n## Problem\n\nGiven a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.\n\nAssume the environment does not allow you to store 64-bit integers (signed or unsigned).\n\n&nbsp;\nExample 1:\n\nInput: x = 123\nOutput: 321\n\nExample 2:\n\nInput: x = -123\nOutput: -321\n\nExample 3:\n\nInput: x = 120\nOutput: 21\n\n&nbsp;\nConstraints:\n\n\t-231 <= x <= 231 - 1\n\n## My Submission\n\n- Runtime: 44 ms\n- Memory: 19.3 MB\n\n## Similar Problems\n\n- [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) — Medium\n- [Reverse Bits](https://leetcode.com/problems/reverse-bits/) — Easy\n- [A Number After a Double Reversal](https://leetcode.com/problems/a-number-after-a-double-reversal/) — Easy\n- [Count Number of Distinct Integers After Reverse Operations](https://leetcode.com/problems/count-number-of-distinct-integers-after-reverse-operations/) — Medium\n",
+      "files": [
+        {
+          "path": "problems/lc-reverse-integer/lc-reverse-integer.py",
+          "content": "class Solution:\n    def reverse(self, x: int) -> int:\n        sign=-1 if x<0 else 1\n        rev=0\n        x=abs(x)\n        while x>0:\n            d=x%10\n            rev=rev*10+d\n            x//=10\n        rev=rev*sign\n        if rev>(2**31)-1 or rev<(-2**31):\n            return 0\n        else :\n            return rev"
+        },
+        {
+          "path": "problems/lc-reverse-integer/README.md",
+          "content": "# Reverse Integer\n\n**Difficulty:** Medium  |  **Acceptance:** 32.4%\n\n**Tags:** `Math`\n\n## Problem\n\nGiven a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.\n\nAssume the environment does not allow you to store 64-bit integers (signed or unsigned).\n\n&nbsp;\nExample 1:\n\nInput: x = 123\nOutput: 321\n\nExample 2:\n\nInput: x = -123\nOutput: -321\n\nExample 3:\n\nInput: x = 120\nOutput: 21\n\n&nbsp;\nConstraints:\n\n\t-231 <= x <= 231 - 1\n\n## My Submission\n\n- Runtime: 44 ms\n- Memory: 19.3 MB\n\n## Similar Problems\n\n- [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) — Medium\n- [Reverse Bits](https://leetcode.com/problems/reverse-bits/) — Easy\n- [A Number After a Double Reversal](https://leetcode.com/problems/a-number-after-a-double-reversal/) — Easy\n- [Count Number of Distinct Integers After Reverse Operations](https://leetcode.com/problems/count-number-of-distinct-integers-after-reverse-operations/) — Medium\n"
+        }
+      ],
+      "timestamp": 1777868556000,
+      "runtime": "44 ms",
+      "memory": "19.3 MB",
+      "runtimePct": 68.31060000000002,
+      "memoryPct": 8.722100000000005,
+      "problemStatement": "<p>Given a signed 32-bit integer <code>x</code>, return <code>x</code><em> with its digits reversed</em>. If reversing <code>x</code> causes the value to go outside the signed 32-bit integer range <code>[-2<sup>31</sup>, 2<sup>31</sup> - 1]</code>, then return <code>0</code>.</p>\n\n<p><strong>Assume the environment does not allow you to store 64-bit integers (signed or unsigned).</strong></p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = 123\n<strong>Output:</strong> 321\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = -123\n<strong>Output:</strong> -321\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = 120\n<strong>Output:</strong> 21\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>-2<sup>31</sup> &lt;= x &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n",
+      "hints": null,
+      "acRate": 32.42109503026828,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "string-to-integer-atoi",
+          "title": "String to Integer (atoi)",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "reverse-bits",
+          "title": "Reverse Bits",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "a-number-after-a-double-reversal",
+          "title": "A Number After a Double Reversal",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "count-number-of-distinct-integers-after-reverse-operations",
+          "title": "Count Number of Distinct Integers After Reverse Operations",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true
+    },
+    {
+      "id": "lc-add-digits::1994656470",
+      "submissionId": 1994656470,
+      "platform": "leetcode",
+      "title": "Add Digits",
+      "titleSlug": "add-digits",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Math",
+        "Simulation",
+        "Number Theory"
+      ],
+      "topic": "Math",
+      "code": "class Solution:\n    def addDigits(self, num: int) -> int:\n        if num==0:\n            return num\n        \n        while num>=10:\n            sum=0\n            while num>0:\n                sum=sum+(num%10)\n                num=num//10\n            num=sum\n        return num",
+      "readmeContent": "# Add Digits\n\n**Difficulty:** Easy  |  **Acceptance:** 69.3%\n\n**Tags:** `Math`, `Simulation`, `Number Theory`\n\n## Problem\n\nGiven an integer num, repeatedly add all its digits until the result has only one digit, and return it.\n\n&nbsp;\nExample 1:\n\nInput: num = 38\nOutput: 2\nExplanation: The process is\n38 --> 3 + 8 --> 11\n11 --> 1 + 1 --> 2 \nSince 2 has only one digit, return it.\n\nExample 2:\n\nInput: num = 0\nOutput: 0\n\n&nbsp;\nConstraints:\n\n\t0 <= num <= 231 - 1\n\n&nbsp;\nFollow up: Could you do it without any loop/recursion in O(1) runtime?\n\n## My Submission\n\n- Runtime: 1 ms\n- Memory: 19.1 MB\n\n## Similar Problems\n\n- [Happy Number](https://leetcode.com/problems/happy-number/) — Easy\n- [Sum of Digits of String After Convert](https://leetcode.com/problems/sum-of-digits-of-string-after-convert/) — Easy\n- [Minimum Sum of Four Digit Number After Splitting Digits](https://leetcode.com/problems/minimum-sum-of-four-digit-number-after-splitting-digits/) — Easy\n- [Calculate Digit Sum of a String](https://leetcode.com/problems/calculate-digit-sum-of-a-string/) — Easy\n- [Difference Between Element Sum and Digit Sum of an Array](https://leetcode.com/problems/difference-between-element-sum-and-digit-sum-of-an-array/) — Easy\n",
+      "files": [
+        {
+          "path": "problems/lc-add-digits/lc-add-digits.py",
+          "content": "class Solution:\n    def addDigits(self, num: int) -> int:\n        if num==0:\n            return num\n        \n        while num>=10:\n            sum=0\n            while num>0:\n                sum=sum+(num%10)\n                num=num//10\n            num=sum\n        return num"
+        },
+        {
+          "path": "problems/lc-add-digits/README.md",
+          "content": "# Add Digits\n\n**Difficulty:** Easy  |  **Acceptance:** 69.3%\n\n**Tags:** `Math`, `Simulation`, `Number Theory`\n\n## Problem\n\nGiven an integer num, repeatedly add all its digits until the result has only one digit, and return it.\n\n&nbsp;\nExample 1:\n\nInput: num = 38\nOutput: 2\nExplanation: The process is\n38 --> 3 + 8 --> 11\n11 --> 1 + 1 --> 2 \nSince 2 has only one digit, return it.\n\nExample 2:\n\nInput: num = 0\nOutput: 0\n\n&nbsp;\nConstraints:\n\n\t0 <= num <= 231 - 1\n\n&nbsp;\nFollow up: Could you do it without any loop/recursion in O(1) runtime?\n\n## My Submission\n\n- Runtime: 1 ms\n- Memory: 19.1 MB\n\n## Similar Problems\n\n- [Happy Number](https://leetcode.com/problems/happy-number/) — Easy\n- [Sum of Digits of String After Convert](https://leetcode.com/problems/sum-of-digits-of-string-after-convert/) — Easy\n- [Minimum Sum of Four Digit Number After Splitting Digits](https://leetcode.com/problems/minimum-sum-of-four-digit-number-after-splitting-digits/) — Easy\n- [Calculate Digit Sum of a String](https://leetcode.com/problems/calculate-digit-sum-of-a-string/) — Easy\n- [Difference Between Element Sum and Digit Sum of an Array](https://leetcode.com/problems/difference-between-element-sum-and-digit-sum-of-an-array/) — Easy\n"
+        }
+      ],
+      "timestamp": 1777869471000,
+      "runtime": "1 ms",
+      "memory": "19.1 MB",
+      "runtimePct": 22.8857,
+      "memoryPct": 97.8464,
+      "problemStatement": "<p>Given an integer <code>num</code>, repeatedly add all its digits until the result has only one digit, and return it.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> num = 38\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> The process is\n38 --&gt; 3 + 8 --&gt; 11\n11 --&gt; 1 + 1 --&gt; 2 \nSince 2 has only one digit, return it.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> num = 0\n<strong>Output:</strong> 0\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= num &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong> Could you do it without any loop/recursion in <code>O(1)</code> runtime?</p>\n",
+      "hints": [
+        "A naive implementation of the above process is trivial. Could you come up with other methods?",
+        "What are all the possible results?",
+        "How do they occur, periodically or randomly?",
+        "You may find this <a href=\"https://en.wikipedia.org/wiki/Digital_root\" target=\"_blank\">Wikipedia article</a> useful."
+      ],
+      "acRate": 69.26190664141303,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "happy-number",
+          "title": "Happy Number",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "sum-of-digits-of-string-after-convert",
+          "title": "Sum of Digits of String After Convert",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "minimum-sum-of-four-digit-number-after-splitting-digits",
+          "title": "Minimum Sum of Four Digit Number After Splitting Digits",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "calculate-digit-sum-of-a-string",
+          "title": "Calculate Digit Sum of a String",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "difference-between-element-sum-and-digit-sum-of-an-array",
+          "title": "Difference Between Element Sum and Digit Sum of an Array",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "alternating-digit-sum",
+          "title": "Alternating Digit Sum",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true
+    },
+    {
+      "id": "lc-missing-number::1994660459",
+      "submissionId": 1994660459,
+      "platform": "leetcode",
+      "title": "Missing Number",
+      "titleSlug": "missing-number",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Math",
+        "Binary Search",
+        "Bit Manipulation",
+        "Sorting"
+      ],
+      "topic": "Bit Manipulation",
+      "code": "class Solution:\n    def missingNumber(self, nums: List[int]) -> int:\n        for i in range(len(nums)+1):\n            if i not in nums:\n                return i\n        ",
+      "readmeContent": "# Missing Number\n\n**Difficulty:** Easy  |  **Acceptance:** 72.6%\n\n**Tags:** `Array`, `Hash Table`, `Math`, `Binary Search`, `Bit Manipulation`, `Sorting`\n\n## Problem\n\nGiven an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.\n\n&nbsp;\nExample 1:\n\nInput: nums = [3,0,1]\n\nOutput: 2\n\nExplanation:\n\nn = 3 since there are 3 numbers, so all numbers are in the range [0,3]. 2 is the missing number in the range since it does not appear in nums.\n\nExample 2:\n\nInput: nums = [0,1]\n\nOutput: 2\n\nExplanation:\n\nn = 2 since there are 2 numbers, so all numbers are in the range [0,2]. 2 is the missing number in the range since it does not appear in nums.\n\nExample 3:\n\nInput: nums = [9,6,4,2,3,5,7,0,1]\n\nOutput: 8\n\nExplanation:\n\nn = 9 since there are 9 numbers, so all numbers are in the range [0,9]. 8 is the missing number in the range since it does not appear in nums.\n\n&nbsp;\n\n&nbsp;\n\n&nbsp;\n\n&nbsp;\n\n&nbsp;\nConstraints:\n\n\tn == nums.length\n\t1 <= n <= 104\n\t0 <= nums[i] <= n\n\tAll the numbers of nums are unique.\n\n&nbsp;\nFollow up: Could you implement a solution using only O(1) extra space complexity and O(n) runtime complexity?\n\n## My Submission\n\n- Runtime: 1406 ms\n- Memory: 20.4 MB\n\n## Similar Problems\n\n- [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) — Hard\n- [Single Number](https://leetcode.com/problems/single-number/) — Easy\n- [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) — Medium\n- [Couples Holding Hands](https://leetcode.com/problems/couples-holding-hands/) — Hard\n- [Find Unique Binary String](https://leetcode.com/problems/find-unique-binary-string/) — Medium\n",
+      "files": [
+        {
+          "path": "problems/lc-missing-number/lc-missing-number.py",
+          "content": "class Solution:\n    def missingNumber(self, nums: List[int]) -> int:\n        for i in range(len(nums)+1):\n            if i not in nums:\n                return i\n        "
+        },
+        {
+          "path": "problems/lc-missing-number/README.md",
+          "content": "# Missing Number\n\n**Difficulty:** Easy  |  **Acceptance:** 72.6%\n\n**Tags:** `Array`, `Hash Table`, `Math`, `Binary Search`, `Bit Manipulation`, `Sorting`\n\n## Problem\n\nGiven an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.\n\n&nbsp;\nExample 1:\n\nInput: nums = [3,0,1]\n\nOutput: 2\n\nExplanation:\n\nn = 3 since there are 3 numbers, so all numbers are in the range [0,3]. 2 is the missing number in the range since it does not appear in nums.\n\nExample 2:\n\nInput: nums = [0,1]\n\nOutput: 2\n\nExplanation:\n\nn = 2 since there are 2 numbers, so all numbers are in the range [0,2]. 2 is the missing number in the range since it does not appear in nums.\n\nExample 3:\n\nInput: nums = [9,6,4,2,3,5,7,0,1]\n\nOutput: 8\n\nExplanation:\n\nn = 9 since there are 9 numbers, so all numbers are in the range [0,9]. 8 is the missing number in the range since it does not appear in nums.\n\n&nbsp;\n\n&nbsp;\n\n&nbsp;\n\n&nbsp;\n\n&nbsp;\nConstraints:\n\n\tn == nums.length\n\t1 <= n <= 104\n\t0 <= nums[i] <= n\n\tAll the numbers of nums are unique.\n\n&nbsp;\nFollow up: Could you implement a solution using only O(1) extra space complexity and O(n) runtime complexity?\n\n## My Submission\n\n- Runtime: 1406 ms\n- Memory: 20.4 MB\n\n## Similar Problems\n\n- [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) — Hard\n- [Single Number](https://leetcode.com/problems/single-number/) — Easy\n- [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) — Medium\n- [Couples Holding Hands](https://leetcode.com/problems/couples-holding-hands/) — Hard\n- [Find Unique Binary String](https://leetcode.com/problems/find-unique-binary-string/) — Medium\n"
+        }
+      ],
+      "timestamp": 1777869862000,
+      "runtime": "1406 ms",
+      "memory": "20.4 MB",
+      "runtimePct": 6.895399999999922,
+      "memoryPct": 41.32810000000001,
+      "problemStatement": "<p>Given an array <code>nums</code> containing <code>n</code> distinct numbers in the range <code>[0, n]</code>, return <em>the only number in the range that is missing from the array.</em></p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [3,0,1]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">2</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p><code>n = 3</code> since there are 3 numbers, so all numbers are in the range <code>[0,3]</code>. 2 is the missing number in the range since it does not appear in <code>nums</code>.</p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [0,1]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">2</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p><code>n = 2</code> since there are 2 numbers, so all numbers are in the range <code>[0,2]</code>. 2 is the missing number in the range since it does not appear in <code>nums</code>.</p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [9,6,4,2,3,5,7,0,1]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">8</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p><code>n = 9</code> since there are 9 numbers, so all numbers are in the range <code>[0,9]</code>. 8 is the missing number in the range since it does not appear in <code>nums</code>.</p>\n</div>\n\n<div class=\"simple-translate-system-theme\" id=\"simple-translate\">\n<div>\n<div class=\"simple-translate-button isShow\" style=\"background-image: url(&quot;moz-extension://8a9ffb6b-7e69-4e93-aae1-436a1448eff6/icons/512.png&quot;); height: 22px; width: 22px; top: 318px; left: 36px;\">&nbsp;</div>\n\n<div class=\"simple-translate-panel \" style=\"width: 300px; height: 200px; top: 0px; left: 0px; font-size: 13px;\">\n<div class=\"simple-translate-result-wrapper\" style=\"overflow: hidden;\">\n<div class=\"simple-translate-move\" draggable=\"true\">&nbsp;</div>\n\n<div class=\"simple-translate-result-contents\">\n<p class=\"simple-translate-result\" dir=\"auto\">&nbsp;</p>\n\n<p class=\"simple-translate-candidate\" dir=\"auto\">&nbsp;</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == nums.length</code></li>\n\t<li><code>1 &lt;= n &lt;= 10<sup>4</sup></code></li>\n\t<li><code>0 &lt;= nums[i] &lt;= n</code></li>\n\t<li>All the numbers of <code>nums</code> are <strong>unique</strong>.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong> Could you implement a solution using only <code>O(1)</code> extra space complexity and <code>O(n)</code> runtime complexity?</p>\n",
+      "hints": null,
+      "acRate": 72.5821520446869,
+      "similar": [
+        {
+          "difficulty": "Hard",
+          "titleSlug": "first-missing-positive",
+          "title": "First Missing Positive",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "single-number",
+          "title": "Single Number",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "find-the-duplicate-number",
+          "title": "Find the Duplicate Number",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "couples-holding-hands",
+          "title": "Couples Holding Hands",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "find-unique-binary-string",
+          "title": "Find Unique Binary String",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "find-the-largest-almost-missing-integer",
+          "title": "Find the Largest Almost Missing Integer",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "conflictPending": true,
+      "conflictCandidates": [
+        {
+          "id": "lc-missing-number::1994660828",
+          "code": "class Solution:\n    def missingNumber(self, nums: List[int]) -> int:\n        for i in range(len(nums)+1):\n            if i not in nums:\n                return i\n        ",
+          "lang": {
+            "name": "Python3",
+            "ext": "py",
+            "slug": "python3"
+          },
+          "runtime": "1390 ms",
+          "memory": "20.4 MB",
+          "runtimePct": 12.78139999999992,
+          "memoryPct": 41.32810000000001,
+          "timestamp": 1777869898000,
+          "submissionId": 1994660828
+        },
+        {
+          "id": "lc-missing-number::2033840158",
+          "code": "class Solution:\n    def missingNumber(self, nums: List[int]) -> int:\n        nums=set(nums)\n        for i in range(len(nums)+1):\n            if i not in nums:\n                return i\n        ",
+          "lang": {
+            "name": "Python3",
+            "ext": "py",
+            "slug": "python3"
+          },
+          "runtime": "3 ms",
+          "memory": "21 MB",
+          "runtimePct": 60.7491,
+          "memoryPct": 6.136600000000014,
+          "timestamp": 1781520717000,
+          "submissionId": 2033840158
+        }
+      ]
+    },
+    {
+      "id": "lc-missing-number::1994660828",
+      "submissionId": 1994660828,
+      "platform": "leetcode",
+      "title": "Missing Number",
+      "titleSlug": "missing-number",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Math",
+        "Binary Search",
+        "Bit Manipulation",
+        "Sorting"
+      ],
+      "topic": "Bit Manipulation",
+      "code": "class Solution:\n    def missingNumber(self, nums: List[int]) -> int:\n        for i in range(len(nums)+1):\n            if i not in nums:\n                return i\n        ",
+      "readmeContent": "# Missing Number\n\n**Difficulty:** Easy  |  **Acceptance:** 72.6%\n\n**Tags:** `Array`, `Hash Table`, `Math`, `Binary Search`, `Bit Manipulation`, `Sorting`\n\n## Problem\n\nGiven an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.\n\n&nbsp;\nExample 1:\n\nInput: nums = [3,0,1]\n\nOutput: 2\n\nExplanation:\n\nn = 3 since there are 3 numbers, so all numbers are in the range [0,3]. 2 is the missing number in the range since it does not appear in nums.\n\nExample 2:\n\nInput: nums = [0,1]\n\nOutput: 2\n\nExplanation:\n\nn = 2 since there are 2 numbers, so all numbers are in the range [0,2]. 2 is the missing number in the range since it does not appear in nums.\n\nExample 3:\n\nInput: nums = [9,6,4,2,3,5,7,0,1]\n\nOutput: 8\n\nExplanation:\n\nn = 9 since there are 9 numbers, so all numbers are in the range [0,9]. 8 is the missing number in the range since it does not appear in nums.\n\n&nbsp;\n\n&nbsp;\n\n&nbsp;\n\n&nbsp;\n\n&nbsp;\nConstraints:\n\n\tn == nums.length\n\t1 <= n <= 104\n\t0 <= nums[i] <= n\n\tAll the numbers of nums are unique.\n\n&nbsp;\nFollow up: Could you implement a solution using only O(1) extra space complexity and O(n) runtime complexity?\n\n## My Submission\n\n- Runtime: 1390 ms\n- Memory: 20.4 MB\n\n## Similar Problems\n\n- [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) — Hard\n- [Single Number](https://leetcode.com/problems/single-number/) — Easy\n- [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) — Medium\n- [Couples Holding Hands](https://leetcode.com/problems/couples-holding-hands/) — Hard\n- [Find Unique Binary String](https://leetcode.com/problems/find-unique-binary-string/) — Medium\n",
+      "files": [
+        {
+          "path": "problems/lc-missing-number/lc-missing-number.py",
+          "content": "class Solution:\n    def missingNumber(self, nums: List[int]) -> int:\n        for i in range(len(nums)+1):\n            if i not in nums:\n                return i\n        "
+        },
+        {
+          "path": "problems/lc-missing-number/README.md",
+          "content": "# Missing Number\n\n**Difficulty:** Easy  |  **Acceptance:** 72.6%\n\n**Tags:** `Array`, `Hash Table`, `Math`, `Binary Search`, `Bit Manipulation`, `Sorting`\n\n## Problem\n\nGiven an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.\n\n&nbsp;\nExample 1:\n\nInput: nums = [3,0,1]\n\nOutput: 2\n\nExplanation:\n\nn = 3 since there are 3 numbers, so all numbers are in the range [0,3]. 2 is the missing number in the range since it does not appear in nums.\n\nExample 2:\n\nInput: nums = [0,1]\n\nOutput: 2\n\nExplanation:\n\nn = 2 since there are 2 numbers, so all numbers are in the range [0,2]. 2 is the missing number in the range since it does not appear in nums.\n\nExample 3:\n\nInput: nums = [9,6,4,2,3,5,7,0,1]\n\nOutput: 8\n\nExplanation:\n\nn = 9 since there are 9 numbers, so all numbers are in the range [0,9]. 8 is the missing number in the range since it does not appear in nums.\n\n&nbsp;\n\n&nbsp;\n\n&nbsp;\n\n&nbsp;\n\n&nbsp;\nConstraints:\n\n\tn == nums.length\n\t1 <= n <= 104\n\t0 <= nums[i] <= n\n\tAll the numbers of nums are unique.\n\n&nbsp;\nFollow up: Could you implement a solution using only O(1) extra space complexity and O(n) runtime complexity?\n\n## My Submission\n\n- Runtime: 1390 ms\n- Memory: 20.4 MB\n\n## Similar Problems\n\n- [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) — Hard\n- [Single Number](https://leetcode.com/problems/single-number/) — Easy\n- [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) — Medium\n- [Couples Holding Hands](https://leetcode.com/problems/couples-holding-hands/) — Hard\n- [Find Unique Binary String](https://leetcode.com/problems/find-unique-binary-string/) — Medium\n"
+        }
+      ],
+      "timestamp": 1777869898000,
+      "runtime": "1390 ms",
+      "memory": "20.4 MB",
+      "runtimePct": 12.78139999999992,
+      "memoryPct": 41.32810000000001,
+      "problemStatement": "<p>Given an array <code>nums</code> containing <code>n</code> distinct numbers in the range <code>[0, n]</code>, return <em>the only number in the range that is missing from the array.</em></p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [3,0,1]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">2</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p><code>n = 3</code> since there are 3 numbers, so all numbers are in the range <code>[0,3]</code>. 2 is the missing number in the range since it does not appear in <code>nums</code>.</p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [0,1]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">2</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p><code>n = 2</code> since there are 2 numbers, so all numbers are in the range <code>[0,2]</code>. 2 is the missing number in the range since it does not appear in <code>nums</code>.</p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [9,6,4,2,3,5,7,0,1]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">8</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p><code>n = 9</code> since there are 9 numbers, so all numbers are in the range <code>[0,9]</code>. 8 is the missing number in the range since it does not appear in <code>nums</code>.</p>\n</div>\n\n<div class=\"simple-translate-system-theme\" id=\"simple-translate\">\n<div>\n<div class=\"simple-translate-button isShow\" style=\"background-image: url(&quot;moz-extension://8a9ffb6b-7e69-4e93-aae1-436a1448eff6/icons/512.png&quot;); height: 22px; width: 22px; top: 318px; left: 36px;\">&nbsp;</div>\n\n<div class=\"simple-translate-panel \" style=\"width: 300px; height: 200px; top: 0px; left: 0px; font-size: 13px;\">\n<div class=\"simple-translate-result-wrapper\" style=\"overflow: hidden;\">\n<div class=\"simple-translate-move\" draggable=\"true\">&nbsp;</div>\n\n<div class=\"simple-translate-result-contents\">\n<p class=\"simple-translate-result\" dir=\"auto\">&nbsp;</p>\n\n<p class=\"simple-translate-candidate\" dir=\"auto\">&nbsp;</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == nums.length</code></li>\n\t<li><code>1 &lt;= n &lt;= 10<sup>4</sup></code></li>\n\t<li><code>0 &lt;= nums[i] &lt;= n</code></li>\n\t<li>All the numbers of <code>nums</code> are <strong>unique</strong>.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong> Could you implement a solution using only <code>O(1)</code> extra space complexity and <code>O(n)</code> runtime complexity?</p>\n",
+      "hints": null,
+      "acRate": 72.5821520446869,
+      "similar": [
+        {
+          "difficulty": "Hard",
+          "titleSlug": "first-missing-positive",
+          "title": "First Missing Positive",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "single-number",
+          "title": "Single Number",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "find-the-duplicate-number",
+          "title": "Find the Duplicate Number",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "couples-holding-hands",
+          "title": "Couples Holding Hands",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "find-unique-binary-string",
+          "title": "Find Unique Binary String",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "find-the-largest-almost-missing-integer",
+          "title": "Find the Largest Almost Missing Integer",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "isDuplicate": true,
+      "duplicateOf": "lc-missing-number::1994660459"
+    },
+    {
+      "id": "lc-plus-one",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Plus One",
+      "titleSlug": "plus-one",
+      "difficulty": "Easy",
+      "topic": "Math",
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "canonical": null,
+      "readmeContent": "# [66] Plus One\n**Difficulty:** Easy  |  **Acceptance:** 50.5%  |  **Likes:** 12053 / **Dislikes:** 5619\n**Tags:** `Array`, `Math`\n## Problem\nYou are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.\n\nIncrement the large integer by one and return the resulting array of digits.\n\n&nbsp;\nExample 1:\n\nInput: digits = [1,2,3]\nOutput: [1,2,4]\nExplanation: The array represents the integer 123.\nIncrementing by one gives 123 + 1 = 124.\nThus, the result should be [1,2,4].\n\nExample 2:\n\nInput: digits = [4,3,2,1]\nOutput: [4,3,2,2]\nExplanation: The array represents the integer 4321.\nIncrementing by one gives 4321 + 1 = 4322.\nThus, the result should be [4,3,2,2].\n\nExample 3:\n\nInput: digits = [9]\nOutput: [1,0]\nExplanation: The array represents the integer 9.\nIncrementing by one gives 9 + 1 = 10.\nThus, the result should be [1,0].\n\n&nbsp;\nConstraints:\n\n\t1 <= digits.length <= 100\n\t0 <= digits[i] <= 9\n\tdigits does not contain any leading 0's.\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 19.3 MB (beats 56.6%)\n\n## Similar Problems\n\n- [Multiply Strings](https://leetcode.com/problems/multiply-strings/) — Medium\n- [Add Binary](https://leetcode.com/problems/add-binary/) — Easy\n- [Add to Array-Form of Integer](https://leetcode.com/problems/add-to-array-form-of-integer/) — Easy\n- [Minimum Operations to Reduce an Integer to 0](https://leetcode.com/problems/minimum-operations-to-reduce-an-integer-to-0/) — Medium\n",
+      "code": "class Solution:\n    def plusOne(self, digits: List[int]) -> List[int]:\n        for i in range(len(digits)-1,-1,-1):\n            if digits[i]<9:\n                digits[i]+=1\n                return digits\n            digits[i]=0\n        return [1]+digits",
+      "files": [
+        {
+          "path": "problems/lc-plus-one/lc-plus-one.py",
+          "content": "class Solution:\n    def plusOne(self, digits: List[int]) -> List[int]:\n        for i in range(len(digits)-1,-1,-1):\n            if digits[i]<9:\n                digits[i]+=1\n                return digits\n            digits[i]=0\n        return [1]+digits"
+        },
+        {
+          "path": "problems/lc-plus-one/README.md",
+          "content": "# [66] Plus One\n**Difficulty:** Easy  |  **Acceptance:** 50.5%  |  **Likes:** 12053 / **Dislikes:** 5619\n**Tags:** `Array`, `Math`\n## Problem\nYou are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.\n\nIncrement the large integer by one and return the resulting array of digits.\n\n&nbsp;\nExample 1:\n\nInput: digits = [1,2,3]\nOutput: [1,2,4]\nExplanation: The array represents the integer 123.\nIncrementing by one gives 123 + 1 = 124.\nThus, the result should be [1,2,4].\n\nExample 2:\n\nInput: digits = [4,3,2,1]\nOutput: [4,3,2,2]\nExplanation: The array represents the integer 4321.\nIncrementing by one gives 4321 + 1 = 4322.\nThus, the result should be [4,3,2,2].\n\nExample 3:\n\nInput: digits = [9]\nOutput: [1,0]\nExplanation: The array represents the integer 9.\nIncrementing by one gives 9 + 1 = 10.\nThus, the result should be [1,0].\n\n&nbsp;\nConstraints:\n\n\t1 <= digits.length <= 100\n\t0 <= digits[i] <= 9\n\tdigits does not contain any leading 0's.\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 19.3 MB (beats 56.6%)\n\n## Similar Problems\n\n- [Multiply Strings](https://leetcode.com/problems/multiply-strings/) — Medium\n- [Add Binary](https://leetcode.com/problems/add-binary/) — Easy\n- [Add to Array-Form of Integer](https://leetcode.com/problems/add-to-array-form-of-integer/) — Easy\n- [Minimum Operations to Reduce an Integer to 0](https://leetcode.com/problems/minimum-operations-to-reduce-an-integer-to-0/) — Medium\n"
+        }
+      ],
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "runtime": "0 ms",
+      "memory": "19.3 MB",
+      "runtimePct": 100,
+      "memoryPct": 56.5939,
+      "timestamp": 1778336710000,
+      "acRate": 50.50418534551262,
+      "likes": 12053,
+      "dislikes": 5619,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "multiply-strings",
+          "title": "Multiply Strings",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "add-binary",
+          "title": "Add Binary",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "add-to-array-form-of-integer",
+          "title": "Add to Array-Form of Integer",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "minimum-operations-to-reduce-an-integer-to-0",
+          "title": "Minimum Operations to Reduce an Integer to 0",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>You are given a <strong>large integer</strong> represented as an integer array <code>digits</code>, where each <code>digits[i]</code> is the <code>i<sup>th</sup></code> digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading <code>0</code>&#39;s.</p>\n\n<p>Increment the large integer by one and return <em>the resulting array of digits</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> digits = [1,2,3]\n<strong>Output:</strong> [1,2,4]\n<strong>Explanation:</strong> The array represents the integer 123.\nIncrementing by one gives 123 + 1 = 124.\nThus, the result should be [1,2,4].\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> digits = [4,3,2,1]\n<strong>Output:</strong> [4,3,2,2]\n<strong>Explanation:</strong> The array represents the integer 4321.\nIncrementing by one gives 4321 + 1 = 4322.\nThus, the result should be [4,3,2,2].\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> digits = [9]\n<strong>Output:</strong> [1,0]\n<strong>Explanation:</strong> The array represents the integer 9.\nIncrementing by one gives 9 + 1 = 10.\nThus, the result should be [1,0].\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= digits.length &lt;= 100</code></li>\n\t<li><code>0 &lt;= digits[i] &lt;= 9</code></li>\n\t<li><code>digits</code> does not contain any leading <code>0</code>&#39;s.</li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/plus-one/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "_requestAIReview": true,
+      "platform": "leetcode"
+    },
+    {
+      "id": "lc-length-of-last-word::1998873436",
+      "submissionId": 1998873436,
+      "platform": "leetcode",
+      "title": "Length of Last Word",
+      "titleSlug": "length-of-last-word",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "String"
+      ],
+      "topic": "String",
+      "code": "class Solution:\n    def lengthOfLastWord(self, s: str) -> int:\n        sr=s.split()\n        lst_word=sr[len(sr)-1]\n        return len(lst_word)\n        ",
+      "readmeContent": "# Length of Last Word\n\n**Difficulty:** Easy  |  **Acceptance:** 59.6%\n\n**Tags:** `String`\n\n## Problem\n\nGiven a string s consisting of words and spaces, return the length of the last word in the string.\n\nA word is a maximal substring consisting of non-space characters only.\n\n&nbsp;\nExample 1:\n\nInput: s = \"Hello World\"\nOutput: 5\nExplanation: The last word is \"World\" with length 5.\n\nExample 2:\n\nInput: s = \"   fly me   to   the moon  \"\nOutput: 4\nExplanation: The last word is \"moon\" with length 4.\n\nExample 3:\n\nInput: s = \"luffy is still joyboy\"\nOutput: 6\nExplanation: The last word is \"joyboy\" with length 6.\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 104\n\ts consists of only English letters and spaces ' '.\n\tThere will be at least one word in s.\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 19.3 MB\n",
+      "files": [
+        {
+          "path": "problems/lc-length-of-last-word/lc-length-of-last-word.py",
+          "content": "class Solution:\n    def lengthOfLastWord(self, s: str) -> int:\n        sr=s.split()\n        lst_word=sr[len(sr)-1]\n        return len(lst_word)\n        "
+        },
+        {
+          "path": "problems/lc-length-of-last-word/README.md",
+          "content": "# Length of Last Word\n\n**Difficulty:** Easy  |  **Acceptance:** 59.6%\n\n**Tags:** `String`\n\n## Problem\n\nGiven a string s consisting of words and spaces, return the length of the last word in the string.\n\nA word is a maximal substring consisting of non-space characters only.\n\n&nbsp;\nExample 1:\n\nInput: s = \"Hello World\"\nOutput: 5\nExplanation: The last word is \"World\" with length 5.\n\nExample 2:\n\nInput: s = \"   fly me   to   the moon  \"\nOutput: 4\nExplanation: The last word is \"moon\" with length 4.\n\nExample 3:\n\nInput: s = \"luffy is still joyboy\"\nOutput: 6\nExplanation: The last word is \"joyboy\" with length 6.\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 104\n\ts consists of only English letters and spaces ' '.\n\tThere will be at least one word in s.\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 19.3 MB\n"
+        }
+      ],
+      "timestamp": 1778336893000,
+      "runtime": "0 ms",
+      "memory": "19.3 MB",
+      "runtimePct": 100,
+      "memoryPct": 53.52539999999999,
+      "problemStatement": "<p>Given a string <code>s</code> consisting of words and spaces, return <em>the length of the <strong>last</strong> word in the string.</em></p>\n\n<p>A <strong>word</strong> is a maximal <span data-keyword=\"substring-nonempty\">substring</span> consisting of non-space characters only.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;Hello World&quot;\n<strong>Output:</strong> 5\n<strong>Explanation:</strong> The last word is &quot;World&quot; with length 5.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;   fly me   to   the moon  &quot;\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> The last word is &quot;moon&quot; with length 4.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;luffy is still joyboy&quot;\n<strong>Output:</strong> 6\n<strong>Explanation:</strong> The last word is &quot;joyboy&quot; with length 6.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>s</code> consists of only English letters and spaces <code>&#39; &#39;</code>.</li>\n\t<li>There will be at least one word in <code>s</code>.</li>\n</ul>\n",
+      "hints": null,
+      "acRate": 59.59006017713908,
+      "similar": null,
+      "hasSimilar": null
+    },
+    {
+      "id": "lc-reverse-string::2027745747",
+      "submissionId": 2027745747,
+      "platform": "leetcode",
+      "title": "Reverse String",
+      "titleSlug": "reverse-string",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Two Pointers",
+        "String"
+      ],
+      "topic": "Two Pointers",
+      "code": "class Solution:\n    def reverseString(self, s: List[str]) -> None:\n        s[:]=s[::-1]",
+      "readmeContent": "# Reverse String\n\n**Difficulty:** Easy  |  **Acceptance:** 81.2%\n\n**Tags:** `Two Pointers`, `String`\n\n## Problem\n\nWrite a function that reverses a string. The input string is given as an array of characters s.\n\nYou must do this by modifying the input array in-place with O(1) extra memory.\n\n&nbsp;\nExample 1:\nInput: s = [\"h\",\"e\",\"l\",\"l\",\"o\"]\nOutput: [\"o\",\"l\",\"l\",\"e\",\"h\"]\nExample 2:\nInput: s = [\"H\",\"a\",\"n\",\"n\",\"a\",\"h\"]\nOutput: [\"h\",\"a\",\"n\",\"n\",\"a\",\"H\"]\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 105\n\ts[i] is a printable ascii character.\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 23.5 MB\n\n## Similar Problems\n\n- [Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/) — Easy\n- [Reverse String II](https://leetcode.com/problems/reverse-string-ii/) — Easy\n",
+      "files": [
+        {
+          "path": "problems/lc-reverse-string/lc-reverse-string.py",
+          "content": "class Solution:\n    def reverseString(self, s: List[str]) -> None:\n        s[:]=s[::-1]"
+        },
+        {
+          "path": "problems/lc-reverse-string/README.md",
+          "content": "# Reverse String\n\n**Difficulty:** Easy  |  **Acceptance:** 81.2%\n\n**Tags:** `Two Pointers`, `String`\n\n## Problem\n\nWrite a function that reverses a string. The input string is given as an array of characters s.\n\nYou must do this by modifying the input array in-place with O(1) extra memory.\n\n&nbsp;\nExample 1:\nInput: s = [\"h\",\"e\",\"l\",\"l\",\"o\"]\nOutput: [\"o\",\"l\",\"l\",\"e\",\"h\"]\nExample 2:\nInput: s = [\"H\",\"a\",\"n\",\"n\",\"a\",\"h\"]\nOutput: [\"h\",\"a\",\"n\",\"n\",\"a\",\"H\"]\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 105\n\ts[i] is a printable ascii character.\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 23.5 MB\n\n## Similar Problems\n\n- [Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/) — Easy\n- [Reverse String II](https://leetcode.com/problems/reverse-string-ii/) — Easy\n"
+        }
+      ],
+      "timestamp": 1781023186000,
+      "runtime": "0 ms",
+      "memory": "23.5 MB",
+      "runtimePct": 100,
+      "memoryPct": 45.86280000000002,
+      "problemStatement": "<p>Write a function that reverses a string. The input string is given as an array of characters <code>s</code>.</p>\n\n<p>You must do this by modifying the input array <a href=\"https://en.wikipedia.org/wiki/In-place_algorithm\" target=\"_blank\">in-place</a> with <code>O(1)</code> extra memory.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> s = [\"h\",\"e\",\"l\",\"l\",\"o\"]\n<strong>Output:</strong> [\"o\",\"l\",\"l\",\"e\",\"h\"]\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> s = [\"H\",\"a\",\"n\",\"n\",\"a\",\"h\"]\n<strong>Output:</strong> [\"h\",\"a\",\"n\",\"n\",\"a\",\"H\"]\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>s[i]</code> is a <a href=\"https://en.wikipedia.org/wiki/ASCII#Printable_characters\" target=\"_blank\">printable ascii character</a>.</li>\n</ul>\n",
+      "hints": [
+        "The entire logic for reversing a string is based on using the opposite directional two-pointer approach!"
+      ],
+      "acRate": 81.24912448347004,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "reverse-vowels-of-a-string",
+          "title": "Reverse Vowels of a String",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "reverse-string-ii",
+          "title": "Reverse String II",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "conflictPending": true,
+      "conflictCandidates": [
+        {
+          "id": "lc-reverse-string::2035029394",
+          "code": "class Solution:\n    def reverseString(self, s: List[str]) -> None:\n        i=0\n        j=len(s)-1\n        while i<=j:\n            s[i],s[j]=s[j],s[i]\n            i+=1\n            j-=1",
+          "lang": {
+            "name": "Python3",
+            "ext": "py",
+            "slug": "python3"
+          },
+          "runtime": "0 ms",
+          "memory": "23.4 MB",
+          "runtimePct": 100,
+          "memoryPct": 81.06660000000002,
+          "timestamp": 1781605536000,
+          "submissionId": 2035029394
+        }
+      ]
+    },
+    {
+      "id": "lc-valid-palindrome::2027753563",
+      "submissionId": 2027753563,
+      "platform": "leetcode",
+      "title": "Valid Palindrome",
+      "titleSlug": "valid-palindrome",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "String",
+        "Two Pointers"
+      ],
+      "topic": "Two Pointers",
+      "code": "class Solution:\n    def isPalindrome(self, s: str) -> bool:\n        x=\"\".join(ch.lower() for ch in s if ch.isalnum())\n        if x==x[::-1]:\n            return True\n        else:\n            return False\n",
+      "readmeContent": "# Valid Palindrome\n\n**Difficulty:** Easy  |  **Acceptance:** 54.2%\n\n**Tags:** `Two Pointers`, `String`\n\n## Problem\n\nA phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.\n\nGiven a string s, return true if it is a palindrome, or false otherwise.\n\n&nbsp;\nExample 1:\n\nInput: s = \"A man, a plan, a canal: Panama\"\nOutput: true\nExplanation: \"amanaplanacanalpanama\" is a palindrome.\n\nExample 2:\n\nInput: s = \"race a car\"\nOutput: false\nExplanation: \"raceacar\" is not a palindrome.\n\nExample 3:\n\nInput: s = \" \"\nOutput: true\nExplanation: s is an empty string \"\" after removing non-alphanumeric characters.\nSince an empty string reads the same forward and backward, it is a palindrome.\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 2 * 105\n\ts consists only of printable ASCII characters.\n\n## My Submission\n\n- Runtime: 7 ms\n- Memory: 23.4 MB\n\n## Similar Problems\n\n- [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) — Easy\n- [Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/) — Easy\n- [Maximum Product of the Length of Two Palindromic Subsequences](https://leetcode.com/problems/maximum-product-of-the-length-of-two-palindromic-subsequences/) — Medium\n- [Find First Palindromic String in the Array](https://leetcode.com/problems/find-first-palindromic-string-in-the-array/) — Easy\n- [Maximum Palindromes After Operations](https://leetcode.com/problems/maximum-palindromes-after-operations/) — Medium\n",
+      "files": [
+        {
+          "path": "problems/lc-valid-palindrome/lc-valid-palindrome.py",
+          "content": "class Solution:\n    def isPalindrome(self, s: str) -> bool:\n        x=\"\".join(ch.lower() for ch in s if ch.isalnum())\n        if x==x[::-1]:\n            return True\n        else:\n            return False\n"
+        },
+        {
+          "path": "problems/lc-valid-palindrome/README.md",
+          "content": "# Valid Palindrome\n\n**Difficulty:** Easy  |  **Acceptance:** 54.2%\n\n**Tags:** `Two Pointers`, `String`\n\n## Problem\n\nA phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.\n\nGiven a string s, return true if it is a palindrome, or false otherwise.\n\n&nbsp;\nExample 1:\n\nInput: s = \"A man, a plan, a canal: Panama\"\nOutput: true\nExplanation: \"amanaplanacanalpanama\" is a palindrome.\n\nExample 2:\n\nInput: s = \"race a car\"\nOutput: false\nExplanation: \"raceacar\" is not a palindrome.\n\nExample 3:\n\nInput: s = \" \"\nOutput: true\nExplanation: s is an empty string \"\" after removing non-alphanumeric characters.\nSince an empty string reads the same forward and backward, it is a palindrome.\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 2 * 105\n\ts consists only of printable ASCII characters.\n\n## My Submission\n\n- Runtime: 7 ms\n- Memory: 23.4 MB\n\n## Similar Problems\n\n- [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) — Easy\n- [Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/) — Easy\n- [Maximum Product of the Length of Two Palindromic Subsequences](https://leetcode.com/problems/maximum-product-of-the-length-of-two-palindromic-subsequences/) — Medium\n- [Find First Palindromic String in the Array](https://leetcode.com/problems/find-first-palindromic-string-in-the-array/) — Easy\n- [Maximum Palindromes After Operations](https://leetcode.com/problems/maximum-palindromes-after-operations/) — Medium\n"
+        }
+      ],
+      "timestamp": 1781023603000,
+      "runtime": "7 ms",
+      "memory": "23.4 MB",
+      "runtimePct": 81.1182,
+      "memoryPct": 12.042499999999988,
+      "problemStatement": "<p>A phrase is a <strong>palindrome</strong> if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.</p>\n\n<p>Given a string <code>s</code>, return <code>true</code><em> if it is a <strong>palindrome</strong>, or </em><code>false</code><em> otherwise</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;A man, a plan, a canal: Panama&quot;\n<strong>Output:</strong> true\n<strong>Explanation:</strong> &quot;amanaplanacanalpanama&quot; is a palindrome.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;race a car&quot;\n<strong>Output:</strong> false\n<strong>Explanation:</strong> &quot;raceacar&quot; is not a palindrome.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot; &quot;\n<strong>Output:</strong> true\n<strong>Explanation:</strong> s is an empty string &quot;&quot; after removing non-alphanumeric characters.\nSince an empty string reads the same forward and backward, it is a palindrome.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 2 * 10<sup>5</sup></code></li>\n\t<li><code>s</code> consists only of printable ASCII characters.</li>\n</ul>\n",
+      "hints": null,
+      "acRate": 54.16344755713144,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "palindrome-linked-list",
+          "title": "Palindrome Linked List",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "valid-palindrome-ii",
+          "title": "Valid Palindrome II",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-product-of-the-length-of-two-palindromic-subsequences",
+          "title": "Maximum Product of the Length of Two Palindromic Subsequences",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "find-first-palindromic-string-in-the-array",
+          "title": "Find First Palindromic String in the Array",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-palindromes-after-operations",
+          "title": "Maximum Palindromes After Operations",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 125,
+            "platform": "leetcode",
+            "slug": "valid-palindrome"
+          }
+        ],
+        "canonicalId": "valid-palindrome",
+        "canonicalTitle": "Valid Palindrome",
+        "confirmedBy": "system-init",
+        "difficulty": "easy",
+        "pattern": "two-pointer",
+        "tags": [
+          "string"
+        ],
+        "topic": "two-pointers",
+        "voteCount": 91
+      }
+    },
+    {
+      "id": "lc-contains-duplicate::2029587341",
+      "submissionId": 2029587341,
+      "platform": "leetcode",
+      "title": "Contains Duplicate",
+      "titleSlug": "contains-duplicate",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Sorting"
+      ],
+      "topic": "Array",
+      "code": "class Solution:\n    def containsDuplicate(self, nums: List[int]) -> bool:\n        if len(nums)==len(set(nums)):\n            return False\n        else:\n            return True",
+      "readmeContent": "# Contains Duplicate\n\n**Difficulty:** Easy  |  **Acceptance:** 64.7%\n\n**Tags:** `Array`, `Hash Table`, `Sorting`\n\n## Problem\n\nGiven an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.\n\n&nbsp;\nExample 1:\n\nInput: nums = [1,2,3,1]\n\nOutput: true\n\nExplanation:\n\nThe element 1 occurs at the indices 0 and 3.\n\nExample 2:\n\nInput: nums = [1,2,3,4]\n\nOutput: false\n\nExplanation:\n\nAll elements are distinct.\n\nExample 3:\n\nInput: nums = [1,1,1,3,3,4,3,2,4,2]\n\nOutput: true\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 105\n\t-109 <= nums[i] <= 109\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 31.3 MB\n\n## Similar Problems\n\n- [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/) — Easy\n- [Contains Duplicate III](https://leetcode.com/problems/contains-duplicate-iii/) — Hard\n- [Make Array Zero by Subtracting Equal Amounts](https://leetcode.com/problems/make-array-zero-by-subtracting-equal-amounts/) — Easy\n- [Find Valid Pair of Adjacent Digits in String](https://leetcode.com/problems/find-valid-pair-of-adjacent-digits-in-string/) — Easy\n",
+      "files": [
+        {
+          "path": "problems/lc-contains-duplicate/lc-contains-duplicate.py",
+          "content": "class Solution:\n    def containsDuplicate(self, nums: List[int]) -> bool:\n        if len(nums)==len(set(nums)):\n            return False\n        else:\n            return True"
+        },
+        {
+          "path": "problems/lc-contains-duplicate/README.md",
+          "content": "# Contains Duplicate\n\n**Difficulty:** Easy  |  **Acceptance:** 64.7%\n\n**Tags:** `Array`, `Hash Table`, `Sorting`\n\n## Problem\n\nGiven an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.\n\n&nbsp;\nExample 1:\n\nInput: nums = [1,2,3,1]\n\nOutput: true\n\nExplanation:\n\nThe element 1 occurs at the indices 0 and 3.\n\nExample 2:\n\nInput: nums = [1,2,3,4]\n\nOutput: false\n\nExplanation:\n\nAll elements are distinct.\n\nExample 3:\n\nInput: nums = [1,1,1,3,3,4,3,2,4,2]\n\nOutput: true\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 105\n\t-109 <= nums[i] <= 109\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 31.3 MB\n\n## Similar Problems\n\n- [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/) — Easy\n- [Contains Duplicate III](https://leetcode.com/problems/contains-duplicate-iii/) — Hard\n- [Make Array Zero by Subtracting Equal Amounts](https://leetcode.com/problems/make-array-zero-by-subtracting-equal-amounts/) — Easy\n- [Find Valid Pair of Adjacent Digits in String](https://leetcode.com/problems/find-valid-pair-of-adjacent-digits-in-string/) — Easy\n"
+        }
+      ],
+      "timestamp": 1781171697000,
+      "runtime": "0 ms",
+      "memory": "31.3 MB",
+      "runtimePct": 100,
+      "memoryPct": 93.00950000000003,
+      "problemStatement": "<p>Given an integer array <code>nums</code>, return <code>true</code> if any value appears <strong>at least twice</strong> in the array, and return <code>false</code> if every element is distinct.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [1,2,3,1]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>The element 1 occurs at the indices 0 and 3.</p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [1,2,3,4]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">false</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>All elements are distinct.</p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [1,1,1,3,3,4,3,2,4,2]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>\n</ul>\n",
+      "hints": null,
+      "acRate": 64.66181595972986,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "contains-duplicate-ii",
+          "title": "Contains Duplicate II",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "contains-duplicate-iii",
+          "title": "Contains Duplicate III",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "make-array-zero-by-subtracting-equal-amounts",
+          "title": "Make Array Zero by Subtracting Equal Amounts",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "find-valid-pair-of-adjacent-digits-in-string",
+          "title": "Find Valid Pair of Adjacent Digits in String",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 217,
+            "platform": "leetcode",
+            "slug": "contains-duplicate"
+          }
+        ],
+        "canonicalId": "contains-duplicate",
+        "canonicalTitle": "Contains Duplicate",
+        "confirmedBy": "system-init",
+        "difficulty": "easy",
+        "pattern": "hash-set",
+        "tags": [
+          "array",
+          "hash-table"
+        ],
+        "topic": "arrays",
+        "voteCount": 95
+      }
+    },
+    {
+      "id": "lc-single-number::2029632290",
+      "submissionId": 2029632290,
+      "platform": "leetcode",
+      "title": "Single Number",
+      "titleSlug": "single-number",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Bit Manipulation"
+      ],
+      "topic": "Bit Manipulation",
+      "code": "class Solution:\n    def singleNumber(self, nums: List[int]) -> int:\n        result=0\n        for n in nums:\n            result^=n\n        return result",
+      "readmeContent": "# Single Number\n\n**Difficulty:** Easy  |  **Acceptance:** 78.2%\n\n**Tags:** `Array`, `Bit Manipulation`\n\n## Problem\n\nGiven a non-empty&nbsp;array of integers nums, every element appears twice except for one. Find that single one.\n\nYou must&nbsp;implement a solution with a linear runtime complexity and use&nbsp;only constant&nbsp;extra space.\n\n&nbsp;\nExample 1:\n\nInput: nums = [2,2,1]\n\nOutput: 1\n\nExample 2:\n\nInput: nums = [4,1,2,1,2]\n\nOutput: 4\n\nExample 3:\n\nInput: nums = [1]\n\nOutput: 1\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 3 * 104\n\t-3 * 104 <= nums[i] <= 3 * 104\n\tEach element in the array appears twice except for one element which appears only once.\n\n## My Submission\n\n- Runtime: 3 ms\n- Memory: 21.1 MB\n\n## Similar Problems\n\n- [Single Number II](https://leetcode.com/problems/single-number-ii/) — Medium\n- [Single Number III](https://leetcode.com/problems/single-number-iii/) — Medium\n- [Missing Number](https://leetcode.com/problems/missing-number/) — Easy\n- [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) — Medium\n- [Find the Difference](https://leetcode.com/problems/find-the-difference/) — Easy\n",
+      "files": [
+        {
+          "path": "problems/lc-single-number/lc-single-number.py",
+          "content": "class Solution:\n    def singleNumber(self, nums: List[int]) -> int:\n        result=0\n        for n in nums:\n            result^=n\n        return result"
+        },
+        {
+          "path": "problems/lc-single-number/README.md",
+          "content": "# Single Number\n\n**Difficulty:** Easy  |  **Acceptance:** 78.2%\n\n**Tags:** `Array`, `Bit Manipulation`\n\n## Problem\n\nGiven a non-empty&nbsp;array of integers nums, every element appears twice except for one. Find that single one.\n\nYou must&nbsp;implement a solution with a linear runtime complexity and use&nbsp;only constant&nbsp;extra space.\n\n&nbsp;\nExample 1:\n\nInput: nums = [2,2,1]\n\nOutput: 1\n\nExample 2:\n\nInput: nums = [4,1,2,1,2]\n\nOutput: 4\n\nExample 3:\n\nInput: nums = [1]\n\nOutput: 1\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 3 * 104\n\t-3 * 104 <= nums[i] <= 3 * 104\n\tEach element in the array appears twice except for one element which appears only once.\n\n## My Submission\n\n- Runtime: 3 ms\n- Memory: 21.1 MB\n\n## Similar Problems\n\n- [Single Number II](https://leetcode.com/problems/single-number-ii/) — Medium\n- [Single Number III](https://leetcode.com/problems/single-number-iii/) — Medium\n- [Missing Number](https://leetcode.com/problems/missing-number/) — Easy\n- [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) — Medium\n- [Find the Difference](https://leetcode.com/problems/find-the-difference/) — Easy\n"
+        }
+      ],
+      "timestamp": 1781174394000,
+      "runtime": "3 ms",
+      "memory": "21.1 MB",
+      "runtimePct": 60.534299999999995,
+      "memoryPct": 69.9858,
+      "problemStatement": "<p>Given a <strong>non-empty</strong>&nbsp;array of integers <code>nums</code>, every element appears <em>twice</em> except for one. Find that single one.</p>\n\n<p>You must&nbsp;implement a solution with a linear runtime complexity and use&nbsp;only constant&nbsp;extra space.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [2,2,1]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">1</span></p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [4,1,2,1,2]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">4</span></p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [1]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">1</span></p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 3 * 10<sup>4</sup></code></li>\n\t<li><code>-3 * 10<sup>4</sup> &lt;= nums[i] &lt;= 3 * 10<sup>4</sup></code></li>\n\t<li>Each element in the array appears twice except for one element which appears only once.</li>\n</ul>\n",
+      "hints": [
+        "Think about the XOR (^) operator's property."
+      ],
+      "acRate": 78.21844272811475,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "single-number-ii",
+          "title": "Single Number II",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "single-number-iii",
+          "title": "Single Number III",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "missing-number",
+          "title": "Missing Number",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "find-the-duplicate-number",
+          "title": "Find the Duplicate Number",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "find-the-difference",
+          "title": "Find the Difference",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "find-the-xor-of-numbers-which-appear-twice",
+          "title": "Find the XOR of Numbers Which Appear Twice",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true
+    }
+  ]
+}
