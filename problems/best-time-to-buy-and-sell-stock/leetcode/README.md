@@ -7,8 +7,8 @@
 | Problem ID | `lc-best-time-to-buy-and-sell-stock` |
 | Topics | Array, Dynamic Programming |
 | Solved | 2026-06-15 |
-| Runtime | 31 ms (beats 84.63340000000001%) |
-| Memory | 28.5 MB (beats 76.14680000000001%) |
+| Runtime | 31 ms (beats 84.25930000000002%) |
+| Memory | 28.5 MB (beats 70.025%) |
 
 ## Problem Statement
 

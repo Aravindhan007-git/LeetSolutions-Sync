@@ -1,4 +1,21 @@
 {
+  "leetcode::best-time-to-buy-and-sell-stock": {
+    "difficulty": "Easy",
+    "lang": "Python3",
+    "platform": "leetcode",
+    "slug": "best-time-to-buy-and-sell-stock",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python3",
+        "ts": 1795835187143
+      }
+    ],
+    "tags": [
+      "Array",
+      "Dynamic Programming"
+    ]
+  },
   "leetcode::binary-tree-inorder-traversal": {
     "difficulty": "Easy",
     "lang": "Python3",
