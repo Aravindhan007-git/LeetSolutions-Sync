@@ -1,4 +1,44 @@
 {
+  "leetcode::missing-number": {
+    "difficulty": "Easy",
+    "lang": "Python3",
+    "platform": "leetcode",
+    "slug": "missing-number",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python3",
+        "ts": 1787939702081
+      }
+    ],
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Math",
+      "Binary Search",
+      "Bit Manipulation",
+      "Sorting"
+    ]
+  },
+  "leetcode::permutation-in-string": {
+    "difficulty": "Medium",
+    "lang": "Python3",
+    "platform": "leetcode",
+    "slug": "permutation-in-string",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python3",
+        "ts": 1787914533058
+      }
+    ],
+    "tags": [
+      "String",
+      "Hash Table",
+      "Two Pointers",
+      "Sliding Window"
+    ]
+  },
   "leetcode::plus-one": {
     "difficulty": "Easy",
     "lang": "Python3",

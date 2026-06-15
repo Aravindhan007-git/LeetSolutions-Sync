@@ -1,26 +1,26 @@
 {
-  "updatedAt": "2026-08-28T10:43:13.557Z",
+  "updatedAt": "2026-08-28T17:55:02.148Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 78,
-    "easy": 60,
-    "medium": 16,
+    "total": 80,
+    "easy": 61,
+    "medium": 17,
     "hard": 2,
     "unknownDifficulty": 0,
     "byPlatform": {
-      "leetcode": 78
+      "leetcode": 80
     },
     "byLang": {
-      "Python3": 69,
+      "Python3": 71,
       "C": 9
     },
     "byTopic": {
       "Math": 10,
-      "Array": 43,
+      "Array": 44,
       "Linked List": 6,
       "Hash Table": 2,
       "Two Pointers": 10,
-      "String": 7
+      "String": 8
     }
   },
   "meta": {
@@ -2153,6 +2153,99 @@
       "manuallyEdited": false
     },
     {
+      "id": "lc-missing-number",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Missing Number",
+      "titleSlug": "missing-number",
+      "difficulty": "Easy",
+      "topic": "Bit Manipulation",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Math",
+        "Binary Search",
+        "Bit Manipulation",
+        "Sorting"
+      ],
+      "canonical": null,
+      "readmeContent": "# [268] Missing Number\n**Difficulty:** Easy  |  **Acceptance:** 72.6%  |  **Likes:** 14551 / **Dislikes:** 3483\n**Tags:** `Array`, `Hash Table`, `Math`, `Binary Search`, `Bit Manipulation`, `Sorting`\n## Problem\nGiven an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.\n\n&nbsp;\nExample 1:\n\nInput: nums = [3,0,1]\n\nOutput: 2\n\nExplanation:\n\nn = 3 since there are 3 numbers, so all numbers are in the range [0,3]. 2 is the missing number in the range since it does not appear in nums.\n\nExample 2:\n\nInput: nums = [0,1]\n\nOutput: 2\n\nExplanation:\n\nn = 2 since there are 2 numbers, so all numbers are in the range [0,2]. 2 is the missing number in the range since it does not appear in nums.\n\nExample 3:\n\nInput: nums = [9,6,4,2,3,5,7,0,1]\n\nOutput: 8\n\nExplanation:\n\nn = 9 since there are 9 numbers, so all numbers are in the range [0,9]. 8 is the missing number in the range since it does not appear in nums.\n\n&nbsp;\n\n&nbsp;\n\n&nbsp;\n\n&nbsp;\n\n&nbsp;\nConstraints:\n\n\tn == nums.length\n\t1 <= n <= 104\n\t0 <= nums[i] <= n\n\tAll the numbers of nums are unique.\n\n&nbsp;\nFollow up: Could you implement a solution using only O(1) extra space complexity and O(n) runtime complexity?\n## My Submission\n\n- Runtime: 3 ms (beats 60.7%)\n- Memory: 21 MB (beats 6.1%)\n\n## Similar Problems\n\n- [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) — Hard\n- [Single Number](https://leetcode.com/problems/single-number/) — Easy\n- [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) — Medium\n- [Couples Holding Hands](https://leetcode.com/problems/couples-holding-hands/) — Hard\n- [Find Unique Binary String](https://leetcode.com/problems/find-unique-binary-string/) — Medium\n",
+      "code": "class Solution:\n    def missingNumber(self, nums: List[int]) -> int:\n        nums=set(nums)\n        for i in range(len(nums)+1):\n            if i not in nums:\n                return i\n        ",
+      "files": [
+        {
+          "path": "problems/lc-missing-number/lc-missing-number.py",
+          "content": "class Solution:\n    def missingNumber(self, nums: List[int]) -> int:\n        nums=set(nums)\n        for i in range(len(nums)+1):\n            if i not in nums:\n                return i\n        "
+        },
+        {
+          "path": "problems/lc-missing-number/README.md",
+          "content": "# [268] Missing Number\n**Difficulty:** Easy  |  **Acceptance:** 72.6%  |  **Likes:** 14551 / **Dislikes:** 3483\n**Tags:** `Array`, `Hash Table`, `Math`, `Binary Search`, `Bit Manipulation`, `Sorting`\n## Problem\nGiven an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.\n\n&nbsp;\nExample 1:\n\nInput: nums = [3,0,1]\n\nOutput: 2\n\nExplanation:\n\nn = 3 since there are 3 numbers, so all numbers are in the range [0,3]. 2 is the missing number in the range since it does not appear in nums.\n\nExample 2:\n\nInput: nums = [0,1]\n\nOutput: 2\n\nExplanation:\n\nn = 2 since there are 2 numbers, so all numbers are in the range [0,2]. 2 is the missing number in the range since it does not appear in nums.\n\nExample 3:\n\nInput: nums = [9,6,4,2,3,5,7,0,1]\n\nOutput: 8\n\nExplanation:\n\nn = 9 since there are 9 numbers, so all numbers are in the range [0,9]. 8 is the missing number in the range since it does not appear in nums.\n\n&nbsp;\n\n&nbsp;\n\n&nbsp;\n\n&nbsp;\n\n&nbsp;\nConstraints:\n\n\tn == nums.length\n\t1 <= n <= 104\n\t0 <= nums[i] <= n\n\tAll the numbers of nums are unique.\n\n&nbsp;\nFollow up: Could you implement a solution using only O(1) extra space complexity and O(n) runtime complexity?\n## My Submission\n\n- Runtime: 3 ms (beats 60.7%)\n- Memory: 21 MB (beats 6.1%)\n\n## Similar Problems\n\n- [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) — Hard\n- [Single Number](https://leetcode.com/problems/single-number/) — Easy\n- [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) — Medium\n- [Couples Holding Hands](https://leetcode.com/problems/couples-holding-hands/) — Hard\n- [Find Unique Binary String](https://leetcode.com/problems/find-unique-binary-string/) — Medium\n"
+        }
+      ],
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "runtime": "3 ms",
+      "memory": "21 MB",
+      "runtimePct": 60.7491,
+      "memoryPct": 6.136600000000014,
+      "timestamp": 1781520718000,
+      "acRate": 72.58439488359703,
+      "likes": 14551,
+      "dislikes": 3483,
+      "similar": [
+        {
+          "difficulty": "Hard",
+          "titleSlug": "first-missing-positive",
+          "title": "First Missing Positive",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "single-number",
+          "title": "Single Number",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "find-the-duplicate-number",
+          "title": "Find the Duplicate Number",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "couples-holding-hands",
+          "title": "Couples Holding Hands",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "find-unique-binary-string",
+          "title": "Find Unique Binary String",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "find-the-largest-almost-missing-integer",
+          "title": "Find the Largest Almost Missing Integer",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>Given an array <code>nums</code> containing <code>n</code> distinct numbers in the range <code>[0, n]</code>, return <em>the only number in the range that is missing from the array.</em></p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [3,0,1]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">2</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p><code>n = 3</code> since there are 3 numbers, so all numbers are in the range <code>[0,3]</code>. 2 is the missing number in the range since it does not appear in <code>nums</code>.</p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [0,1]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">2</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p><code>n = 2</code> since there are 2 numbers, so all numbers are in the range <code>[0,2]</code>. 2 is the missing number in the range since it does not appear in <code>nums</code>.</p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [9,6,4,2,3,5,7,0,1]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">8</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p><code>n = 9</code> since there are 9 numbers, so all numbers are in the range <code>[0,9]</code>. 8 is the missing number in the range since it does not appear in <code>nums</code>.</p>\n</div>\n\n<div class=\"simple-translate-system-theme\" id=\"simple-translate\">\n<div>\n<div class=\"simple-translate-button isShow\" style=\"background-image: url(&quot;moz-extension://8a9ffb6b-7e69-4e93-aae1-436a1448eff6/icons/512.png&quot;); height: 22px; width: 22px; top: 318px; left: 36px;\">&nbsp;</div>\n\n<div class=\"simple-translate-panel \" style=\"width: 300px; height: 200px; top: 0px; left: 0px; font-size: 13px;\">\n<div class=\"simple-translate-result-wrapper\" style=\"overflow: hidden;\">\n<div class=\"simple-translate-move\" draggable=\"true\">&nbsp;</div>\n\n<div class=\"simple-translate-result-contents\">\n<p class=\"simple-translate-result\" dir=\"auto\">&nbsp;</p>\n\n<p class=\"simple-translate-candidate\" dir=\"auto\">&nbsp;</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == nums.length</code></li>\n\t<li><code>1 &lt;= n &lt;= 10<sup>4</sup></code></li>\n\t<li><code>0 &lt;= nums[i] &lt;= n</code></li>\n\t<li>All the numbers of <code>nums</code> are <strong>unique</strong>.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong> Could you implement a solution using only <code>O(1)</code> extra space complexity and <code>O(n)</code> runtime complexity?</p>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/missing-number/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": true,
+      "duplicateOf": "lc-missing-number::2033840158",
+      "_requestAIReview": true,
+      "platform": "leetcode",
+      "methods": [],
+      "manuallyEdited": false
+    },
+    {
       "id": "lc-missing-number::1994660459",
       "submissionId": 1994660459,
       "platform": "leetcode",
@@ -2837,6 +2930,92 @@
         "problems/lc-palindrome-number/README.md"
       ],
       "notes": "",
+      "methods": [],
+      "manuallyEdited": false
+    },
+    {
+      "id": "lc-permutation-in-string",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Permutation in String",
+      "titleSlug": "permutation-in-string",
+      "difficulty": "Medium",
+      "topic": "Sliding Window",
+      "tags": [
+        "String",
+        "Hash Table",
+        "Two Pointers",
+        "Sliding Window"
+      ],
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 567,
+            "platform": "leetcode",
+            "slug": "permutation-in-string"
+          }
+        ],
+        "canonicalId": "permutation-in-string",
+        "canonicalTitle": "Permutation in String",
+        "confirmedBy": "system-init",
+        "difficulty": "medium",
+        "pattern": "sliding-window",
+        "tags": [
+          "string"
+        ],
+        "topic": "sliding-window",
+        "voteCount": 93
+      },
+      "readmeContent": "# [567] Permutation in String\n**Difficulty:** Medium  |  **Acceptance:** 49.6%  |  **Likes:** 13234 / **Dislikes:** 528\n**Tags:** `Hash Table`, `Two Pointers`, `String`, `Sliding Window`\n## Problem\nGiven two strings s1 and s2, return true if s2 contains a permutation of s1, or false otherwise.\n\nIn other words, return true if one of s1's permutations is the substring of s2.\n\n&nbsp;\nExample 1:\n\nInput: s1 = \"ab\", s2 = \"eidbaooo\"\nOutput: true\nExplanation: s2 contains one permutation of s1 (\"ba\").\n\nExample 2:\n\nInput: s1 = \"ab\", s2 = \"eidboaoo\"\nOutput: false\n\n&nbsp;\nConstraints:\n\n\t1 <= s1.length, s2.length <= 104\n\ts1 and s2 consist of lowercase English letters.\n## My Submission\n\n- Runtime: 15 ms (beats 80.7%)\n- Memory: 19.2 MB (beats 97.7%)\n\n## Similar Problems\n\n- [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) — Hard\n- [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) — Medium\n",
+      "code": "class Solution:\n    def checkInclusion(self, s1: str, s2: str) -> bool:\n        \n        a=[0]*26\n        b=[0]*26\n        w=len(s1)\n        r=len(s2)\n        if w>r:\n            return False\n        for i in s1:\n            a[ord(i)-ord('a')]+=1\n        for i in range(r):\n            if i<w:\n                b[ord(s2[i])-ord('a')]+=1\n            else:\n                b[ord(s2[i-w])-ord('a')]-=1\n                b[ord(s2[i])-ord('a')]+=1\n            if a==b:\n                return True\n        return False",
+      "files": [
+        {
+          "path": "problems/permutation-in-string/leetcode/lc-permutation-in-string.py",
+          "content": "class Solution:\n    def checkInclusion(self, s1: str, s2: str) -> bool:\n        \n        a=[0]*26\n        b=[0]*26\n        w=len(s1)\n        r=len(s2)\n        if w>r:\n            return False\n        for i in s1:\n            a[ord(i)-ord('a')]+=1\n        for i in range(r):\n            if i<w:\n                b[ord(s2[i])-ord('a')]+=1\n            else:\n                b[ord(s2[i-w])-ord('a')]-=1\n                b[ord(s2[i])-ord('a')]+=1\n            if a==b:\n                return True\n        return False"
+        },
+        {
+          "path": "problems/permutation-in-string/README.md",
+          "content": "# [567] Permutation in String\n**Difficulty:** Medium  |  **Acceptance:** 49.6%  |  **Likes:** 13234 / **Dislikes:** 528\n**Tags:** `Hash Table`, `Two Pointers`, `String`, `Sliding Window`\n## Problem\nGiven two strings s1 and s2, return true if s2 contains a permutation of s1, or false otherwise.\n\nIn other words, return true if one of s1's permutations is the substring of s2.\n\n&nbsp;\nExample 1:\n\nInput: s1 = \"ab\", s2 = \"eidbaooo\"\nOutput: true\nExplanation: s2 contains one permutation of s1 (\"ba\").\n\nExample 2:\n\nInput: s1 = \"ab\", s2 = \"eidboaoo\"\nOutput: false\n\n&nbsp;\nConstraints:\n\n\t1 <= s1.length, s2.length <= 104\n\ts1 and s2 consist of lowercase English letters.\n## My Submission\n\n- Runtime: 15 ms (beats 80.7%)\n- Memory: 19.2 MB (beats 97.7%)\n\n## Similar Problems\n\n- [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) — Hard\n- [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) — Medium\n"
+        }
+      ],
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "runtime": "15 ms",
+      "memory": "19.2 MB",
+      "runtimePct": 80.73200000000001,
+      "memoryPct": 97.6776,
+      "timestamp": 1782357006000,
+      "acRate": 49.60471166419927,
+      "likes": 13234,
+      "dislikes": 528,
+      "similar": [
+        {
+          "difficulty": "Hard",
+          "titleSlug": "minimum-window-substring",
+          "title": "Minimum Window Substring",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "find-all-anagrams-in-a-string",
+          "title": "Find All Anagrams in a String",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>Given two strings <code>s1</code> and <code>s2</code>, return <code>true</code> if <code>s2</code> contains a <span data-keyword=\"permutation-string\">permutation</span> of <code>s1</code>, or <code>false</code> otherwise.</p>\n\n<p>In other words, return <code>true</code> if one of <code>s1</code>&#39;s permutations is the substring of <code>s2</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s1 = &quot;ab&quot;, s2 = &quot;eidbaooo&quot;\n<strong>Output:</strong> true\n<strong>Explanation:</strong> s2 contains one permutation of s1 (&quot;ba&quot;).\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s1 = &quot;ab&quot;, s2 = &quot;eidboaoo&quot;\n<strong>Output:</strong> false\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s1.length, s2.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>s1</code> and <code>s2</code> consist of lowercase English letters.</li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/permutation-in-string/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": true,
+      "duplicateOf": "lc-permutation-in-string::2045203188",
+      "_requestAIReview": true,
+      "platform": "leetcode",
       "methods": [],
       "manuallyEdited": false
     },
@@ -4874,7 +5053,11 @@
       "_requestAIReview": true,
       "platform": "leetcode",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-single-number/lc-single-number.py",
+        "problems/lc-single-number/README.md"
+      ]
     },
     {
       "id": "lc-single-number::2029632290",
