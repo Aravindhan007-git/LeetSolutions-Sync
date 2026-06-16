@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-reverse-string` |
 | Topics | Two Pointers, String |
-| Solved | 2026-06-09 |
+| Solved | 2026-06-16 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 23.5 MB (beats 45.86280000000002%) |
+| Memory | 23.4 MB (beats 81.06660000000002%) |
 
 ## Problem Statement
 
@@ -49,5 +49,10 @@ The entire logic for reversing a string is based on using the opposite direction
 ```Python3
 class Solution:
     def reverseString(self, s: List[str]) -> None:
-        s[:]=s[::-1]
+        i=0
+        j=len(s)-1
+        while i<=j:
+            s[i],s[j]=s[j],s[i]
+            i+=1
+            j-=1
 ```
