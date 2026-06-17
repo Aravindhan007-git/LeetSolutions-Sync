@@ -67,9 +67,9 @@ class Solution:
                 s[i],s[j]=s[j],s[i]
                 i+=1
                 j-=1
-            elif s[i].isalpha():
-                j-=1
-            else:
+            elif not s[i].isalpha():
                 i+=1
+            else:
+                j-=1
         return "".join(s)
 ```
