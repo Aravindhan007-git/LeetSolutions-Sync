@@ -7,8 +7,8 @@
 | Problem ID | `lc-rotate-array` |
 | Topics | Array, Math, Two Pointers |
 | Solved | 2026-06-17 |
-| Runtime | 1758 ms (beats 5.00340000000003%) |
-| Memory | 26.4 MB (beats 95.47440000000002%) |
+| Runtime | 0 ms (beats 100%) |
+| Memory | 26.5 MB (beats 78.57850000000002%) |
 
 ## Problem Statement
 
@@ -86,7 +86,7 @@ The other line of thought is a tad bit complicated but essentially it builds on 
 ```Python3
 class Solution:
     def rotate(self, nums: List[int], k: int) -> None:
-       for i in range(k):
-        x=nums.pop(len(nums)-1)
-        nums.insert(0,x)
+       k=k%len(nums)
+       nums[:]=nums[-k:]+nums[:-k]
+       return nums
 ```
