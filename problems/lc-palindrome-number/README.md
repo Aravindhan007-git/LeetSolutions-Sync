@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-palindrome-number` |
 | Topics | Math |
-| Solved | 2026-01-31 |
+| Solved | 2026-08-14 |
 | Runtime | 1 ms (beats 93.3008%) |
-| Memory | 19.4 MB (beats 19.249600000000015%) |
+| Memory | 19.2 MB (beats 87.22680000000001%) |
 
 ## Problem Statement
 
@@ -58,8 +58,8 @@ Beware of overflow when you reverse the integer.
 ```Python3
 class Solution:
     def isPalindrome(self, x: int) -> bool:
-        x=str(x)
-        if x==x[::-1]:
+        s=str(x)
+        if s==s[::-1]:
             return True
         else:
             return False
