@@ -1,0 +1,19 @@
+{
+  "leetcode::plus-one": {
+    "difficulty": "Easy",
+    "lang": "Python3",
+    "platform": "leetcode",
+    "slug": "plus-one",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python3",
+        "ts": 1787893216650
+      }
+    ],
+    "tags": [
+      "Array",
+      "Math"
+    ]
+  }
+}

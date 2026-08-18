@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "config": {
+    "utcOffsetMinutes": 330
+  },
+  "vacations": [],
+  "installDay": "2026-08-28",
+  "username": "Aravindhan007-git",
+  "pagesUrl": "https://aravindhan007-git.github.io/LeetSolutions-Sync/",
+  "readme": true,
+  "badgeStyle": "svg",
+  "shieldsStyle": "flat",
+  "rawBase": "https://raw.githubusercontent.com/Aravindhan007-git/LeetSolutions-Sync/main",
+  "picks": null,
+  "achievementPicks": null
+}

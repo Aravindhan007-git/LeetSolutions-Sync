@@ -1,0 +1,15 @@
+{
+  "autoReview": false,
+  "claude_enabled": false,
+  "deepseek_enabled": false,
+  "gamificationEnabled": true,
+  "gemini_enabled": false,
+  "gitProvider": "github",
+  "github_owner": "",
+  "github_pages_url": "https://aravindhan007-git.github.io/LeetSolutions-Sync/",
+  "github_repo": "LeetSolutions-Sync",
+  "ollama_enabled": false,
+  "openai_enabled": false,
+  "openrouter_enabled": false,
+  "__syncedAt": "2026-08-28T05:13:34.033Z"
+}
