@@ -4,17 +4,17 @@
   "currentStreak": 0,
   "longestStreak": 0,
   "freezes": 0,
-  "totalPoints": 1080,
-  "totalSolves": 76,
+  "totalPoints": 1090,
+  "totalSolves": 77,
   "totalRecalls": 0,
   "byDifficulty": {
     "Medium": 16,
-    "Easy": 58,
+    "Easy": 59,
     "Hard": 2
   },
   "level": 4,
   "levelName": "Analyst",
-  "activeDays": 24,
+  "activeDays": 25,
   "dailyTargetPoints": 25,
   "achievements": [
     "first-blood",

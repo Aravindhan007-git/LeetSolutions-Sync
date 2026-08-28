@@ -1,21 +1,21 @@
 {
-  "updatedAt": "2026-08-28T05:48:48.306Z",
+  "updatedAt": "2026-08-28T05:57:00.181Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 76,
-    "easy": 58,
+    "total": 77,
+    "easy": 59,
     "medium": 16,
     "hard": 2,
     "unknownDifficulty": 0,
     "byPlatform": {
-      "leetcode": 76
+      "leetcode": 77
     },
     "byLang": {
-      "Python3": 67,
+      "Python3": 68,
       "C": 9
     },
     "byTopic": {
-      "Math": 9,
+      "Math": 10,
       "Array": 42,
       "Linked List": 6,
       "Hash Table": 2,
@@ -3081,6 +3081,70 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false
+    },
+    {
+      "id": "lc-power-of-four",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Power of Four",
+      "titleSlug": "power-of-four",
+      "difficulty": "Easy",
+      "topic": "Recursion",
+      "tags": [
+        "Math",
+        "Bit Manipulation",
+        "Recursion"
+      ],
+      "canonical": null,
+      "readmeContent": "# [342] Power of Four\n**Difficulty:** Easy  |  **Acceptance:** 52.5%  |  **Likes:** 4523 / **Dislikes:** 424\n**Tags:** `Math`, `Bit Manipulation`, `Recursion`\n## Problem\nGiven an integer n, return true if it is a power of four. Otherwise, return false.\n\nAn integer n is a power of four, if there exists an integer x such that n == 4x.\n\n&nbsp;\nExample 1:\nInput: n = 16\nOutput: true\nExample 2:\nInput: n = 5\nOutput: false\nExample 3:\nInput: n = 1\nOutput: true\n\n&nbsp;\nConstraints:\n\n\t-231 <= n <= 231 - 1\n\n&nbsp;\nFollow up: Could you solve it without loops/recursion?\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 19.4 MB (beats 24.8%)\n\n## Similar Problems\n\n- [Power of Two](https://leetcode.com/problems/power-of-two/) — Easy\n- [Power of Three](https://leetcode.com/problems/power-of-three/) — Easy\n",
+      "code": "class Solution:\n    def isPowerOfFour(self, n: int) -> bool:\n        if n<=0:\n            return False\n        while n%4==0:\n            n//=4\n        return n==1",
+      "files": [
+        {
+          "path": "problems/lc-power-of-four/lc-power-of-four.py",
+          "content": "class Solution:\n    def isPowerOfFour(self, n: int) -> bool:\n        if n<=0:\n            return False\n        while n%4==0:\n            n//=4\n        return n==1"
+        },
+        {
+          "path": "problems/lc-power-of-four/README.md",
+          "content": "# [342] Power of Four\n**Difficulty:** Easy  |  **Acceptance:** 52.5%  |  **Likes:** 4523 / **Dislikes:** 424\n**Tags:** `Math`, `Bit Manipulation`, `Recursion`\n## Problem\nGiven an integer n, return true if it is a power of four. Otherwise, return false.\n\nAn integer n is a power of four, if there exists an integer x such that n == 4x.\n\n&nbsp;\nExample 1:\nInput: n = 16\nOutput: true\nExample 2:\nInput: n = 5\nOutput: false\nExample 3:\nInput: n = 1\nOutput: true\n\n&nbsp;\nConstraints:\n\n\t-231 <= n <= 231 - 1\n\n&nbsp;\nFollow up: Could you solve it without loops/recursion?\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 19.4 MB (beats 24.8%)\n\n## Similar Problems\n\n- [Power of Two](https://leetcode.com/problems/power-of-two/) — Easy\n- [Power of Three](https://leetcode.com/problems/power-of-three/) — Easy\n"
+        }
+      ],
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "runtime": "0 ms",
+      "memory": "19.4 MB",
+      "runtimePct": 100,
+      "memoryPct": 24.78099999999999,
+      "timestamp": 1787896534000,
+      "acRate": 52.52857056243445,
+      "likes": 4523,
+      "dislikes": 424,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "power-of-two",
+          "title": "Power of Two",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "power-of-three",
+          "title": "Power of Three",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>Given an integer <code>n</code>, return <em><code>true</code> if it is a power of four. Otherwise, return <code>false</code></em>.</p>\n\n<p>An integer <code>n</code> is a power of four, if there exists an integer <code>x</code> such that <code>n == 4<sup>x</sup></code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> n = 16\n<strong>Output:</strong> true\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> n = 5\n<strong>Output:</strong> false\n</pre><p><strong class=\"example\">Example 3:</strong></p>\n<pre><strong>Input:</strong> n = 1\n<strong>Output:</strong> true\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>-2<sup>31</sup> &lt;= n &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow up:</strong> Could you solve it without loops/recursion?",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/power-of-four/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "_requestAIReview": true,
+      "platform": "leetcode"
     },
     {
       "id": "lc-power-of-three::2034226779",

@@ -20,5 +20,23 @@
       "Array",
       "Math"
     ]
+  },
+  "leetcode::power-of-four": {
+    "difficulty": "Easy",
+    "lang": "Python3",
+    "platform": "leetcode",
+    "slug": "power-of-four",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python3",
+        "ts": 1787896620100
+      }
+    ],
+    "tags": [
+      "Math",
+      "Bit Manipulation",
+      "Recursion"
+    ]
   }
 }
