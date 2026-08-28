@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-28T17:55:02.148Z",
+  "updatedAt": "2026-08-28T17:55:07.354Z",
   "layoutVersion": 3,
   "stats": {
     "total": 80,
@@ -2169,16 +2169,16 @@
         "Sorting"
       ],
       "canonical": null,
-      "readmeContent": "# [268] Missing Number\n**Difficulty:** Easy  |  **Acceptance:** 72.6%  |  **Likes:** 14551 / **Dislikes:** 3483\n**Tags:** `Array`, `Hash Table`, `Math`, `Binary Search`, `Bit Manipulation`, `Sorting`\n## Problem\nGiven an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.\n\n&nbsp;\nExample 1:\n\nInput: nums = [3,0,1]\n\nOutput: 2\n\nExplanation:\n\nn = 3 since there are 3 numbers, so all numbers are in the range [0,3]. 2 is the missing number in the range since it does not appear in nums.\n\nExample 2:\n\nInput: nums = [0,1]\n\nOutput: 2\n\nExplanation:\n\nn = 2 since there are 2 numbers, so all numbers are in the range [0,2]. 2 is the missing number in the range since it does not appear in nums.\n\nExample 3:\n\nInput: nums = [9,6,4,2,3,5,7,0,1]\n\nOutput: 8\n\nExplanation:\n\nn = 9 since there are 9 numbers, so all numbers are in the range [0,9]. 8 is the missing number in the range since it does not appear in nums.\n\n&nbsp;\n\n&nbsp;\n\n&nbsp;\n\n&nbsp;\n\n&nbsp;\nConstraints:\n\n\tn == nums.length\n\t1 <= n <= 104\n\t0 <= nums[i] <= n\n\tAll the numbers of nums are unique.\n\n&nbsp;\nFollow up: Could you implement a solution using only O(1) extra space complexity and O(n) runtime complexity?\n## My Submission\n\n- Runtime: 3 ms (beats 60.7%)\n- Memory: 21 MB (beats 6.1%)\n\n## Similar Problems\n\n- [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) — Hard\n- [Single Number](https://leetcode.com/problems/single-number/) — Easy\n- [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) — Medium\n- [Couples Holding Hands](https://leetcode.com/problems/couples-holding-hands/) — Hard\n- [Find Unique Binary String](https://leetcode.com/problems/find-unique-binary-string/) — Medium\n",
-      "code": "class Solution:\n    def missingNumber(self, nums: List[int]) -> int:\n        nums=set(nums)\n        for i in range(len(nums)+1):\n            if i not in nums:\n                return i\n        ",
+      "readmeContent": "# [268] Missing Number\n**Difficulty:** Easy  |  **Acceptance:** 72.6%  |  **Likes:** 14551 / **Dislikes:** 3483\n**Tags:** `Array`, `Hash Table`, `Math`, `Binary Search`, `Bit Manipulation`, `Sorting`\n## Problem\nGiven an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.\n\n&nbsp;\nExample 1:\n\nInput: nums = [3,0,1]\n\nOutput: 2\n\nExplanation:\n\nn = 3 since there are 3 numbers, so all numbers are in the range [0,3]. 2 is the missing number in the range since it does not appear in nums.\n\nExample 2:\n\nInput: nums = [0,1]\n\nOutput: 2\n\nExplanation:\n\nn = 2 since there are 2 numbers, so all numbers are in the range [0,2]. 2 is the missing number in the range since it does not appear in nums.\n\nExample 3:\n\nInput: nums = [9,6,4,2,3,5,7,0,1]\n\nOutput: 8\n\nExplanation:\n\nn = 9 since there are 9 numbers, so all numbers are in the range [0,9]. 8 is the missing number in the range since it does not appear in nums.\n\n&nbsp;\n\n&nbsp;\n\n&nbsp;\n\n&nbsp;\n\n&nbsp;\nConstraints:\n\n\tn == nums.length\n\t1 <= n <= 104\n\t0 <= nums[i] <= n\n\tAll the numbers of nums are unique.\n\n&nbsp;\nFollow up: Could you implement a solution using only O(1) extra space complexity and O(n) runtime complexity?\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 20.3 MB (beats 75.5%)\n\n## Similar Problems\n\n- [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) — Hard\n- [Single Number](https://leetcode.com/problems/single-number/) — Easy\n- [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) — Medium\n- [Couples Holding Hands](https://leetcode.com/problems/couples-holding-hands/) — Hard\n- [Find Unique Binary String](https://leetcode.com/problems/find-unique-binary-string/) — Medium\n",
+      "code": "class Solution:\n    def missingNumber(self, nums: List[int]) -> int:\n        mis=0\n        for i in range(len(nums)+1):\n            mis^=i\n        for i in nums:\n            mis^=i\n\n        return mis",
       "files": [
         {
           "path": "problems/lc-missing-number/lc-missing-number.py",
-          "content": "class Solution:\n    def missingNumber(self, nums: List[int]) -> int:\n        nums=set(nums)\n        for i in range(len(nums)+1):\n            if i not in nums:\n                return i\n        "
+          "content": "class Solution:\n    def missingNumber(self, nums: List[int]) -> int:\n        mis=0\n        for i in range(len(nums)+1):\n            mis^=i\n        for i in nums:\n            mis^=i\n\n        return mis"
         },
         {
           "path": "problems/lc-missing-number/README.md",
-          "content": "# [268] Missing Number\n**Difficulty:** Easy  |  **Acceptance:** 72.6%  |  **Likes:** 14551 / **Dislikes:** 3483\n**Tags:** `Array`, `Hash Table`, `Math`, `Binary Search`, `Bit Manipulation`, `Sorting`\n## Problem\nGiven an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.\n\n&nbsp;\nExample 1:\n\nInput: nums = [3,0,1]\n\nOutput: 2\n\nExplanation:\n\nn = 3 since there are 3 numbers, so all numbers are in the range [0,3]. 2 is the missing number in the range since it does not appear in nums.\n\nExample 2:\n\nInput: nums = [0,1]\n\nOutput: 2\n\nExplanation:\n\nn = 2 since there are 2 numbers, so all numbers are in the range [0,2]. 2 is the missing number in the range since it does not appear in nums.\n\nExample 3:\n\nInput: nums = [9,6,4,2,3,5,7,0,1]\n\nOutput: 8\n\nExplanation:\n\nn = 9 since there are 9 numbers, so all numbers are in the range [0,9]. 8 is the missing number in the range since it does not appear in nums.\n\n&nbsp;\n\n&nbsp;\n\n&nbsp;\n\n&nbsp;\n\n&nbsp;\nConstraints:\n\n\tn == nums.length\n\t1 <= n <= 104\n\t0 <= nums[i] <= n\n\tAll the numbers of nums are unique.\n\n&nbsp;\nFollow up: Could you implement a solution using only O(1) extra space complexity and O(n) runtime complexity?\n## My Submission\n\n- Runtime: 3 ms (beats 60.7%)\n- Memory: 21 MB (beats 6.1%)\n\n## Similar Problems\n\n- [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) — Hard\n- [Single Number](https://leetcode.com/problems/single-number/) — Easy\n- [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) — Medium\n- [Couples Holding Hands](https://leetcode.com/problems/couples-holding-hands/) — Hard\n- [Find Unique Binary String](https://leetcode.com/problems/find-unique-binary-string/) — Medium\n"
+          "content": "# [268] Missing Number\n**Difficulty:** Easy  |  **Acceptance:** 72.6%  |  **Likes:** 14551 / **Dislikes:** 3483\n**Tags:** `Array`, `Hash Table`, `Math`, `Binary Search`, `Bit Manipulation`, `Sorting`\n## Problem\nGiven an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.\n\n&nbsp;\nExample 1:\n\nInput: nums = [3,0,1]\n\nOutput: 2\n\nExplanation:\n\nn = 3 since there are 3 numbers, so all numbers are in the range [0,3]. 2 is the missing number in the range since it does not appear in nums.\n\nExample 2:\n\nInput: nums = [0,1]\n\nOutput: 2\n\nExplanation:\n\nn = 2 since there are 2 numbers, so all numbers are in the range [0,2]. 2 is the missing number in the range since it does not appear in nums.\n\nExample 3:\n\nInput: nums = [9,6,4,2,3,5,7,0,1]\n\nOutput: 8\n\nExplanation:\n\nn = 9 since there are 9 numbers, so all numbers are in the range [0,9]. 8 is the missing number in the range since it does not appear in nums.\n\n&nbsp;\n\n&nbsp;\n\n&nbsp;\n\n&nbsp;\n\n&nbsp;\nConstraints:\n\n\tn == nums.length\n\t1 <= n <= 104\n\t0 <= nums[i] <= n\n\tAll the numbers of nums are unique.\n\n&nbsp;\nFollow up: Could you implement a solution using only O(1) extra space complexity and O(n) runtime complexity?\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 20.3 MB (beats 75.5%)\n\n## Similar Problems\n\n- [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) — Hard\n- [Single Number](https://leetcode.com/problems/single-number/) — Easy\n- [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) — Medium\n- [Couples Holding Hands](https://leetcode.com/problems/couples-holding-hands/) — Hard\n- [Find Unique Binary String](https://leetcode.com/problems/find-unique-binary-string/) — Medium\n"
         }
       ],
       "lang": {
@@ -2186,12 +2186,12 @@
         "ext": "py",
         "slug": "python3"
       },
-      "runtime": "3 ms",
-      "memory": "21 MB",
-      "runtimePct": 60.7491,
-      "memoryPct": 6.136600000000014,
-      "timestamp": 1781520718000,
-      "acRate": 72.58439488359703,
+      "runtime": "0 ms",
+      "memory": "20.3 MB",
+      "runtimePct": 100,
+      "memoryPct": 75.47680000000001,
+      "timestamp": 1787939622000,
+      "acRate": 72.58440446155772,
       "likes": 14551,
       "dislikes": 3483,
       "similar": [
@@ -2238,8 +2238,8 @@
       "submissionsUrl": "https://leetcode.com/problems/missing-number/submissions/",
       "notes": "",
       "methodTitle": "",
-      "isDuplicate": true,
-      "duplicateOf": "lc-missing-number::2033840158",
+      "isDuplicate": false,
+      "duplicateOf": null,
       "_requestAIReview": true,
       "platform": "leetcode",
       "methods": [],

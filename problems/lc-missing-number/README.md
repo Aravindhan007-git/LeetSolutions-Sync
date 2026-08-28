@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-missing-number` |
 | Topics | Array, Hash Table, Math, Binary Search, Bit Manipulation, Sorting |
-| Solved | 2026-06-15 |
-| Runtime | 3 ms (beats 60.7491%) |
-| Memory | 21 MB (beats 6.136600000000014%) |
+| Solved | 2026-08-28 |
+| Runtime | 0 ms (beats 100%) |
+| Memory | 20.3 MB (beats 75.47680000000001%) |
 
 ## Problem Statement
 
@@ -75,9 +75,11 @@ Given an array `nums` containing `n` distinct numbers in the range `[0, n]`, ret
 ```Python3
 class Solution:
     def missingNumber(self, nums: List[int]) -> int:
-        nums=set(nums)
+        mis=0
         for i in range(len(nums)+1):
-            if i not in nums:
-                return i
-        
+            mis^=i
+        for i in nums:
+            mis^=i
+
+        return mis
 ```
