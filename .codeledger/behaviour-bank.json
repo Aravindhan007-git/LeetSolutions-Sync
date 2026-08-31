@@ -1,4 +1,21 @@
 {
+  "leetcode::maximum-average-subarray-i": {
+    "difficulty": "Easy",
+    "lang": "Python3",
+    "platform": "leetcode",
+    "slug": "maximum-average-subarray-i",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python3",
+        "ts": 1788149749360
+      }
+    ],
+    "tags": [
+      "Array",
+      "Sliding Window"
+    ]
+  },
   "leetcode::missing-number": {
     "difficulty": "Easy",
     "lang": "Python3",
