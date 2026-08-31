@@ -1,14 +1,14 @@
 {
   "schema": 1,
   "asOf": "2026-08-31",
-  "currentStreak": 0,
-  "longestStreak": 0,
+  "currentStreak": 2,
+  "longestStreak": 2,
   "freezes": 0,
-  "totalPoints": 1155,
-  "totalSolves": 82,
+  "totalPoints": 1180,
+  "totalSolves": 83,
   "totalRecalls": 0,
   "byDifficulty": {
-    "Medium": 17,
+    "Medium": 18,
     "Easy": 63,
     "Hard": 2
   },
@@ -20,6 +20,7 @@
     "first-blood",
     "ten-down",
     "well-rounded",
-    "double-day"
+    "double-day",
+    "comeback"
   ]
 }

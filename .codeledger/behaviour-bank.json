@@ -1,4 +1,22 @@
 {
+  "leetcode::count-complete-subarrays-in-an-array": {
+    "difficulty": "Medium",
+    "lang": "Python3",
+    "platform": "leetcode",
+    "slug": "count-complete-subarrays-in-an-array",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python3",
+        "ts": 1788153443359
+      }
+    ],
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Sliding Window"
+    ]
+  },
   "leetcode::maximum-average-subarray-i": {
     "difficulty": "Easy",
     "lang": "Python3",
