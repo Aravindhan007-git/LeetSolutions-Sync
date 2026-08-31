@@ -161,6 +161,34 @@
         "elapsedSeconds": 0,
         "lang": "Python3",
         "ts": 1788173022327
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python3",
+        "ts": 1788173339070
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python3",
+        "ts": 1788183923992
+      }
+    ],
+    "tags": [
+      "Array",
+      "Matrix",
+      "Simulation"
+    ]
+  },
+  "leetcode::spiral-matrix-ii": {
+    "difficulty": "Medium",
+    "lang": "Python3",
+    "platform": "leetcode",
+    "slug": "spiral-matrix-ii",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python3",
+        "ts": 1788187338381
       }
     ],
     "tags": [
