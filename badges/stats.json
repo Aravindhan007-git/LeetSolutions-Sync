@@ -3,12 +3,12 @@
   "asOf": "2026-08-31",
   "currentStreak": 2,
   "longestStreak": 2,
-  "freezes": 0,
-  "totalPoints": 1180,
-  "totalSolves": 83,
+  "freezes": 1,
+  "totalPoints": 1205,
+  "totalSolves": 84,
   "totalRecalls": 0,
   "byDifficulty": {
-    "Medium": 18,
+    "Medium": 19,
     "Easy": 63,
     "Hard": 2
   },

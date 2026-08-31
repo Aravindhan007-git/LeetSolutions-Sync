@@ -146,6 +146,24 @@
       "Bit Manipulation"
     ]
   },
+  "leetcode::spiral-matrix": {
+    "difficulty": "Medium",
+    "lang": "Python3",
+    "platform": "leetcode",
+    "slug": "spiral-matrix",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python3",
+        "ts": 1788172994207
+      }
+    ],
+    "tags": [
+      "Array",
+      "Matrix",
+      "Simulation"
+    ]
+  },
   "leetcode::unique-middle-element": {
     "difficulty": "Easy",
     "lang": "Python3",
