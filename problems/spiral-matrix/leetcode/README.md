@@ -8,7 +8,7 @@
 | Topics | Array, Matrix, Simulation |
 | Solved | 2026-08-31 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 19.1 MB (beats 99.1981%) |
+| Memory | 19.2 MB (beats 94.35%) |
 
 ## Problem Statement
 
@@ -62,8 +62,7 @@ class Solution:
                     res.append(matrix[bottom][i])
                 bottom-=1
             if left<=right:
-                for i in range(bottom
-                ,top-1,-1):
+                for i in range(bottom,top-1,-1):
                     res.append(matrix[i][left])
                 left+=1
             

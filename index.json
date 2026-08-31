@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-31T10:43:14.395Z",
+  "updatedAt": "2026-08-31T10:43:42.408Z",
   "layoutVersion": 3,
   "stats": {
     "total": 84,
@@ -5503,16 +5503,16 @@
         "topic": "math",
         "voteCount": 96
       },
-      "readmeContent": "# [54] Spiral Matrix\n**Difficulty:** Medium  |  **Acceptance:** 57.7%  |  **Likes:** 17816 / **Dislikes:** 1598\n**Tags:** `Array`, `Matrix`, `Simulation`\n## Problem\nGiven an m x n matrix, return all elements of the matrix in spiral order.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,2,3],[4,5,6],[7,8,9]]\nOutput: [1,2,3,6,9,8,7,4,5]\n\nExample 2:\n\nInput: matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]\nOutput: [1,2,3,4,8,12,11,10,9,5,6,7]\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= m, n <= 10\n\t-100 <= matrix[i][j] <= 100\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 19.1 MB (beats 99.2%)\n\n## Similar Problems\n\n- [Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/) — Medium\n- [Spiral Matrix III](https://leetcode.com/problems/spiral-matrix-iii/) — Medium\n- [Spiral Matrix IV](https://leetcode.com/problems/spiral-matrix-iv/) — Medium\n",
-      "code": "class Solution:\n    def spiralOrder(self, matrix: List[List[int]]) -> List[int]:\n        res=[]\n        r=len(matrix)\n        c=len(matrix[0])\n        top=0\n        left=0\n        bottom=r-1\n        right=c-1\n        while top<=bottom and left<=right:\n            for i in range(left,right+1):\n                res.append(matrix[top][i])\n            top+=1\n            for i in range(top,bottom+1):\n                res.append(matrix[i][right])\n            right-=1\n            if top<=bottom:\n                for i in range(right,left-1,-1):\n                    res.append(matrix[bottom][i])\n                bottom-=1\n            if left<=right:\n                for i in range(bottom\n                ,top-1,-1):\n                    res.append(matrix[i][left])\n                left+=1\n            \n        return res",
+      "readmeContent": "# [54] Spiral Matrix\n**Difficulty:** Medium  |  **Acceptance:** 57.7%  |  **Likes:** 17816 / **Dislikes:** 1598\n**Tags:** `Array`, `Matrix`, `Simulation`\n## Problem\nGiven an m x n matrix, return all elements of the matrix in spiral order.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,2,3],[4,5,6],[7,8,9]]\nOutput: [1,2,3,6,9,8,7,4,5]\n\nExample 2:\n\nInput: matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]\nOutput: [1,2,3,4,8,12,11,10,9,5,6,7]\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= m, n <= 10\n\t-100 <= matrix[i][j] <= 100\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 19.2 MB (beats 94.3%)\n\n## Similar Problems\n\n- [Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/) — Medium\n- [Spiral Matrix III](https://leetcode.com/problems/spiral-matrix-iii/) — Medium\n- [Spiral Matrix IV](https://leetcode.com/problems/spiral-matrix-iv/) — Medium\n",
+      "code": "class Solution:\n    def spiralOrder(self, matrix: List[List[int]]) -> List[int]:\n        res=[]\n        r=len(matrix)\n        c=len(matrix[0])\n        top=0\n        left=0\n        bottom=r-1\n        right=c-1\n        while top<=bottom and left<=right:\n            for i in range(left,right+1):\n                res.append(matrix[top][i])\n            top+=1\n            for i in range(top,bottom+1):\n                res.append(matrix[i][right])\n            right-=1\n            if top<=bottom:\n                for i in range(right,left-1,-1):\n                    res.append(matrix[bottom][i])\n                bottom-=1\n            if left<=right:\n                for i in range(bottom,top-1,-1):\n                    res.append(matrix[i][left])\n                left+=1\n            \n        return res",
       "files": [
         {
           "path": "problems/spiral-matrix/leetcode/lc-spiral-matrix.py",
-          "content": "class Solution:\n    def spiralOrder(self, matrix: List[List[int]]) -> List[int]:\n        res=[]\n        r=len(matrix)\n        c=len(matrix[0])\n        top=0\n        left=0\n        bottom=r-1\n        right=c-1\n        while top<=bottom and left<=right:\n            for i in range(left,right+1):\n                res.append(matrix[top][i])\n            top+=1\n            for i in range(top,bottom+1):\n                res.append(matrix[i][right])\n            right-=1\n            if top<=bottom:\n                for i in range(right,left-1,-1):\n                    res.append(matrix[bottom][i])\n                bottom-=1\n            if left<=right:\n                for i in range(bottom\n                ,top-1,-1):\n                    res.append(matrix[i][left])\n                left+=1\n            \n        return res"
+          "content": "class Solution:\n    def spiralOrder(self, matrix: List[List[int]]) -> List[int]:\n        res=[]\n        r=len(matrix)\n        c=len(matrix[0])\n        top=0\n        left=0\n        bottom=r-1\n        right=c-1\n        while top<=bottom and left<=right:\n            for i in range(left,right+1):\n                res.append(matrix[top][i])\n            top+=1\n            for i in range(top,bottom+1):\n                res.append(matrix[i][right])\n            right-=1\n            if top<=bottom:\n                for i in range(right,left-1,-1):\n                    res.append(matrix[bottom][i])\n                bottom-=1\n            if left<=right:\n                for i in range(bottom,top-1,-1):\n                    res.append(matrix[i][left])\n                left+=1\n            \n        return res"
         },
         {
           "path": "problems/spiral-matrix/README.md",
-          "content": "# [54] Spiral Matrix\n**Difficulty:** Medium  |  **Acceptance:** 57.7%  |  **Likes:** 17816 / **Dislikes:** 1598\n**Tags:** `Array`, `Matrix`, `Simulation`\n## Problem\nGiven an m x n matrix, return all elements of the matrix in spiral order.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,2,3],[4,5,6],[7,8,9]]\nOutput: [1,2,3,6,9,8,7,4,5]\n\nExample 2:\n\nInput: matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]\nOutput: [1,2,3,4,8,12,11,10,9,5,6,7]\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= m, n <= 10\n\t-100 <= matrix[i][j] <= 100\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 19.1 MB (beats 99.2%)\n\n## Similar Problems\n\n- [Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/) — Medium\n- [Spiral Matrix III](https://leetcode.com/problems/spiral-matrix-iii/) — Medium\n- [Spiral Matrix IV](https://leetcode.com/problems/spiral-matrix-iv/) — Medium\n"
+          "content": "# [54] Spiral Matrix\n**Difficulty:** Medium  |  **Acceptance:** 57.7%  |  **Likes:** 17816 / **Dislikes:** 1598\n**Tags:** `Array`, `Matrix`, `Simulation`\n## Problem\nGiven an m x n matrix, return all elements of the matrix in spiral order.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,2,3],[4,5,6],[7,8,9]]\nOutput: [1,2,3,6,9,8,7,4,5]\n\nExample 2:\n\nInput: matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]\nOutput: [1,2,3,4,8,12,11,10,9,5,6,7]\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= m, n <= 10\n\t-100 <= matrix[i][j] <= 100\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 19.2 MB (beats 94.3%)\n\n## Similar Problems\n\n- [Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/) — Medium\n- [Spiral Matrix III](https://leetcode.com/problems/spiral-matrix-iii/) — Medium\n- [Spiral Matrix IV](https://leetcode.com/problems/spiral-matrix-iv/) — Medium\n"
         }
       ],
       "lang": {
@@ -5521,11 +5521,11 @@
         "slug": "python3"
       },
       "runtime": "0 ms",
-      "memory": "19.1 MB",
+      "memory": "19.2 MB",
       "runtimePct": 100,
-      "memoryPct": 99.1981,
-      "timestamp": 1788172907000,
-      "acRate": 57.74967131967843,
+      "memoryPct": 94.35,
+      "timestamp": 1788172934000,
+      "acRate": 57.74968080523068,
       "likes": 17816,
       "dislikes": 1598,
       "similar": [
@@ -5557,7 +5557,13 @@
       "isDuplicate": false,
       "duplicateOf": null,
       "_requestAIReview": true,
-      "platform": "leetcode"
+      "platform": "leetcode",
+      "_committedPaths": [
+        "problems/spiral-matrix/leetcode/lc-spiral-matrix.py",
+        "problems/spiral-matrix/leetcode/README.md"
+      ],
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-squares-of-a-sorted-array::2034927823",

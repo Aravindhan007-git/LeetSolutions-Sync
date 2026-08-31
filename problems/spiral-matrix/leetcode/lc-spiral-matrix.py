@@ -19,8 +19,7 @@ class Solution:
                     res.append(matrix[bottom][i])
                 bottom-=1
             if left<=right:
-                for i in range(bottom
-                ,top-1,-1):
+                for i in range(bottom,top-1,-1):
                     res.append(matrix[i][left])
                 left+=1
             
