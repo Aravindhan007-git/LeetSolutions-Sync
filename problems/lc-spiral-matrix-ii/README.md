@@ -7,7 +7,7 @@
 | Problem ID | `lc-spiral-matrix-ii` |
 | Topics | Array, Matrix, Simulation |
 | Solved | 2026-08-31 |
-| Runtime | 43 ms (beats 0.6920999999999966%) |
+| Runtime | 0 ms (beats 100%) |
 | Memory | 19.5 MB (beats 11.124299999999998%) |
 
 ## Problem Statement

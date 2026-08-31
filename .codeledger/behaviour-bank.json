@@ -129,6 +129,24 @@
       "Recursion"
     ]
   },
+  "leetcode::search-a-2d-matrix": {
+    "difficulty": "Medium",
+    "lang": "Python3",
+    "platform": "leetcode",
+    "slug": "search-a-2d-matrix",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python3",
+        "ts": 1788188807896
+      }
+    ],
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Matrix"
+    ]
+  },
   "leetcode::single-number": {
     "difficulty": "Easy",
     "lang": "Python3",
@@ -189,6 +207,11 @@
         "elapsedSeconds": 0,
         "lang": "Python3",
         "ts": 1788187338381
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python3",
+        "ts": 1788187379205
       }
     ],
     "tags": [

@@ -1,22 +1,22 @@
 {
-  "updatedAt": "2026-08-31T14:42:18.473Z",
+  "updatedAt": "2026-08-31T15:06:47.985Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 85,
+    "total": 86,
     "easy": 63,
-    "medium": 20,
+    "medium": 21,
     "hard": 2,
     "unknownDifficulty": 0,
     "byPlatform": {
-      "leetcode": 85
+      "leetcode": 86
     },
     "byLang": {
-      "Python3": 76,
+      "Python3": 77,
       "C": 9
     },
     "byTopic": {
       "Math": 10,
-      "Array": 49,
+      "Array": 50,
       "Linked List": 6,
       "Hash Table": 2,
       "Two Pointers": 10,
@@ -5053,6 +5053,89 @@
       "manuallyEdited": false
     },
     {
+      "id": "lc-search-a-2d-matrix",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Search a 2D Matrix",
+      "titleSlug": "search-a-2d-matrix",
+      "difficulty": "Medium",
+      "topic": "Binary Search",
+      "tags": [
+        "Array",
+        "Binary Search",
+        "Matrix"
+      ],
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 74,
+            "platform": "leetcode",
+            "slug": "search-a-2d-matrix"
+          }
+        ],
+        "canonicalId": "search-a-2d-matrix",
+        "canonicalTitle": "Search a 2D Matrix",
+        "confirmedBy": "system-init",
+        "difficulty": "medium",
+        "pattern": "binary-search",
+        "tags": [
+          "array"
+        ],
+        "topic": "binary-search",
+        "voteCount": 89
+      },
+      "readmeContent": "# [74] Search a 2D Matrix\n**Difficulty:** Medium  |  **Acceptance:** 54.4%  |  **Likes:** 18219 / **Dislikes:** 497\n**Tags:** `Array`, `Binary Search`, `Matrix`\n## Problem\nYou are given an m x n integer matrix matrix with the following two properties:\n\n\tEach row is sorted in non-decreasing order.\n\tThe first integer of each row is greater than the last integer of the previous row.\n\nGiven an integer target, return true if target is in matrix or false otherwise.\n\nYou must write a solution in O(log(m * n)) time complexity.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3\nOutput: true\n\nExample 2:\n\nInput: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 13\nOutput: false\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= m, n <= 100\n\t-104 <= matrix[i][j], target <= 104\n## My Submission\n\n- Runtime: 46 ms (beats 0.1%)\n- Memory: 19.6 MB (beats 13.5%)\n\n## Similar Problems\n\n- [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/) — Medium\n- [Split Message Based on Limit](https://leetcode.com/problems/split-message-based-on-limit/) — Hard\n",
+      "code": "class Solution:\n    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:\n        for i in range(len(matrix)):\n            for j in range(len(matrix[0])):\n                if matrix[i][j]==target:\n                    return True\n        return False",
+      "files": [
+        {
+          "path": "problems/search-a-2d-matrix/leetcode/lc-search-a-2d-matrix.py",
+          "content": "class Solution:\n    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:\n        for i in range(len(matrix)):\n            for j in range(len(matrix[0])):\n                if matrix[i][j]==target:\n                    return True\n        return False"
+        },
+        {
+          "path": "problems/search-a-2d-matrix/README.md",
+          "content": "# [74] Search a 2D Matrix\n**Difficulty:** Medium  |  **Acceptance:** 54.4%  |  **Likes:** 18219 / **Dislikes:** 497\n**Tags:** `Array`, `Binary Search`, `Matrix`\n## Problem\nYou are given an m x n integer matrix matrix with the following two properties:\n\n\tEach row is sorted in non-decreasing order.\n\tThe first integer of each row is greater than the last integer of the previous row.\n\nGiven an integer target, return true if target is in matrix or false otherwise.\n\nYou must write a solution in O(log(m * n)) time complexity.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3\nOutput: true\n\nExample 2:\n\nInput: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 13\nOutput: false\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= m, n <= 100\n\t-104 <= matrix[i][j], target <= 104\n## My Submission\n\n- Runtime: 46 ms (beats 0.1%)\n- Memory: 19.6 MB (beats 13.5%)\n\n## Similar Problems\n\n- [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/) — Medium\n- [Split Message Based on Limit](https://leetcode.com/problems/split-message-based-on-limit/) — Hard\n"
+        }
+      ],
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "runtime": "46 ms",
+      "memory": "19.6 MB",
+      "runtimePct": 0.05810000000000248,
+      "memoryPct": 13.513900000000021,
+      "timestamp": 1788188720000,
+      "acRate": 54.35661849382723,
+      "likes": 18219,
+      "dislikes": 497,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "search-a-2d-matrix-ii",
+          "title": "Search a 2D Matrix II",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "split-message-based-on-limit",
+          "title": "Split Message Based on Limit",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>You are given an <code>m x n</code> integer matrix <code>matrix</code> with the following two properties:</p>\n\n<ul>\n\t<li>Each row is sorted in non-decreasing order.</li>\n\t<li>The first integer of each row is greater than the last integer of the previous row.</li>\n</ul>\n\n<p>Given an integer <code>target</code>, return <code>true</code> <em>if</em> <code>target</code> <em>is in</em> <code>matrix</code> <em>or</em> <code>false</code> <em>otherwise</em>.</p>\n\n<p>You must write a solution in <code>O(log(m * n))</code> time complexity.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/10/05/mat.jpg\" style=\"width: 322px; height: 242px;\" />\n<pre>\n<strong>Input:</strong> matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3\n<strong>Output:</strong> true\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/10/05/mat2.jpg\" style=\"width: 322px; height: 242px;\" />\n<pre>\n<strong>Input:</strong> matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 13\n<strong>Output:</strong> false\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>m == matrix.length</code></li>\n\t<li><code>n == matrix[i].length</code></li>\n\t<li><code>1 &lt;= m, n &lt;= 100</code></li>\n\t<li><code>-10<sup>4</sup> &lt;= matrix[i][j], target &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/search-a-2d-matrix/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "_requestAIReview": true,
+      "platform": "leetcode"
+    },
+    {
       "id": "lc-shortest-distance-to-a-character::2044005853",
       "submissionId": 2044005853,
       "platform": "leetcode",
@@ -5579,7 +5662,7 @@
         "Simulation"
       ],
       "canonical": null,
-      "readmeContent": "# [59] Spiral Matrix II\n**Difficulty:** Medium  |  **Acceptance:** 75.7%  |  **Likes:** 6986 / **Dislikes:** 292\n**Tags:** `Array`, `Matrix`, `Simulation`\n## Problem\nGiven a positive integer n, generate an n x n matrix filled with elements from 1 to n2 in spiral order.\n\n&nbsp;\nExample 1:\n\nInput: n = 3\nOutput: [[1,2,3],[8,9,4],[7,6,5]]\n\nExample 2:\n\nInput: n = 1\nOutput: [[1]]\n\n&nbsp;\nConstraints:\n\n\t1 <= n <= 20\n## My Submission\n\n- Runtime: 43 ms (beats 0.7%)\n- Memory: 19.5 MB (beats 11.1%)\n\n## Similar Problems\n\n- [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) — Medium\n- [Spiral Matrix III](https://leetcode.com/problems/spiral-matrix-iii/) — Medium\n- [Spiral Matrix IV](https://leetcode.com/problems/spiral-matrix-iv/) — Medium\n",
+      "readmeContent": "# [59] Spiral Matrix II\n**Difficulty:** Medium  |  **Acceptance:** 75.7%  |  **Likes:** 6986 / **Dislikes:** 292\n**Tags:** `Array`, `Matrix`, `Simulation`\n## Problem\nGiven a positive integer n, generate an n x n matrix filled with elements from 1 to n2 in spiral order.\n\n&nbsp;\nExample 1:\n\nInput: n = 3\nOutput: [[1,2,3],[8,9,4],[7,6,5]]\n\nExample 2:\n\nInput: n = 1\nOutput: [[1]]\n\n&nbsp;\nConstraints:\n\n\t1 <= n <= 20\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 19.5 MB (beats 11.1%)\n\n## Similar Problems\n\n- [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) — Medium\n- [Spiral Matrix III](https://leetcode.com/problems/spiral-matrix-iii/) — Medium\n- [Spiral Matrix IV](https://leetcode.com/problems/spiral-matrix-iv/) — Medium\n",
       "code": "class Solution:\n    def generateMatrix(self, n: int) -> List[List[int]]:\n        nums=[[0]*n for _ in range(n)]\n        top=0\n        left=0\n        bottom=n-1\n        right=n-1\n        a=1\n        while left<=right and top<=bottom:\n            for i in range(left,right+1):\n                nums[top][i]=a\n                a+=1\n            top+=1\n            for i in range(top,bottom+1):\n                nums[i][right]=a\n                a+=1\n            right-=1\n            if top<=bottom:\n                for i in range(right,left-1,-1):\n                    nums[bottom][i]=a\n                    a+=1\n                bottom-=1\n            if left<=right:\n                for i in range(bottom,top-1,-1):\n                    nums[i][left]=a\n                    a+=1\n                left+=1\n        return nums",
       "files": [
         {
@@ -5588,7 +5671,7 @@
         },
         {
           "path": "problems/lc-spiral-matrix-ii/README.md",
-          "content": "# [59] Spiral Matrix II\n**Difficulty:** Medium  |  **Acceptance:** 75.7%  |  **Likes:** 6986 / **Dislikes:** 292\n**Tags:** `Array`, `Matrix`, `Simulation`\n## Problem\nGiven a positive integer n, generate an n x n matrix filled with elements from 1 to n2 in spiral order.\n\n&nbsp;\nExample 1:\n\nInput: n = 3\nOutput: [[1,2,3],[8,9,4],[7,6,5]]\n\nExample 2:\n\nInput: n = 1\nOutput: [[1]]\n\n&nbsp;\nConstraints:\n\n\t1 <= n <= 20\n## My Submission\n\n- Runtime: 43 ms (beats 0.7%)\n- Memory: 19.5 MB (beats 11.1%)\n\n## Similar Problems\n\n- [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) — Medium\n- [Spiral Matrix III](https://leetcode.com/problems/spiral-matrix-iii/) — Medium\n- [Spiral Matrix IV](https://leetcode.com/problems/spiral-matrix-iv/) — Medium\n"
+          "content": "# [59] Spiral Matrix II\n**Difficulty:** Medium  |  **Acceptance:** 75.7%  |  **Likes:** 6986 / **Dislikes:** 292\n**Tags:** `Array`, `Matrix`, `Simulation`\n## Problem\nGiven a positive integer n, generate an n x n matrix filled with elements from 1 to n2 in spiral order.\n\n&nbsp;\nExample 1:\n\nInput: n = 3\nOutput: [[1,2,3],[8,9,4],[7,6,5]]\n\nExample 2:\n\nInput: n = 1\nOutput: [[1]]\n\n&nbsp;\nConstraints:\n\n\t1 <= n <= 20\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 19.5 MB (beats 11.1%)\n\n## Similar Problems\n\n- [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) — Medium\n- [Spiral Matrix III](https://leetcode.com/problems/spiral-matrix-iii/) — Medium\n- [Spiral Matrix IV](https://leetcode.com/problems/spiral-matrix-iv/) — Medium\n"
         }
       ],
       "lang": {
@@ -5596,9 +5679,9 @@
         "ext": "py",
         "slug": "python3"
       },
-      "runtime": "43 ms",
+      "runtime": "0 ms",
       "memory": "19.5 MB",
-      "runtimePct": 0.6920999999999966,
+      "runtimePct": 100,
       "memoryPct": 11.124299999999998,
       "timestamp": 1788187253000,
       "acRate": 75.74232236160408,
@@ -5633,7 +5716,13 @@
       "isDuplicate": false,
       "duplicateOf": null,
       "_requestAIReview": true,
-      "platform": "leetcode"
+      "platform": "leetcode",
+      "_committedPaths": [
+        "problems/lc-spiral-matrix-ii/lc-spiral-matrix-ii.py",
+        "problems/lc-spiral-matrix-ii/README.md"
+      ],
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-squares-of-a-sorted-array::2034927823",
