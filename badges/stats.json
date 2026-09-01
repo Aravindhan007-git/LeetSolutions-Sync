@@ -1,20 +1,20 @@
 {
   "schema": 1,
-  "asOf": "2026-08-31",
-  "currentStreak": 2,
-  "longestStreak": 2,
+  "asOf": "2026-09-01",
+  "currentStreak": 3,
+  "longestStreak": 3,
   "freezes": 1,
-  "totalPoints": 1255,
-  "totalSolves": 86,
+  "totalPoints": 1280,
+  "totalSolves": 87,
   "totalRecalls": 0,
   "byDifficulty": {
-    "Medium": 21,
+    "Medium": 22,
     "Easy": 63,
     "Hard": 2
   },
   "level": 4,
   "levelName": "Analyst",
-  "activeDays": 26,
+  "activeDays": 27,
   "dailyTargetPoints": 25,
   "achievements": [
     "first-blood",

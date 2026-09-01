@@ -104,6 +104,11 @@
         "elapsedSeconds": 0,
         "lang": "Python3",
         "ts": 1788147216796
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python3",
+        "ts": 1788234143339
       }
     ],
     "tags": [
@@ -235,6 +240,27 @@
     "tags": [
       "Array",
       "Counting"
+    ]
+  },
+  "leetcode::word-search": {
+    "difficulty": "Medium",
+    "lang": "Python3",
+    "platform": "leetcode",
+    "slug": "word-search",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python3",
+        "ts": 1788234974528
+      }
+    ],
+    "tags": [
+      "Grid",
+      "Array",
+      "String",
+      "Backtracking",
+      "Depth-First Search",
+      "Matrix"
     ]
   }
 }
