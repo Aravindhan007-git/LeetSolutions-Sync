@@ -1,17 +1,17 @@
 {
-  "updatedAt": "2026-09-01T03:56:14.644Z",
+  "updatedAt": "2026-09-02T09:59:03.600Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 87,
+    "total": 88,
     "easy": 63,
-    "medium": 22,
+    "medium": 23,
     "hard": 2,
     "unknownDifficulty": 0,
     "byPlatform": {
-      "leetcode": 87
+      "leetcode": 88
     },
     "byLang": {
-      "Python3": 78,
+      "Python3": 79,
       "C": 9
     },
     "byTopic": {
@@ -20,7 +20,7 @@
       "Linked List": 6,
       "Hash Table": 2,
       "Two Pointers": 10,
-      "String": 8,
+      "String": 9,
       "Grid": 1
     }
   },
@@ -1229,6 +1229,96 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false
+    },
+    {
+      "id": "lc-generate-parentheses",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Generate Parentheses",
+      "titleSlug": "generate-parentheses",
+      "difficulty": "Medium",
+      "topic": "Backtracking",
+      "tags": [
+        "String",
+        "Dynamic Programming",
+        "Backtracking",
+        "Bracket Sequences"
+      ],
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 22,
+            "platform": "leetcode",
+            "slug": "generate-parentheses"
+          }
+        ],
+        "canonicalId": "generate-parentheses",
+        "canonicalTitle": "Generate Parentheses",
+        "confirmedBy": "system-init",
+        "difficulty": "medium",
+        "pattern": "backtracking",
+        "tags": [
+          "string"
+        ],
+        "topic": "backtracking",
+        "voteCount": 97
+      },
+      "readmeContent": "# [22] Generate Parentheses\n**Difficulty:** Medium  |  **Acceptance:** 79.1%  |  **Likes:** 23557 / **Dislikes:** 1097\n**Tags:** `String`, `Dynamic Programming`, `Backtracking`, `Bracket Sequences`\n## Problem\nGiven n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.\n\n&nbsp;\nExample 1:\nInput: n = 3\nOutput: [\"((()))\",\"(()())\",\"(())()\",\"()(())\",\"()()()\"]\nExample 2:\nInput: n = 1\nOutput: [\"()\"]\n\n&nbsp;\nConstraints:\n\n\t1 <= n <= 8\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 19.4 MB (beats 73.6%)\n\n## Similar Problems\n\n- [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) — Medium\n- [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) — Easy\n- [Check if a Parentheses String Can Be Valid](https://leetcode.com/problems/check-if-a-parentheses-string-can-be-valid/) — Medium\n",
+      "code": "class Solution:\n    def generateParenthesis(self, n: int) -> List[str]:\n        res=[]\n        def find(s,op,cl,res):\n            if len(s)==n*2:\n                res.append(s)\n                return\n            if op<n:\n                find(s+'(',op+1,cl,res)\n            if cl<op:\n                find(s+')',op,cl+1,res)\n        find(\"\",0,0,res)\n        return res",
+      "files": [
+        {
+          "path": "problems/generate-parentheses/leetcode/lc-generate-parentheses.py",
+          "content": "class Solution:\n    def generateParenthesis(self, n: int) -> List[str]:\n        res=[]\n        def find(s,op,cl,res):\n            if len(s)==n*2:\n                res.append(s)\n                return\n            if op<n:\n                find(s+'(',op+1,cl,res)\n            if cl<op:\n                find(s+')',op,cl+1,res)\n        find(\"\",0,0,res)\n        return res"
+        },
+        {
+          "path": "problems/generate-parentheses/README.md",
+          "content": "# [22] Generate Parentheses\n**Difficulty:** Medium  |  **Acceptance:** 79.1%  |  **Likes:** 23557 / **Dislikes:** 1097\n**Tags:** `String`, `Dynamic Programming`, `Backtracking`, `Bracket Sequences`\n## Problem\nGiven n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.\n\n&nbsp;\nExample 1:\nInput: n = 3\nOutput: [\"((()))\",\"(()())\",\"(())()\",\"()(())\",\"()()()\"]\nExample 2:\nInput: n = 1\nOutput: [\"()\"]\n\n&nbsp;\nConstraints:\n\n\t1 <= n <= 8\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 19.4 MB (beats 73.6%)\n\n## Similar Problems\n\n- [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) — Medium\n- [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) — Easy\n- [Check if a Parentheses String Can Be Valid](https://leetcode.com/problems/check-if-a-parentheses-string-can-be-valid/) — Medium\n"
+        }
+      ],
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "runtime": "0 ms",
+      "memory": "19.4 MB",
+      "runtimePct": 100,
+      "memoryPct": 73.62280000000001,
+      "timestamp": 1788343057000,
+      "acRate": 79.12976499487566,
+      "likes": 23557,
+      "dislikes": 1097,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "letter-combinations-of-a-phone-number",
+          "title": "Letter Combinations of a Phone Number",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "valid-parentheses",
+          "title": "Valid Parentheses",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "check-if-a-parentheses-string-can-be-valid",
+          "title": "Check if a Parentheses String Can Be Valid",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>Given <code>n</code> pairs of parentheses, write a function to <em>generate all combinations of well-formed parentheses</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> n = 3\n<strong>Output:</strong> [\"((()))\",\"(()())\",\"(())()\",\"()(())\",\"()()()\"]\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> n = 1\n<strong>Output:</strong> [\"()\"]\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 8</code></li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/generate-parentheses/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "_requestAIReview": true,
+      "platform": "leetcode"
     },
     {
       "id": "lc-insert-interval::2110886480",
@@ -3263,7 +3353,7 @@
         "Math"
       ],
       "canonical": null,
-      "readmeContent": "# [66] Plus One\n**Difficulty:** Easy  |  **Acceptance:** 50.5%  |  **Likes:** 12060 / **Dislikes:** 5620\n**Tags:** `Array`, `Math`\n## Problem\nYou are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.\n\nIncrement the large integer by one and return the resulting array of digits.\n\n&nbsp;\nExample 1:\n\nInput: digits = [1,2,3]\nOutput: [1,2,4]\nExplanation: The array represents the integer 123.\nIncrementing by one gives 123 + 1 = 124.\nThus, the result should be [1,2,4].\n\nExample 2:\n\nInput: digits = [4,3,2,1]\nOutput: [4,3,2,2]\nExplanation: The array represents the integer 4321.\nIncrementing by one gives 4321 + 1 = 4322.\nThus, the result should be [4,3,2,2].\n\nExample 3:\n\nInput: digits = [9]\nOutput: [1,0]\nExplanation: The array represents the integer 9.\nIncrementing by one gives 9 + 1 = 10.\nThus, the result should be [1,0].\n\n&nbsp;\nConstraints:\n\n\t1 <= digits.length <= 100\n\t0 <= digits[i] <= 9\n\tdigits does not contain any leading 0's.\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 19.3 MB (beats 56.6%)\n\n## Similar Problems\n\n- [Multiply Strings](https://leetcode.com/problems/multiply-strings/) — Medium\n- [Add Binary](https://leetcode.com/problems/add-binary/) — Easy\n- [Add to Array-Form of Integer](https://leetcode.com/problems/add-to-array-form-of-integer/) — Easy\n- [Minimum Operations to Reduce an Integer to 0](https://leetcode.com/problems/minimum-operations-to-reduce-an-integer-to-0/) — Medium\n",
+      "readmeContent": "# [66] Plus One\n**Difficulty:** Easy  |  **Acceptance:** 50.5%  |  **Likes:** 12066 / **Dislikes:** 5620\n**Tags:** `Array`, `Math`\n## Problem\nYou are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.\n\nIncrement the large integer by one and return the resulting array of digits.\n\n&nbsp;\nExample 1:\n\nInput: digits = [1,2,3]\nOutput: [1,2,4]\nExplanation: The array represents the integer 123.\nIncrementing by one gives 123 + 1 = 124.\nThus, the result should be [1,2,4].\n\nExample 2:\n\nInput: digits = [4,3,2,1]\nOutput: [4,3,2,2]\nExplanation: The array represents the integer 4321.\nIncrementing by one gives 4321 + 1 = 4322.\nThus, the result should be [4,3,2,2].\n\nExample 3:\n\nInput: digits = [9]\nOutput: [1,0]\nExplanation: The array represents the integer 9.\nIncrementing by one gives 9 + 1 = 10.\nThus, the result should be [1,0].\n\n&nbsp;\nConstraints:\n\n\t1 <= digits.length <= 100\n\t0 <= digits[i] <= 9\n\tdigits does not contain any leading 0's.\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 19.3 MB (beats 56.7%)\n\n## Similar Problems\n\n- [Multiply Strings](https://leetcode.com/problems/multiply-strings/) — Medium\n- [Add Binary](https://leetcode.com/problems/add-binary/) — Easy\n- [Add to Array-Form of Integer](https://leetcode.com/problems/add-to-array-form-of-integer/) — Easy\n- [Minimum Operations to Reduce an Integer to 0](https://leetcode.com/problems/minimum-operations-to-reduce-an-integer-to-0/) — Medium\n",
       "code": "class Solution:\n    def plusOne(self, digits: List[int]) -> List[int]:\n        for i in range(len(digits)-1,-1,-1):\n            if digits[i]<9:\n                digits[i]+=1\n                return digits\n            digits[i]=0\n        return [1]+digits",
       "files": [
         {
@@ -3272,7 +3362,7 @@
         },
         {
           "path": "problems/lc-plus-one/README.md",
-          "content": "# [66] Plus One\n**Difficulty:** Easy  |  **Acceptance:** 50.5%  |  **Likes:** 12060 / **Dislikes:** 5620\n**Tags:** `Array`, `Math`\n## Problem\nYou are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.\n\nIncrement the large integer by one and return the resulting array of digits.\n\n&nbsp;\nExample 1:\n\nInput: digits = [1,2,3]\nOutput: [1,2,4]\nExplanation: The array represents the integer 123.\nIncrementing by one gives 123 + 1 = 124.\nThus, the result should be [1,2,4].\n\nExample 2:\n\nInput: digits = [4,3,2,1]\nOutput: [4,3,2,2]\nExplanation: The array represents the integer 4321.\nIncrementing by one gives 4321 + 1 = 4322.\nThus, the result should be [4,3,2,2].\n\nExample 3:\n\nInput: digits = [9]\nOutput: [1,0]\nExplanation: The array represents the integer 9.\nIncrementing by one gives 9 + 1 = 10.\nThus, the result should be [1,0].\n\n&nbsp;\nConstraints:\n\n\t1 <= digits.length <= 100\n\t0 <= digits[i] <= 9\n\tdigits does not contain any leading 0's.\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 19.3 MB (beats 56.6%)\n\n## Similar Problems\n\n- [Multiply Strings](https://leetcode.com/problems/multiply-strings/) — Medium\n- [Add Binary](https://leetcode.com/problems/add-binary/) — Easy\n- [Add to Array-Form of Integer](https://leetcode.com/problems/add-to-array-form-of-integer/) — Easy\n- [Minimum Operations to Reduce an Integer to 0](https://leetcode.com/problems/minimum-operations-to-reduce-an-integer-to-0/) — Medium\n"
+          "content": "# [66] Plus One\n**Difficulty:** Easy  |  **Acceptance:** 50.5%  |  **Likes:** 12066 / **Dislikes:** 5620\n**Tags:** `Array`, `Math`\n## Problem\nYou are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.\n\nIncrement the large integer by one and return the resulting array of digits.\n\n&nbsp;\nExample 1:\n\nInput: digits = [1,2,3]\nOutput: [1,2,4]\nExplanation: The array represents the integer 123.\nIncrementing by one gives 123 + 1 = 124.\nThus, the result should be [1,2,4].\n\nExample 2:\n\nInput: digits = [4,3,2,1]\nOutput: [4,3,2,2]\nExplanation: The array represents the integer 4321.\nIncrementing by one gives 4321 + 1 = 4322.\nThus, the result should be [4,3,2,2].\n\nExample 3:\n\nInput: digits = [9]\nOutput: [1,0]\nExplanation: The array represents the integer 9.\nIncrementing by one gives 9 + 1 = 10.\nThus, the result should be [1,0].\n\n&nbsp;\nConstraints:\n\n\t1 <= digits.length <= 100\n\t0 <= digits[i] <= 9\n\tdigits does not contain any leading 0's.\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 19.3 MB (beats 56.7%)\n\n## Similar Problems\n\n- [Multiply Strings](https://leetcode.com/problems/multiply-strings/) — Medium\n- [Add Binary](https://leetcode.com/problems/add-binary/) — Easy\n- [Add to Array-Form of Integer](https://leetcode.com/problems/add-to-array-form-of-integer/) — Easy\n- [Minimum Operations to Reduce an Integer to 0](https://leetcode.com/problems/minimum-operations-to-reduce-an-integer-to-0/) — Medium\n"
         }
       ],
       "lang": {
@@ -3283,10 +3373,10 @@
       "runtime": "0 ms",
       "memory": "19.3 MB",
       "runtimePct": 100,
-      "memoryPct": 56.62610000000001,
+      "memoryPct": 56.69069999999999,
       "timestamp": 1778336710000,
-      "acRate": 50.521247161818565,
-      "likes": 12060,
+      "acRate": 50.52800736080081,
+      "likes": 12066,
       "dislikes": 5620,
       "similar": [
         {
@@ -6621,7 +6711,13 @@
       "isDuplicate": false,
       "duplicateOf": null,
       "_requestAIReview": true,
-      "platform": "leetcode"
+      "platform": "leetcode",
+      "_committedPaths": [
+        "problems/word-search/leetcode/lc-word-search.py",
+        "problems/word-search/leetcode/README.md"
+      ],
+      "methods": [],
+      "manuallyEdited": false
     }
   ]
 }

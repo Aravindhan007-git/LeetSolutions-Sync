@@ -17,6 +17,25 @@
       "Sliding Window"
     ]
   },
+  "leetcode::generate-parentheses": {
+    "difficulty": "Medium",
+    "lang": "Python3",
+    "platform": "leetcode",
+    "slug": "generate-parentheses",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python3",
+        "ts": 1788343143503
+      }
+    ],
+    "tags": [
+      "String",
+      "Dynamic Programming",
+      "Backtracking",
+      "Bracket Sequences"
+    ]
+  },
   "leetcode::maximum-average-subarray-i": {
     "difficulty": "Easy",
     "lang": "Python3",
@@ -109,6 +128,11 @@
         "elapsedSeconds": 0,
         "lang": "Python3",
         "ts": 1788234143339
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python3",
+        "ts": 1788329833601
       }
     ],
     "tags": [

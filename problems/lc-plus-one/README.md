@@ -8,7 +8,7 @@
 | Topics | Array, Math |
 | Solved | 2026-05-09 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 19.3 MB (beats 56.62610000000001%) |
+| Memory | 19.3 MB (beats 56.69069999999999%) |
 
 ## Problem Statement
 
