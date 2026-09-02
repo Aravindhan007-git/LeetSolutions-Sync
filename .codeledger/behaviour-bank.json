@@ -266,6 +266,24 @@
       "Counting"
     ]
   },
+  "leetcode::valid-parentheses": {
+    "difficulty": "Easy",
+    "lang": "Python3",
+    "platform": "leetcode",
+    "slug": "valid-parentheses",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python3",
+        "ts": 1788345780345
+      }
+    ],
+    "tags": [
+      "String",
+      "Stack",
+      "Bracket Sequences"
+    ]
+  },
   "leetcode::word-search": {
     "difficulty": "Medium",
     "lang": "Python3",
