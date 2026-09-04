@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "asOf": "2026-09-03",
-  "currentStreak": 4,
-  "longestStreak": 4,
-  "freezes": 1,
+  "asOf": "2026-09-04",
+  "currentStreak": 5,
+  "longestStreak": 5,
+  "freezes": 0,
   "totalPoints": 1315,
   "totalSolves": 89,
   "totalRecalls": 0,
