@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-09T06:52:08.276Z",
+  "updatedAt": "2026-09-09T06:56:32.932Z",
   "layoutVersion": 3,
   "stats": {
     "total": 91,
@@ -4216,11 +4216,11 @@
         "voteCount": 99
       },
       "readmeContent": "# [206] Reverse Linked List\n**Difficulty:** Easy  |  **Acceptance:** 81.0%  |  **Likes:** 24944 / **Dislikes:** 595\n**Tags:** `Linked List`, `Recursion`\n## Problem\nGiven the head of a singly linked list, reverse the list, and return the reversed list.\n\n&nbsp;\nExample 1:\n\nInput: head = [1,2,3,4,5]\nOutput: [5,4,3,2,1]\n\nExample 2:\n\nInput: head = [1,2]\nOutput: [2,1]\n\nExample 3:\n\nInput: head = []\nOutput: []\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in the list is the range [0, 5000].\n\t-5000 <= Node.val <= 5000\n\n&nbsp;\nFollow up: A linked list can be reversed either iteratively or recursively. Could you implement both?\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 20.5 MB (beats 66.3%)\n\n## Similar Problems\n\n- [Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/) — Medium\n- [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) — Easy\n- [Reverse Nodes in Even Length Groups](https://leetcode.com/problems/reverse-nodes-in-even-length-groups/) — Medium\n- [Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/) — Medium\n- [Remove Nodes From Linked List](https://leetcode.com/problems/remove-nodes-from-linked-list/) — Medium\n",
-      "code": "# Definition for singly-linked list.\n# class ListNode:\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution:\n    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:\n        prev=None\n        curr=head\n        while curr:\n            next=curr.next\n            curr.next=prev\n            prev=curr\n            curr=next\n\n        return prev",
+      "code": "# Definition for singly-linked list.\n# class ListNode:\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution:\n    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:\n        prev = None\n        curr = head\n        while curr:\n            next = curr.next\n            curr.next = prev\n            prev = curr\n            curr = next\n        return prev",
       "files": [
         {
           "path": "problems/reverse-linked-list/leetcode/lc-reverse-linked-list.py",
-          "content": "# Definition for singly-linked list.\n# class ListNode:\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution:\n    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:\n        prev=None\n        curr=head\n        while curr:\n            next=curr.next\n            curr.next=prev\n            prev=curr\n            curr=next\n\n        return prev"
+          "content": "# Definition for singly-linked list.\n# class ListNode:\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution:\n    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:\n        prev = None\n        curr = head\n        while curr:\n            next = curr.next\n            curr.next = prev\n            prev = curr\n            curr = next\n        return prev"
         },
         {
           "path": "problems/reverse-linked-list/README.md",
@@ -4236,8 +4236,8 @@
       "memory": "20.5 MB",
       "runtimePct": 100,
       "memoryPct": 66.28429999999999,
-      "timestamp": 1769841651000,
-      "acRate": 81.03571826390726,
+      "timestamp": 1788936903000,
+      "acRate": 81.03571242404271,
       "likes": 24944,
       "dislikes": 595,
       "similar": [
@@ -4284,12 +4284,16 @@
       "submissionsUrl": "https://leetcode.com/problems/reverse-linked-list/submissions/",
       "notes": "",
       "methodTitle": "",
-      "isDuplicate": true,
-      "duplicateOf": "lc-reverse-linked-list::1902695551",
+      "isDuplicate": false,
+      "duplicateOf": null,
       "_requestAIReview": true,
       "platform": "leetcode",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/reverse-linked-list/leetcode/lc-reverse-linked-list.py",
+        "problems/reverse-linked-list/leetcode/README.md"
+      ]
     },
     {
       "id": "lc-reverse-linked-list::1706829960",
