@@ -185,6 +185,23 @@
       "Recursion"
     ]
   },
+  "leetcode::remove-linked-list-elements": {
+    "difficulty": "Easy",
+    "lang": "Python3",
+    "platform": "leetcode",
+    "slug": "remove-linked-list-elements",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python3",
+        "ts": 1788944683784
+      }
+    ],
+    "tags": [
+      "Linked List",
+      "Recursion"
+    ]
+  },
   "leetcode::reverse-linked-list": {
     "difficulty": "Easy",
     "lang": "Python3",

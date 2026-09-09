@@ -1,23 +1,23 @@
 {
-  "updatedAt": "2026-09-09T06:56:32.932Z",
+  "updatedAt": "2026-09-09T09:04:43.877Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 91,
-    "easy": 66,
+    "total": 92,
+    "easy": 67,
     "medium": 23,
     "hard": 2,
     "unknownDifficulty": 0,
     "byPlatform": {
-      "leetcode": 91
+      "leetcode": 92
     },
     "byLang": {
-      "Python3": 82,
+      "Python3": 83,
       "C": 9
     },
     "byTopic": {
       "Math": 10,
       "Array": 50,
-      "Linked List": 8,
+      "Linked List": 9,
       "Hash Table": 2,
       "Two Pointers": 10,
       "String": 10,
@@ -4111,6 +4111,81 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false
+    },
+    {
+      "id": "lc-remove-linked-list-elements",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Remove Linked List Elements",
+      "titleSlug": "remove-linked-list-elements",
+      "difficulty": "Easy",
+      "topic": "Recursion",
+      "tags": [
+        "Linked List",
+        "Recursion"
+      ],
+      "canonical": null,
+      "readmeContent": "# [203] Remove Linked List Elements\n**Difficulty:** Easy  |  **Acceptance:** 55.4%  |  **Likes:** 9179 / **Dislikes:** 296\n**Tags:** `Linked List`, `Recursion`\n## Problem\nGiven the head of a linked list and an integer val, remove all the nodes of the linked list that has Node.val == val, and return the new head.\n\n&nbsp;\nExample 1:\n\nInput: head = [1,2,6,3,4,5,6], val = 6\nOutput: [1,2,3,4,5]\n\nExample 2:\n\nInput: head = [], val = 1\nOutput: []\n\nExample 3:\n\nInput: head = [7,7,7,7], val = 7\nOutput: []\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in the list is in the range [0, 104].\n\t1 <= Node.val <= 50\n\t0 <= val <= 50\n## My Submission\n\n- Runtime: 4 ms (beats 22.4%)\n- Memory: 22.4 MB (beats 42.0%)\n\n## Similar Problems\n\n- [Remove Element](https://leetcode.com/problems/remove-element/) — Easy\n- [Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/) — Medium\n- [Delete the Middle Node of a Linked List](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/) — Medium\n- [Delete Nodes From Linked List Present in Array](https://leetcode.com/problems/delete-nodes-from-linked-list-present-in-array/) — Medium\n",
+      "code": "# Definition for singly-linked list.\n# class ListNode:\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution:\n    def removeElements(self, head: Optional[ListNode], val: int) -> Optional[ListNode]:\n        dummy = ListNode(0,next = head)\n        temp = dummy\n        while temp.next:\n            if temp.next.val == val:\n                temp.next = temp.next.next\n            else:\n                temp = temp.next\n        return dummy.next",
+      "files": [
+        {
+          "path": "problems/lc-remove-linked-list-elements/lc-remove-linked-list-elements.py",
+          "content": "# Definition for singly-linked list.\n# class ListNode:\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution:\n    def removeElements(self, head: Optional[ListNode], val: int) -> Optional[ListNode]:\n        dummy = ListNode(0,next = head)\n        temp = dummy\n        while temp.next:\n            if temp.next.val == val:\n                temp.next = temp.next.next\n            else:\n                temp = temp.next\n        return dummy.next"
+        },
+        {
+          "path": "problems/lc-remove-linked-list-elements/README.md",
+          "content": "# [203] Remove Linked List Elements\n**Difficulty:** Easy  |  **Acceptance:** 55.4%  |  **Likes:** 9179 / **Dislikes:** 296\n**Tags:** `Linked List`, `Recursion`\n## Problem\nGiven the head of a linked list and an integer val, remove all the nodes of the linked list that has Node.val == val, and return the new head.\n\n&nbsp;\nExample 1:\n\nInput: head = [1,2,6,3,4,5,6], val = 6\nOutput: [1,2,3,4,5]\n\nExample 2:\n\nInput: head = [], val = 1\nOutput: []\n\nExample 3:\n\nInput: head = [7,7,7,7], val = 7\nOutput: []\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in the list is in the range [0, 104].\n\t1 <= Node.val <= 50\n\t0 <= val <= 50\n## My Submission\n\n- Runtime: 4 ms (beats 22.4%)\n- Memory: 22.4 MB (beats 42.0%)\n\n## Similar Problems\n\n- [Remove Element](https://leetcode.com/problems/remove-element/) — Easy\n- [Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/) — Medium\n- [Delete the Middle Node of a Linked List](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/) — Medium\n- [Delete Nodes From Linked List Present in Array](https://leetcode.com/problems/delete-nodes-from-linked-list-present-in-array/) — Medium\n"
+        }
+      ],
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "runtime": "4 ms",
+      "memory": "22.4 MB",
+      "runtimePct": 22.3731,
+      "memoryPct": 41.98450000000001,
+      "timestamp": 1788944596000,
+      "acRate": 55.40319832031596,
+      "likes": 9179,
+      "dislikes": 296,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "remove-element",
+          "title": "Remove Element",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "delete-node-in-a-linked-list",
+          "title": "Delete Node in a Linked List",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "delete-the-middle-node-of-a-linked-list",
+          "title": "Delete the Middle Node of a Linked List",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "delete-nodes-from-linked-list-present-in-array",
+          "title": "Delete Nodes From Linked List Present in Array",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>Given the <code>head</code> of a linked list and an integer <code>val</code>, remove all the nodes of the linked list that has <code>Node.val == val</code>, and return <em>the new head</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/03/06/removelinked-list.jpg\" style=\"width: 500px; height: 142px;\" />\n<pre>\n<strong>Input:</strong> head = [1,2,6,3,4,5,6], val = 6\n<strong>Output:</strong> [1,2,3,4,5]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> head = [], val = 1\n<strong>Output:</strong> []\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> head = [7,7,7,7], val = 7\n<strong>Output:</strong> []\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the list is in the range <code>[0, 10<sup>4</sup>]</code>.</li>\n\t<li><code>1 &lt;= Node.val &lt;= 50</code></li>\n\t<li><code>0 &lt;= val &lt;= 50</code></li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/remove-linked-list-elements/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "_requestAIReview": true,
+      "platform": "leetcode"
     },
     {
       "id": "lc-reverse-integer::1994647257",
