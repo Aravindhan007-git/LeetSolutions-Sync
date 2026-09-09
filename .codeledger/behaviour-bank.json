@@ -17,6 +17,22 @@
       "Sliding Window"
     ]
   },
+  "leetcode::delete-node-in-a-linked-list": {
+    "difficulty": "Medium",
+    "lang": "Python3",
+    "platform": "leetcode",
+    "slug": "delete-node-in-a-linked-list",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python3",
+        "ts": 1788945677227
+      }
+    ],
+    "tags": [
+      "Linked List"
+    ]
+  },
   "leetcode::generate-parentheses": {
     "difficulty": "Medium",
     "lang": "Python3",
@@ -195,6 +211,11 @@
         "elapsedSeconds": 0,
         "lang": "Python3",
         "ts": 1788944683784
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python3",
+        "ts": 1788944696338
       }
     ],
     "tags": [
