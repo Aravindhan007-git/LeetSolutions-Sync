@@ -17,6 +17,22 @@
       "Sliding Window"
     ]
   },
+  "leetcode::customers-who-never-order": {
+    "difficulty": "Easy",
+    "lang": "MySQL",
+    "platform": "leetcode",
+    "slug": "customers-who-never-order",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "MySQL",
+        "ts": 1788946519359
+      }
+    ],
+    "tags": [
+      "Database"
+    ]
+  },
   "leetcode::delete-node-in-a-linked-list": {
     "difficulty": "Medium",
     "lang": "Python3",
