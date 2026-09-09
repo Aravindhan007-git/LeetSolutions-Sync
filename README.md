@@ -38,7 +38,7 @@
 
 **By Platform:** leetcode (90)
 
-**Top Languages:** Python3 (80) · C (10)
+**Top Languages:** Python3 (81) · C (9)
 
 **Top Topics:** Array (50) · Math (10) · Two Pointers (10) · String (10) · Linked List (7) · Hash Table (2) · Grid (1)
 
@@ -100,6 +100,7 @@ Built with [CodeLedger](https://codeledger.vkrishna04.me) · [⭐ Star the exten
 </div>
 
 <!-- CODELEDGER_AUTO_GENERATED_END -->
+
 
 
 

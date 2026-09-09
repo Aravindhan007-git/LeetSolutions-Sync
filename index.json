@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-09T06:49:18.899Z",
+  "updatedAt": "2026-09-09T06:51:22.574Z",
   "layoutVersion": 3,
   "stats": {
     "total": 90,
@@ -11,8 +11,8 @@
       "leetcode": 90
     },
     "byLang": {
-      "Python3": 80,
-      "C": 10
+      "Python3": 81,
+      "C": 9
     },
     "byTopic": {
       "Math": 10,
@@ -2335,29 +2335,29 @@
         "Two Pointers"
       ],
       "canonical": null,
-      "readmeContent": "# [876] Middle of the Linked List\n**Difficulty:** Easy  |  **Acceptance:** 82.4%  |  **Likes:** 13484 / **Dislikes:** 458\n**Tags:** `Linked List`, `Two Pointers`\n## Problem\nGiven the head of a singly linked list, return the middle node of the linked list.\n\nIf there are two middle nodes, return the second middle node.\n\n&nbsp;\nExample 1:\n\nInput: head = [1,2,3,4,5]\nOutput: [3,4,5]\nExplanation: The middle node of the list is node 3.\n\nExample 2:\n\nInput: head = [1,2,3,4,5,6]\nOutput: [4,5,6]\nExplanation: Since the list has two middle nodes with values 3 and 4, we return the second one.\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in the list is in the range [1, 100].\n\t1 <= Node.val <= 100\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 8.4 MB (beats 100.0%)\n\n## Similar Problems\n\n- [Delete the Middle Node of a Linked List](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/) — Medium\n- [Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/) — Medium\n",
-      "code": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     struct ListNode *next;\n * };\n */\nstruct ListNode* middleNode(struct ListNode* head) {\n    struct ListNode* fast=head;\n    struct ListNode* slow=head;\n    struct ListNode* prev=NULL;\n    while(fast!=NULL && fast->next!=NULL){\n        prev=slow;\n        slow=slow->next;\n        fast=fast->next->next;\n    }\n    return slow;\n}",
+      "readmeContent": "# [876] Middle of the Linked List\n**Difficulty:** Easy  |  **Acceptance:** 82.4%  |  **Likes:** 13484 / **Dislikes:** 458\n**Tags:** `Linked List`, `Two Pointers`\n## Problem\nGiven the head of a singly linked list, return the middle node of the linked list.\n\nIf there are two middle nodes, return the second middle node.\n\n&nbsp;\nExample 1:\n\nInput: head = [1,2,3,4,5]\nOutput: [3,4,5]\nExplanation: The middle node of the list is node 3.\n\nExample 2:\n\nInput: head = [1,2,3,4,5,6]\nOutput: [4,5,6]\nExplanation: Since the list has two middle nodes with values 3 and 4, we return the second one.\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in the list is in the range [1, 100].\n\t1 <= Node.val <= 100\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 19.3 MB (beats 59.0%)\n\n## Similar Problems\n\n- [Delete the Middle Node of a Linked List](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/) — Medium\n- [Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/) — Medium\n",
+      "code": "# Definition for singly-linked list.\n# class ListNode:\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution:\n    def middleNode(self, head: Optional[ListNode]) -> Optional[ListNode]:\n        slow=head\n        fast=head\n        while fast and fast.next:\n            slow = slow.next\n            fast = fast.next.next\n        return slow",
       "files": [
         {
-          "path": "problems/lc-middle-of-the-linked-list/lc-middle-of-the-linked-list.c",
-          "content": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     struct ListNode *next;\n * };\n */\nstruct ListNode* middleNode(struct ListNode* head) {\n    struct ListNode* fast=head;\n    struct ListNode* slow=head;\n    struct ListNode* prev=NULL;\n    while(fast!=NULL && fast->next!=NULL){\n        prev=slow;\n        slow=slow->next;\n        fast=fast->next->next;\n    }\n    return slow;\n}"
+          "path": "problems/lc-middle-of-the-linked-list/lc-middle-of-the-linked-list.py",
+          "content": "# Definition for singly-linked list.\n# class ListNode:\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution:\n    def middleNode(self, head: Optional[ListNode]) -> Optional[ListNode]:\n        slow=head\n        fast=head\n        while fast and fast.next:\n            slow = slow.next\n            fast = fast.next.next\n        return slow"
         },
         {
           "path": "problems/lc-middle-of-the-linked-list/README.md",
-          "content": "# [876] Middle of the Linked List\n**Difficulty:** Easy  |  **Acceptance:** 82.4%  |  **Likes:** 13484 / **Dislikes:** 458\n**Tags:** `Linked List`, `Two Pointers`\n## Problem\nGiven the head of a singly linked list, return the middle node of the linked list.\n\nIf there are two middle nodes, return the second middle node.\n\n&nbsp;\nExample 1:\n\nInput: head = [1,2,3,4,5]\nOutput: [3,4,5]\nExplanation: The middle node of the list is node 3.\n\nExample 2:\n\nInput: head = [1,2,3,4,5,6]\nOutput: [4,5,6]\nExplanation: Since the list has two middle nodes with values 3 and 4, we return the second one.\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in the list is in the range [1, 100].\n\t1 <= Node.val <= 100\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 8.4 MB (beats 100.0%)\n\n## Similar Problems\n\n- [Delete the Middle Node of a Linked List](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/) — Medium\n- [Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/) — Medium\n"
+          "content": "# [876] Middle of the Linked List\n**Difficulty:** Easy  |  **Acceptance:** 82.4%  |  **Likes:** 13484 / **Dislikes:** 458\n**Tags:** `Linked List`, `Two Pointers`\n## Problem\nGiven the head of a singly linked list, return the middle node of the linked list.\n\nIf there are two middle nodes, return the second middle node.\n\n&nbsp;\nExample 1:\n\nInput: head = [1,2,3,4,5]\nOutput: [3,4,5]\nExplanation: The middle node of the list is node 3.\n\nExample 2:\n\nInput: head = [1,2,3,4,5,6]\nOutput: [4,5,6]\nExplanation: Since the list has two middle nodes with values 3 and 4, we return the second one.\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in the list is in the range [1, 100].\n\t1 <= Node.val <= 100\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 19.3 MB (beats 59.0%)\n\n## Similar Problems\n\n- [Delete the Middle Node of a Linked List](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/) — Medium\n- [Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/) — Medium\n"
         }
       ],
       "lang": {
-        "name": "C",
-        "ext": "c",
-        "slug": "c"
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
       },
       "runtime": "0 ms",
-      "memory": "8.4 MB",
+      "memory": "19.3 MB",
       "runtimePct": 100,
-      "memoryPct": 100,
-      "timestamp": 1753163209000,
-      "acRate": 82.3687061856527,
+      "memoryPct": 59.03099999999999,
+      "timestamp": 1788936594000,
+      "acRate": 82.36874316829787,
       "likes": 13484,
       "dislikes": 458,
       "similar": [
@@ -2380,12 +2380,16 @@
       "submissionsUrl": "https://leetcode.com/problems/middle-of-the-linked-list/submissions/",
       "notes": "",
       "methodTitle": "",
-      "isDuplicate": true,
-      "duplicateOf": "lc-middle-of-the-linked-list::1706801568",
+      "isDuplicate": false,
+      "duplicateOf": null,
       "_requestAIReview": true,
       "platform": "leetcode",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-middle-of-the-linked-list/lc-middle-of-the-linked-list.c",
+        "problems/lc-middle-of-the-linked-list/README.md"
+      ]
     },
     {
       "id": "lc-middle-of-the-linked-list::1706801568",
