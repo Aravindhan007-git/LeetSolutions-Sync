@@ -68,6 +68,25 @@
       "Bracket Sequences"
     ]
   },
+  "leetcode::linked-list-cycle": {
+    "difficulty": "Easy",
+    "lang": "Python3",
+    "platform": "leetcode",
+    "slug": "linked-list-cycle",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python3",
+        "ts": 1789011499468
+      }
+    ],
+    "tags": [
+      "Linked List",
+      "Hash Table",
+      "Two Pointers",
+      "Floyd's Cycle Finding Algorithm"
+    ]
+  },
   "leetcode::maximum-average-subarray-i": {
     "difficulty": "Easy",
     "lang": "Python3",
