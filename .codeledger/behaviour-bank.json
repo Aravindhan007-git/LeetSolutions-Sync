@@ -49,6 +49,25 @@
       "Linked List"
     ]
   },
+  "leetcode::first-unique-character-in-a-string": {
+    "difficulty": "Easy",
+    "lang": "Python3",
+    "platform": "leetcode",
+    "slug": "first-unique-character-in-a-string",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python3",
+        "ts": 1789024855584
+      }
+    ],
+    "tags": [
+      "Hash Table",
+      "String",
+      "Queue",
+      "Counting"
+    ]
+  },
   "leetcode::generate-parentheses": {
     "difficulty": "Medium",
     "lang": "Python3",
