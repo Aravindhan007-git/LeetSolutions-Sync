@@ -1,17 +1,17 @@
 {
-  "updatedAt": "2026-09-10T07:20:55.790Z",
+  "updatedAt": "2026-09-10T07:41:42.966Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 97,
-    "easy": 71,
+    "total": 98,
+    "easy": 72,
     "medium": 24,
     "hard": 2,
     "unknownDifficulty": 0,
     "byPlatform": {
-      "leetcode": 97
+      "leetcode": 98
     },
     "byLang": {
-      "Python3": 87,
+      "Python3": 88,
       "MySQL": 1,
       "C": 9
     },
@@ -20,7 +20,7 @@
       "Array": 50,
       "Database": 1,
       "Linked List": 11,
-      "Hash Table": 4,
+      "Hash Table": 5,
       "Two Pointers": 10,
       "String": 10,
       "Grid": 1
@@ -872,6 +872,56 @@
       "manuallyEdited": false
     },
     {
+      "id": "lc-digit-frequency-score",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Digit Frequency Score",
+      "titleSlug": "digit-frequency-score",
+      "difficulty": "Easy",
+      "topic": "Math",
+      "tags": [
+        "Hash Table",
+        "Math"
+      ],
+      "canonical": null,
+      "readmeContent": "# [3945] Digit Frequency Score\n**Difficulty:** Easy  |  **Acceptance:** 91.6%  |  **Likes:** 52 / **Dislikes:** 2\n**Tags:** `Hash Table`, `Math`\n## Problem\nYou are given an integer n.\n\nThe score of n is defined as the sum of d * freq(d) over all distinct digits d, where freq(d) denotes the number of times the digit d appears in n.\n\nReturn an integer denoting the score of n.\n\n&nbsp;\nExample 1:\n\nInput: n = 122\n\nOutput: 5\n\nExplanation:\n\n\tThe digit 1 appears 1 time, contributing 1 * 1 = 1.\n\tThe digit 2 appears 2 times, contributing 2 * 2 = 4.\n\tThus, the score of n is 1 + 4 = 5.\n\nExample 2:\n\nInput: n = 101\n\nOutput: 2\n\nExplanation:\n\n\tThe digit 0 appears 1 time, contributing 0 * 1 = 0.\n\tThe digit 1 appears 2 times, contributing 1 * 2 = 2.\n\tThus, the score of n is 2.\n\n&nbsp;\nConstraints:\n\n\t1 <= n <= 109\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 19.4 MB (beats 21.8%)\n",
+      "code": "class Solution:\n    def digitFrequencyScore(self, n: int) -> int:\n        score = 0\n        n = list(str(n))\n        d = {}\n        for v in n:\n            d[v] = d.get(v,0)+1\n\n        l = list(d.items())\n        for v in l:\n            x,y = v\n            score += (int(x)*y)\n        return score",
+      "files": [
+        {
+          "path": "problems/lc-digit-frequency-score/lc-digit-frequency-score.py",
+          "content": "class Solution:\n    def digitFrequencyScore(self, n: int) -> int:\n        score = 0\n        n = list(str(n))\n        d = {}\n        for v in n:\n            d[v] = d.get(v,0)+1\n\n        l = list(d.items())\n        for v in l:\n            x,y = v\n            score += (int(x)*y)\n        return score"
+        },
+        {
+          "path": "problems/lc-digit-frequency-score/README.md",
+          "content": "# [3945] Digit Frequency Score\n**Difficulty:** Easy  |  **Acceptance:** 91.6%  |  **Likes:** 52 / **Dislikes:** 2\n**Tags:** `Hash Table`, `Math`\n## Problem\nYou are given an integer n.\n\nThe score of n is defined as the sum of d * freq(d) over all distinct digits d, where freq(d) denotes the number of times the digit d appears in n.\n\nReturn an integer denoting the score of n.\n\n&nbsp;\nExample 1:\n\nInput: n = 122\n\nOutput: 5\n\nExplanation:\n\n\tThe digit 1 appears 1 time, contributing 1 * 1 = 1.\n\tThe digit 2 appears 2 times, contributing 2 * 2 = 4.\n\tThus, the score of n is 1 + 4 = 5.\n\nExample 2:\n\nInput: n = 101\n\nOutput: 2\n\nExplanation:\n\n\tThe digit 0 appears 1 time, contributing 0 * 1 = 0.\n\tThe digit 1 appears 2 times, contributing 1 * 2 = 2.\n\tThus, the score of n is 2.\n\n&nbsp;\nConstraints:\n\n\t1 <= n <= 109\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 19.4 MB (beats 21.8%)\n"
+        }
+      ],
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "runtime": "0 ms",
+      "memory": "19.4 MB",
+      "runtimePct": 100,
+      "memoryPct": 21.782299999999992,
+      "timestamp": 1789026013000,
+      "acRate": 91.64345744161048,
+      "likes": 52,
+      "dislikes": 2,
+      "similar": [],
+      "problemStatement": "<p>You are given an integer <code>n</code>.</p>\n\n<p>The <strong>score</strong> of <code>n</code> is defined as the <strong>sum</strong> of <code>d * freq(d)</code> over all <strong>distinct</strong> digits <code>d</code>, where <code>freq(d)</code> denotes the number of times the digit <code>d</code> appears in <code>n</code>.</p>\n\n<p>Return an integer denoting the score of <code>n</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">n = 122</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">5</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<ul>\n\t<li>The digit 1 appears 1 time, contributing <code>1 * 1 = 1</code>.</li>\n\t<li>The digit 2 appears 2 times, contributing <code>2 * 2 = 4</code>.</li>\n\t<li>Thus, the score of <code>n</code> is <code>1 + 4 = 5</code>.</li>\n</ul>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">n = 101</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">2</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<ul>\n\t<li>The digit 0 appears 1 time, contributing <code>0 * 1 = 0</code>.</li>\n\t<li>The digit 1 appears 2 times, contributing <code>1 * 2 = 2</code>.</li>\n\t<li>Thus, the score of <code>n</code> is 2.</li>\n</ul>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 10<sup>9</sup></code></li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": false,
+      "submissionsUrl": "https://leetcode.com/problems/digit-frequency-score/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "_requestAIReview": true,
+      "platform": "leetcode"
+    },
+    {
       "id": "lc-fibonacci-number::2041999076",
       "submissionId": 2041999076,
       "platform": "leetcode",
@@ -1424,7 +1474,13 @@
       "isDuplicate": false,
       "duplicateOf": null,
       "_requestAIReview": true,
-      "platform": "leetcode"
+      "platform": "leetcode",
+      "_committedPaths": [
+        "problems/lc-first-unique-character-in-a-string/lc-first-unique-character-in-a-string.py",
+        "problems/lc-first-unique-character-in-a-string/README.md"
+      ],
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-generate-parentheses",

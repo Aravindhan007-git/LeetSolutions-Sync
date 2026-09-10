@@ -49,6 +49,23 @@
       "Linked List"
     ]
   },
+  "leetcode::digit-frequency-score": {
+    "difficulty": "Easy",
+    "lang": "Python3",
+    "platform": "leetcode",
+    "slug": "digit-frequency-score",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python3",
+        "ts": 1789026102811
+      }
+    ],
+    "tags": [
+      "Hash Table",
+      "Math"
+    ]
+  },
   "leetcode::first-unique-character-in-a-string": {
     "difficulty": "Easy",
     "lang": "Python3",
