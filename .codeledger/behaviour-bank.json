@@ -68,6 +68,24 @@
       "Bracket Sequences"
     ]
   },
+  "leetcode::intersection-of-two-linked-lists": {
+    "difficulty": "Easy",
+    "lang": "Python3",
+    "platform": "leetcode",
+    "slug": "intersection-of-two-linked-lists",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python3",
+        "ts": 1789014033924
+      }
+    ],
+    "tags": [
+      "Hash Table",
+      "Linked List",
+      "Two Pointers"
+    ]
+  },
   "leetcode::linked-list-cycle": {
     "difficulty": "Easy",
     "lang": "Python3",
