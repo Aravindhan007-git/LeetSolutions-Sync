@@ -1,23 +1,23 @@
 {
-  "updatedAt": "2026-09-10T07:41:42.966Z",
+  "updatedAt": "2026-09-11T06:12:52.116Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 98,
+    "total": 99,
     "easy": 72,
-    "medium": 24,
+    "medium": 25,
     "hard": 2,
     "unknownDifficulty": 0,
     "byPlatform": {
-      "leetcode": 98
+      "leetcode": 99
     },
     "byLang": {
-      "Python3": 88,
+      "Python3": 89,
       "MySQL": 1,
       "C": 9
     },
     "byTopic": {
       "Math": 10,
-      "Array": 50,
+      "Array": 51,
       "Database": 1,
       "Linked List": 11,
       "Hash Table": 5,
@@ -919,7 +919,13 @@
       "isDuplicate": false,
       "duplicateOf": null,
       "_requestAIReview": true,
-      "platform": "leetcode"
+      "platform": "leetcode",
+      "_committedPaths": [
+        "problems/lc-digit-frequency-score/lc-digit-frequency-score.py",
+        "problems/lc-digit-frequency-score/README.md"
+      ],
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-fibonacci-number::2041999076",
@@ -2856,6 +2862,101 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false
+    },
+    {
+      "id": "lc-minimum-size-subarray-sum",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Minimum Size Subarray Sum",
+      "titleSlug": "minimum-size-subarray-sum",
+      "difficulty": "Medium",
+      "topic": "Sliding Window",
+      "tags": [
+        "Array",
+        "Binary Search",
+        "Sliding Window",
+        "Prefix Sum"
+      ],
+      "canonical": null,
+      "readmeContent": "# [209] Minimum Size Subarray Sum\n**Difficulty:** Medium  |  **Acceptance:** 52.9%  |  **Likes:** 14772 / **Dislikes:** 553\n**Tags:** `Array`, `Binary Search`, `Sliding Window`, `Prefix Sum`\n## Problem\nGiven an array of positive integers nums and a positive integer target, return the minimal length of a subarray whose sum is greater than or equal to target. If there is no such subarray, return 0 instead.\n\n&nbsp;\nExample 1:\n\nInput: target = 7, nums = [2,3,1,2,4,3]\nOutput: 2\nExplanation: The subarray [4,3] has the minimal length under the problem constraint.\n\nExample 2:\n\nInput: target = 4, nums = [1,4,4]\nOutput: 1\n\nExample 3:\n\nInput: target = 11, nums = [1,1,1,1,1,1,1,1]\nOutput: 0\n\n&nbsp;\nConstraints:\n\n\t1 <= target <= 109\n\t1 <= nums.length <= 105\n\t1 <= nums[i] <= 104\n\n&nbsp;\nFollow up: If you have figured out the O(n) solution, try coding another solution of which the time complexity is O(n log(n)).\n## My Submission\n\n- Runtime: 20 ms (beats 29.0%)\n- Memory: 30.5 MB (beats 79.0%)\n- Solve time: 35m 58s\n\n## Similar Problems\n\n- [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) — Hard\n- [Maximum Length of Repeated Subarray](https://leetcode.com/problems/maximum-length-of-repeated-subarray/) — Medium\n- [Minimum Operations to Reduce X to Zero](https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/) — Medium\n- [K Radius Subarray Averages](https://leetcode.com/problems/k-radius-subarray-averages/) — Medium\n- [Maximum Product After K Increments](https://leetcode.com/problems/maximum-product-after-k-increments/) — Medium\n",
+      "code": "class Solution:\n    def minSubArrayLen(self, target: int, nums: List[int]) -> int:\n        left = 0\n        size = float('inf')\n        n = len(nums)\n        c_s = 0\n        for right in range(n):\n            c_s += nums[right]\n            while c_s >= target:\n                size = min(size,right - left +1 )\n                c_s-=nums[left]\n                left+=1\n        if size != float('inf'):\n            return size\n        else:\n            return 0\n",
+      "files": [
+        {
+          "path": "problems/lc-minimum-size-subarray-sum/lc-minimum-size-subarray-sum.py",
+          "content": "class Solution:\n    def minSubArrayLen(self, target: int, nums: List[int]) -> int:\n        left = 0\n        size = float('inf')\n        n = len(nums)\n        c_s = 0\n        for right in range(n):\n            c_s += nums[right]\n            while c_s >= target:\n                size = min(size,right - left +1 )\n                c_s-=nums[left]\n                left+=1\n        if size != float('inf'):\n            return size\n        else:\n            return 0\n"
+        },
+        {
+          "path": "problems/lc-minimum-size-subarray-sum/README.md",
+          "content": "# [209] Minimum Size Subarray Sum\n**Difficulty:** Medium  |  **Acceptance:** 52.9%  |  **Likes:** 14772 / **Dislikes:** 553\n**Tags:** `Array`, `Binary Search`, `Sliding Window`, `Prefix Sum`\n## Problem\nGiven an array of positive integers nums and a positive integer target, return the minimal length of a subarray whose sum is greater than or equal to target. If there is no such subarray, return 0 instead.\n\n&nbsp;\nExample 1:\n\nInput: target = 7, nums = [2,3,1,2,4,3]\nOutput: 2\nExplanation: The subarray [4,3] has the minimal length under the problem constraint.\n\nExample 2:\n\nInput: target = 4, nums = [1,4,4]\nOutput: 1\n\nExample 3:\n\nInput: target = 11, nums = [1,1,1,1,1,1,1,1]\nOutput: 0\n\n&nbsp;\nConstraints:\n\n\t1 <= target <= 109\n\t1 <= nums.length <= 105\n\t1 <= nums[i] <= 104\n\n&nbsp;\nFollow up: If you have figured out the O(n) solution, try coding another solution of which the time complexity is O(n log(n)).\n## My Submission\n\n- Runtime: 20 ms (beats 29.0%)\n- Memory: 30.5 MB (beats 79.0%)\n- Solve time: 35m 58s\n\n## Similar Problems\n\n- [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) — Hard\n- [Maximum Length of Repeated Subarray](https://leetcode.com/problems/maximum-length-of-repeated-subarray/) — Medium\n- [Minimum Operations to Reduce X to Zero](https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/) — Medium\n- [K Radius Subarray Averages](https://leetcode.com/problems/k-radius-subarray-averages/) — Medium\n- [Maximum Product After K Increments](https://leetcode.com/problems/maximum-product-after-k-increments/) — Medium\n"
+        }
+      ],
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "runtime": "20 ms",
+      "memory": "30.5 MB",
+      "runtimePct": 29.039200000000022,
+      "memoryPct": 79.04239999999999,
+      "timestamp": 1789107080000,
+      "acRate": 52.87057086972561,
+      "likes": 14772,
+      "dislikes": 553,
+      "similar": [
+        {
+          "difficulty": "Hard",
+          "titleSlug": "minimum-window-substring",
+          "title": "Minimum Window Substring",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-length-of-repeated-subarray",
+          "title": "Maximum Length of Repeated Subarray",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "minimum-operations-to-reduce-x-to-zero",
+          "title": "Minimum Operations to Reduce X to Zero",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "k-radius-subarray-averages",
+          "title": "K Radius Subarray Averages",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-product-after-k-increments",
+          "title": "Maximum Product After K Increments",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "shortest-subarray-with-or-at-least-k-i",
+          "title": "Shortest Subarray With OR at Least K I",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "minimum-positive-sum-subarray",
+          "title": "Minimum Positive Sum Subarray ",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>Given an array of positive integers <code>nums</code> and a positive integer <code>target</code>, return <em>the <strong>minimal length</strong> of a </em><span data-keyword=\"subarray-nonempty\"><em>subarray</em></span><em> whose sum is greater than or equal to</em> <code>target</code>. If there is no such subarray, return <code>0</code> instead.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> target = 7, nums = [2,3,1,2,4,3]\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> The subarray [4,3] has the minimal length under the problem constraint.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> target = 4, nums = [1,4,4]\n<strong>Output:</strong> 1\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> target = 11, nums = [1,1,1,1,1,1,1,1]\n<strong>Output:</strong> 0\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= target &lt;= 10<sup>9</sup></code></li>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow up:</strong> If you have figured out the <code>O(n)</code> solution, try coding another solution of which the time complexity is <code>O(n log(n))</code>.",
+      "elapsedSeconds": 2158,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/minimum-size-subarray-sum/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "_requestAIReview": true,
+      "platform": "leetcode"
     },
     {
       "id": "lc-missing-number",

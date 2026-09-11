@@ -185,6 +185,25 @@
       "Two Pointers"
     ]
   },
+  "leetcode::minimum-size-subarray-sum": {
+    "difficulty": "Medium",
+    "lang": "Python3",
+    "platform": "leetcode",
+    "slug": "minimum-size-subarray-sum",
+    "solves": [
+      {
+        "elapsedSeconds": 2158,
+        "lang": "Python3",
+        "ts": 1789107171989
+      }
+    ],
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Sliding Window",
+      "Prefix Sum"
+    ]
+  },
   "leetcode::missing-number": {
     "difficulty": "Easy",
     "lang": "Python3",
