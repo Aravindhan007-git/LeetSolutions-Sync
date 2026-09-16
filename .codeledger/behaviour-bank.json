@@ -230,6 +230,24 @@
       "Sorting"
     ]
   },
+  "leetcode::n-queens": {
+    "difficulty": "Hard",
+    "lang": "Python3",
+    "platform": "leetcode",
+    "slug": "n-queens",
+    "solves": [
+      {
+        "elapsedSeconds": 2158,
+        "lang": "Python3",
+        "ts": 1789541446544
+      }
+    ],
+    "tags": [
+      "Array",
+      "Backtracking",
+      "Algorithm X"
+    ]
+  },
   "leetcode::permutation-in-string": {
     "difficulty": "Medium",
     "lang": "Python3",

@@ -1,23 +1,23 @@
 {
-  "updatedAt": "2026-09-11T06:12:52.116Z",
+  "updatedAt": "2026-09-16T06:50:46.659Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 99,
+    "total": 100,
     "easy": 72,
     "medium": 25,
-    "hard": 2,
+    "hard": 3,
     "unknownDifficulty": 0,
     "byPlatform": {
-      "leetcode": 99
+      "leetcode": 100
     },
     "byLang": {
-      "Python3": 89,
+      "Python3": 90,
       "MySQL": 1,
       "C": 9
     },
     "byTopic": {
       "Math": 10,
-      "Array": 51,
+      "Array": 52,
       "Database": 1,
       "Linked List": 11,
       "Hash Table": 5,
@@ -2956,7 +2956,13 @@
       "isDuplicate": false,
       "duplicateOf": null,
       "_requestAIReview": true,
-      "platform": "leetcode"
+      "platform": "leetcode",
+      "_committedPaths": [
+        "problems/lc-minimum-size-subarray-sum/lc-minimum-size-subarray-sum.py",
+        "problems/lc-minimum-size-subarray-sum/README.md"
+      ],
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-missing-number",
@@ -3497,6 +3503,70 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false
+    },
+    {
+      "id": "lc-n-queens",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "N-Queens",
+      "titleSlug": "n-queens",
+      "difficulty": "Hard",
+      "topic": "Backtracking",
+      "tags": [
+        "Array",
+        "Backtracking",
+        "Algorithm X"
+      ],
+      "canonical": null,
+      "readmeContent": "# [51] N-Queens\n**Difficulty:** Hard  |  **Acceptance:** 76.5%  |  **Likes:** 14723 / **Dislikes:** 363\n**Tags:** `Array`, `Backtracking`, `Algorithm X`\n## Problem\nThe n-queens puzzle is the problem of placing n queens on an n x n chessboard such that no two queens attack each other.\n\nGiven an integer n, return all distinct solutions to the n-queens puzzle. You may return the answer in any order.\n\nEach solution contains a distinct board configuration of the n-queens' placement, where 'Q' and '.' both indicate a queen and an empty space, respectively.\n\n&nbsp;\nExample 1:\n\nInput: n = 4\nOutput: [[\".Q..\",\"...Q\",\"Q...\",\"..Q.\"],[\"..Q.\",\"Q...\",\"...Q\",\".Q..\"]]\nExplanation: There exist two distinct solutions to the 4-queens puzzle as shown above\n\nExample 2:\n\nInput: n = 1\nOutput: [[\"Q\"]]\n\n&nbsp;\nConstraints:\n\n\t1 <= n <= 9\n## My Submission\n\n- Runtime: 32 ms (beats 15.2%)\n- Memory: 19.7 MB (beats 70.7%)\n- Solve time: 35m 58s\n\n## Similar Problems\n\n- [N-Queens II](https://leetcode.com/problems/n-queens-ii/) — Hard\n- [Grid Illumination](https://leetcode.com/problems/grid-illumination/) — Hard\n",
+      "code": "class Solution:\n    def solveNQueens(self, n: int) -> list[list[str]]:\n        board = [['.']*n for _ in range(n)]\n        res = []\n\n        def safe(r,c):\n            for i in range(n):\n                if board[i][c] == 'Q':\n                    return False\n\n            i = r-1\n            j = c-1\n            while i >= 0 and j >= 0:\n                if board[i][j] == 'Q':\n                    return False\n                i-=1\n                j-=1\n            i = r-1\n            j = c+1\n            while i >= 0 and j < n:\n                if board[i][j] == 'Q':\n                    return False\n                i-=1\n                j+=1\n            return True\n        \n        def solve(r):\n            if r == n:\n                x = []\n                for i in range(n):\n                    x.append(\"\".join(board[i]))\n                res.append(x)\n                return\n            for c in range(n):\n                if safe(r,c):\n                    board[r][c] = 'Q'\n                    solve(r+1)\n                    board[r][c] = '.'\n        solve(0)\n        return res",
+      "files": [
+        {
+          "path": "problems/lc-n-queens/lc-n-queens.py",
+          "content": "class Solution:\n    def solveNQueens(self, n: int) -> list[list[str]]:\n        board = [['.']*n for _ in range(n)]\n        res = []\n\n        def safe(r,c):\n            for i in range(n):\n                if board[i][c] == 'Q':\n                    return False\n\n            i = r-1\n            j = c-1\n            while i >= 0 and j >= 0:\n                if board[i][j] == 'Q':\n                    return False\n                i-=1\n                j-=1\n            i = r-1\n            j = c+1\n            while i >= 0 and j < n:\n                if board[i][j] == 'Q':\n                    return False\n                i-=1\n                j+=1\n            return True\n        \n        def solve(r):\n            if r == n:\n                x = []\n                for i in range(n):\n                    x.append(\"\".join(board[i]))\n                res.append(x)\n                return\n            for c in range(n):\n                if safe(r,c):\n                    board[r][c] = 'Q'\n                    solve(r+1)\n                    board[r][c] = '.'\n        solve(0)\n        return res"
+        },
+        {
+          "path": "problems/lc-n-queens/README.md",
+          "content": "# [51] N-Queens\n**Difficulty:** Hard  |  **Acceptance:** 76.5%  |  **Likes:** 14723 / **Dislikes:** 363\n**Tags:** `Array`, `Backtracking`, `Algorithm X`\n## Problem\nThe n-queens puzzle is the problem of placing n queens on an n x n chessboard such that no two queens attack each other.\n\nGiven an integer n, return all distinct solutions to the n-queens puzzle. You may return the answer in any order.\n\nEach solution contains a distinct board configuration of the n-queens' placement, where 'Q' and '.' both indicate a queen and an empty space, respectively.\n\n&nbsp;\nExample 1:\n\nInput: n = 4\nOutput: [[\".Q..\",\"...Q\",\"Q...\",\"..Q.\"],[\"..Q.\",\"Q...\",\"...Q\",\".Q..\"]]\nExplanation: There exist two distinct solutions to the 4-queens puzzle as shown above\n\nExample 2:\n\nInput: n = 1\nOutput: [[\"Q\"]]\n\n&nbsp;\nConstraints:\n\n\t1 <= n <= 9\n## My Submission\n\n- Runtime: 32 ms (beats 15.2%)\n- Memory: 19.7 MB (beats 70.7%)\n- Solve time: 35m 58s\n\n## Similar Problems\n\n- [N-Queens II](https://leetcode.com/problems/n-queens-ii/) — Hard\n- [Grid Illumination](https://leetcode.com/problems/grid-illumination/) — Hard\n"
+        }
+      ],
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "runtime": "32 ms",
+      "memory": "19.7 MB",
+      "runtimePct": 15.220299999999988,
+      "memoryPct": 70.73230000000001,
+      "timestamp": 1789541356000,
+      "acRate": 76.47151651612567,
+      "likes": 14723,
+      "dislikes": 363,
+      "similar": [
+        {
+          "difficulty": "Hard",
+          "titleSlug": "n-queens-ii",
+          "title": "N-Queens II",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "grid-illumination",
+          "title": "Grid Illumination",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>The <strong>n-queens</strong> puzzle is the problem of placing <code>n</code> queens on an <code>n x n</code> chessboard such that no two queens attack each other.</p>\n\n<p>Given an integer <code>n</code>, return <em>all distinct solutions to the <strong>n-queens puzzle</strong></em>. You may return the answer in <strong>any order</strong>.</p>\n\n<p>Each solution contains a distinct board configuration of the n-queens&#39; placement, where <code>&#39;Q&#39;</code> and <code>&#39;.&#39;</code> both indicate a queen and an empty space, respectively.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/11/13/queens.jpg\" style=\"width: 600px; height: 268px;\" />\n<pre>\n<strong>Input:</strong> n = 4\n<strong>Output:</strong> [[&quot;.Q..&quot;,&quot;...Q&quot;,&quot;Q...&quot;,&quot;..Q.&quot;],[&quot;..Q.&quot;,&quot;Q...&quot;,&quot;...Q&quot;,&quot;.Q..&quot;]]\n<strong>Explanation:</strong> There exist two distinct solutions to the 4-queens puzzle as shown above\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 1\n<strong>Output:</strong> [[&quot;Q&quot;]]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 9</code></li>\n</ul>\n",
+      "elapsedSeconds": 2158,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/n-queens/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "_requestAIReview": true,
+      "platform": "leetcode"
     },
     {
       "id": "lc-number-of-employees-who-met-the-target::2030713756",

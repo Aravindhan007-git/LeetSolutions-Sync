@@ -1,12 +1,12 @@
 <!-- codeledger:gamification:start -->
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/card-light.svg?v=1445-0-99-2026-09-15">
-  <img src="https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/card.svg?v=1445-0-99-2026-09-15" alt="Streak card" width="420">
+  <source media="(prefers-color-scheme: light)" srcset="https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/card-light.svg?v=1495-2-100-2026-09-16">
+  <img src="https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/card.svg?v=1495-2-100-2026-09-16" alt="Streak card" width="420">
 </picture>
 
-![Streak](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/streak.svg?v=1445-0-99-2026-09-15) ![Points](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/points.svg?v=1445-0-99-2026-09-15) ![Level](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/level.svg?v=1445-0-99-2026-09-15) ![Solved by difficulty](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/difficulty.svg?v=1445-0-99-2026-09-15) ![Freezes](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/freezes.svg?v=1445-0-99-2026-09-15)
+![Streak](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/streak.svg?v=1495-2-100-2026-09-16) ![Points](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/points.svg?v=1495-2-100-2026-09-16) ![Level](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/level.svg?v=1495-2-100-2026-09-16) ![Solved by difficulty](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/difficulty.svg?v=1495-2-100-2026-09-16) ![Freezes](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/freezes.svg?v=1495-2-100-2026-09-16)
 
-🩸 First Blood · 🔟 Ten Down · 🎯 Well Rounded · ⚡ Double Day · 🪃 Comeback
+🩸 First Blood · 🔟 Ten Down · 💯 Century · 🎯 Well Rounded · ⚡ Double Day · 🪃 Comeback
 <!-- codeledger:gamification:end -->
 
 <!-- CODELEDGER_AUTO_GENERATED_START -->
@@ -17,12 +17,12 @@
 
 # Aravindhan007-git's DSA Solutions
 
-[![Solutions](https://img.shields.io/badge/Solutions-99-06b6d4?style=flat-square&logo=github)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Easy](https://img.shields.io/badge/Easy-72-22c55e?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Medium](https://img.shields.io/badge/Medium-25-f59e0b?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Hard](https://img.shields.io/badge/Hard-2-ef4444?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Languages](https://img.shields.io/badge/Languages-3-8b5cf6?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Platforms](https://img.shields.io/badge/Platforms-1-64748b?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)
+[![Solutions](https://img.shields.io/badge/Solutions-100-06b6d4?style=flat-square&logo=github)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Easy](https://img.shields.io/badge/Easy-72-22c55e?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Medium](https://img.shields.io/badge/Medium-25-f59e0b?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Hard](https://img.shields.io/badge/Hard-3-ef4444?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Languages](https://img.shields.io/badge/Languages-3-8b5cf6?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Platforms](https://img.shields.io/badge/Platforms-1-64748b?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)
 
 > Automatically tracked by [CodeLedger](https://codeledger.vkrishna04.me) — every problem solved, committed to Git.
 
 **[View Live Dashboard →](https://aravindhan007-git.github.io/LeetSolutions-Sync/)**
-*Last updated: Sep 11, 2026*
+*Last updated: Sep 16, 2026*
 
 [![CodeLedger](https://raw.githubusercontent.com/Life-Experimentalist/Code-Ledger/refs/heads/main/src/assets/images/social%20preview.png)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)
 
@@ -34,13 +34,13 @@
 
 | Total | Easy | Medium | Hard |
 |:-----:|:----:|:------:|:----:|
-| **99** | 72 | 25 | 2 |
+| **100** | 72 | 25 | 3 |
 
-**By Platform:** leetcode (99)
+**By Platform:** leetcode (100)
 
-**Top Languages:** Python3 (89) · C (9) · MySQL (1)
+**Top Languages:** Python3 (90) · C (9) · MySQL (1)
 
-**Top Topics:** Array (51) · Linked List (11) · Math (10) · Two Pointers (10) · String (10) · Hash Table (5) · Database (1) · Grid (1)
+**Top Topics:** Array (52) · Linked List (11) · Math (10) · Two Pointers (10) · String (10) · Hash Table (5) · Database (1) · Grid (1)
 
 ---
 
@@ -100,6 +100,7 @@ Built with [CodeLedger](https://codeledger.vkrishna04.me) · [⭐ Star the exten
 </div>
 
 <!-- CODELEDGER_AUTO_GENERATED_END -->
+
 
 
 
