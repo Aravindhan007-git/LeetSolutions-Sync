@@ -4,16 +4,16 @@
   "currentStreak": 2,
   "longestStreak": 5,
   "freezes": 1,
-  "totalPoints": 1495,
-  "totalSolves": 100,
+  "totalPoints": 1555,
+  "totalSolves": 102,
   "totalRecalls": 0,
   "byDifficulty": {
     "Medium": 25,
-    "Easy": 72,
-    "Hard": 3
+    "Easy": 73,
+    "Hard": 4
   },
-  "level": 4,
-  "levelName": "Analyst",
+  "level": 5,
+  "levelName": "Engineer",
   "activeDays": 32,
   "dailyTargetPoints": 25,
   "achievements": [
@@ -22,6 +22,7 @@
     "century",
     "well-rounded",
     "double-day",
-    "comeback"
+    "comeback",
+    "level-five"
   ]
 }
