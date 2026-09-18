@@ -1,23 +1,24 @@
 {
-  "updatedAt": "2026-09-16T17:42:31.002Z",
+  "updatedAt": "2026-09-18T03:20:32.625Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 102,
-    "easy": 73,
+    "total": 104,
+    "easy": 75,
     "medium": 25,
     "hard": 4,
     "unknownDifficulty": 0,
     "byPlatform": {
-      "leetcode": 102
+      "leetcode": 104
     },
     "byLang": {
-      "Python3": 92,
+      "Python3": 94,
       "MySQL": 1,
       "C": 9
     },
     "byTopic": {
       "Math": 10,
-      "Array": 52,
+      "Array": 53,
+      "Stack": 1,
       "Dynamic Programming": 1,
       "Database": 1,
       "Linked List": 11,
@@ -365,6 +366,95 @@
       "manuallyEdited": false
     },
     {
+      "id": "lc-binary-tree-inorder-traversal",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Binary Tree Inorder Traversal",
+      "titleSlug": "binary-tree-inorder-traversal",
+      "difficulty": "Easy",
+      "topic": "Stack",
+      "tags": [
+        "Stack",
+        "Tree",
+        "Depth-First Search",
+        "Binary Tree"
+      ],
+      "canonical": null,
+      "readmeContent": "# [94] Binary Tree Inorder Traversal\n**Difficulty:** Easy  |  **Acceptance:** 80.6%  |  **Likes:** 15134 / **Dislikes:** 912\n**Tags:** `Stack`, `Tree`, `Depth-First Search`, `Binary Tree`\n## Problem\nGiven the root of a binary tree, return the inorder traversal of its nodes' values.\n\n&nbsp;\nExample 1:\n\nInput: root = [1,null,2,3]\n\nOutput: [1,3,2]\n\nExplanation:\n\nExample 2:\n\nInput: root = [1,2,3,4,5,null,8,null,null,6,7,9]\n\nOutput: [4,2,6,5,7,1,3,9,8]\n\nExplanation:\n\nExample 3:\n\nInput: root = []\n\nOutput: []\n\nExample 4:\n\nInput: root = [1]\n\nOutput: [1]\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in the tree is in the range [0, 100].\n\t-100 <= Node.val <= 100\n\n&nbsp;\nFollow up: Recursive solution is trivial, could you do it iteratively?\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 19.2 MB (beats 92.6%)\n- Solve time: 35m 58s\n\n## Similar Problems\n\n- [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) — Medium\n- [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) — Easy\n- [Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/) — Easy\n- [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/) — Medium\n- [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) — Medium\n",
+      "code": "# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def inorderTraversal(self, root: TreeNode | None) -> list[int]:\n        res = []\n        def inorder(root):\n            if root is not None:\n                inorder(root.left)\n                res.append(root.val)\n                inorder(root.right)\n\n        inorder(root)\n        return res\n",
+      "files": [
+        {
+          "path": "problems/lc-binary-tree-inorder-traversal/lc-binary-tree-inorder-traversal.py",
+          "content": "# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def inorderTraversal(self, root: TreeNode | None) -> list[int]:\n        res = []\n        def inorder(root):\n            if root is not None:\n                inorder(root.left)\n                res.append(root.val)\n                inorder(root.right)\n\n        inorder(root)\n        return res\n"
+        },
+        {
+          "path": "problems/lc-binary-tree-inorder-traversal/README.md",
+          "content": "# [94] Binary Tree Inorder Traversal\n**Difficulty:** Easy  |  **Acceptance:** 80.6%  |  **Likes:** 15134 / **Dislikes:** 912\n**Tags:** `Stack`, `Tree`, `Depth-First Search`, `Binary Tree`\n## Problem\nGiven the root of a binary tree, return the inorder traversal of its nodes' values.\n\n&nbsp;\nExample 1:\n\nInput: root = [1,null,2,3]\n\nOutput: [1,3,2]\n\nExplanation:\n\nExample 2:\n\nInput: root = [1,2,3,4,5,null,8,null,null,6,7,9]\n\nOutput: [4,2,6,5,7,1,3,9,8]\n\nExplanation:\n\nExample 3:\n\nInput: root = []\n\nOutput: []\n\nExample 4:\n\nInput: root = [1]\n\nOutput: [1]\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in the tree is in the range [0, 100].\n\t-100 <= Node.val <= 100\n\n&nbsp;\nFollow up: Recursive solution is trivial, could you do it iteratively?\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 19.2 MB (beats 92.6%)\n- Solve time: 35m 58s\n\n## Similar Problems\n\n- [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) — Medium\n- [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) — Easy\n- [Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/) — Easy\n- [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/) — Medium\n- [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) — Medium\n"
+        }
+      ],
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "runtime": "0 ms",
+      "memory": "19.2 MB",
+      "runtimePct": 100,
+      "memoryPct": 92.6312,
+      "timestamp": 1789701540000,
+      "acRate": 80.6359922698507,
+      "likes": 15134,
+      "dislikes": 912,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "validate-binary-search-tree",
+          "title": "Validate Binary Search Tree",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "binary-tree-preorder-traversal",
+          "title": "Binary Tree Preorder Traversal",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "binary-tree-postorder-traversal",
+          "title": "Binary Tree Postorder Traversal",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "binary-search-tree-iterator",
+          "title": "Binary Search Tree Iterator",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "kth-smallest-element-in-a-bst",
+          "title": "Kth Smallest Element in a BST",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "minimum-distance-between-bst-nodes",
+          "title": "Minimum Distance Between BST Nodes",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>Given the <code>root</code> of a binary tree, return <em>the inorder traversal of its nodes&#39; values</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">root = [1,null,2,3]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[1,3,2]</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p><img alt=\"\" src=\"https://assets.leetcode.com/uploads/2024/08/29/screenshot-2024-08-29-202743.png\" style=\"width: 200px; height: 264px;\" /></p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">root = [1,2,3,4,5,null,8,null,null,6,7,9]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[4,2,6,5,7,1,3,9,8]</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p><img alt=\"\" src=\"https://assets.leetcode.com/uploads/2024/08/29/tree_2.png\" style=\"width: 350px; height: 286px;\" /></p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">root = []</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[]</span></p>\n</div>\n\n<p><strong class=\"example\">Example 4:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">root = [1]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[1]</span></p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the tree is in the range <code>[0, 100]</code>.</li>\n\t<li><code>-100 &lt;= Node.val &lt;= 100</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow up:</strong> Recursive solution is trivial, could you do it iteratively?",
+      "elapsedSeconds": 2158,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/binary-tree-inorder-traversal/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "_requestAIReview": true,
+      "platform": "leetcode"
+    },
+    {
       "id": "lc-build-array-from-permutation::2034981363",
       "submissionId": 2034981363,
       "platform": "leetcode",
@@ -537,7 +627,13 @@
       "isDuplicate": false,
       "duplicateOf": null,
       "_requestAIReview": true,
-      "platform": "leetcode"
+      "platform": "leetcode",
+      "_committedPaths": [
+        "problems/climbing-stairs/leetcode/lc-climbing-stairs.py",
+        "problems/climbing-stairs/leetcode/README.md"
+      ],
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-container-with-most-water::2033744538",
@@ -3756,7 +3852,13 @@
       "isDuplicate": false,
       "duplicateOf": null,
       "_requestAIReview": true,
-      "platform": "leetcode"
+      "platform": "leetcode",
+      "_committedPaths": [
+        "problems/lc-n-queens-ii/lc-n-queens-ii.py",
+        "problems/lc-n-queens-ii/README.md"
+      ],
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-number-of-employees-who-met-the-target::2030713756",
@@ -4195,7 +4297,7 @@
         "Math"
       ],
       "canonical": null,
-      "readmeContent": "# [66] Plus One\n**Difficulty:** Easy  |  **Acceptance:** 50.5%  |  **Likes:** 12066 / **Dislikes:** 5620\n**Tags:** `Array`, `Math`\n## Problem\nYou are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.\n\nIncrement the large integer by one and return the resulting array of digits.\n\n&nbsp;\nExample 1:\n\nInput: digits = [1,2,3]\nOutput: [1,2,4]\nExplanation: The array represents the integer 123.\nIncrementing by one gives 123 + 1 = 124.\nThus, the result should be [1,2,4].\n\nExample 2:\n\nInput: digits = [4,3,2,1]\nOutput: [4,3,2,2]\nExplanation: The array represents the integer 4321.\nIncrementing by one gives 4321 + 1 = 4322.\nThus, the result should be [4,3,2,2].\n\nExample 3:\n\nInput: digits = [9]\nOutput: [1,0]\nExplanation: The array represents the integer 9.\nIncrementing by one gives 9 + 1 = 10.\nThus, the result should be [1,0].\n\n&nbsp;\nConstraints:\n\n\t1 <= digits.length <= 100\n\t0 <= digits[i] <= 9\n\tdigits does not contain any leading 0's.\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 19.3 MB (beats 56.7%)\n\n## Similar Problems\n\n- [Multiply Strings](https://leetcode.com/problems/multiply-strings/) — Medium\n- [Add Binary](https://leetcode.com/problems/add-binary/) — Easy\n- [Add to Array-Form of Integer](https://leetcode.com/problems/add-to-array-form-of-integer/) — Easy\n- [Minimum Operations to Reduce an Integer to 0](https://leetcode.com/problems/minimum-operations-to-reduce-an-integer-to-0/) — Medium\n",
+      "readmeContent": "# [66] Plus One\n**Difficulty:** Easy  |  **Acceptance:** 50.6%  |  **Likes:** 12117 / **Dislikes:** 5622\n**Tags:** `Array`, `Math`\n## Problem\nYou are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.\n\nIncrement the large integer by one and return the resulting array of digits.\n\n&nbsp;\nExample 1:\n\nInput: digits = [1,2,3]\nOutput: [1,2,4]\nExplanation: The array represents the integer 123.\nIncrementing by one gives 123 + 1 = 124.\nThus, the result should be [1,2,4].\n\nExample 2:\n\nInput: digits = [4,3,2,1]\nOutput: [4,3,2,2]\nExplanation: The array represents the integer 4321.\nIncrementing by one gives 4321 + 1 = 4322.\nThus, the result should be [4,3,2,2].\n\nExample 3:\n\nInput: digits = [9]\nOutput: [1,0]\nExplanation: The array represents the integer 9.\nIncrementing by one gives 9 + 1 = 10.\nThus, the result should be [1,0].\n\n&nbsp;\nConstraints:\n\n\t1 <= digits.length <= 100\n\t0 <= digits[i] <= 9\n\tdigits does not contain any leading 0's.\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 19.3 MB (beats 57.1%)\n- Solve time: 35m 58s\n\n## Similar Problems\n\n- [Multiply Strings](https://leetcode.com/problems/multiply-strings/) — Medium\n- [Add Binary](https://leetcode.com/problems/add-binary/) — Easy\n- [Add to Array-Form of Integer](https://leetcode.com/problems/add-to-array-form-of-integer/) — Easy\n- [Minimum Operations to Reduce an Integer to 0](https://leetcode.com/problems/minimum-operations-to-reduce-an-integer-to-0/) — Medium\n",
       "code": "class Solution:\n    def plusOne(self, digits: List[int]) -> List[int]:\n        for i in range(len(digits)-1,-1,-1):\n            if digits[i]<9:\n                digits[i]+=1\n                return digits\n            digits[i]=0\n        return [1]+digits",
       "files": [
         {
@@ -4204,7 +4306,7 @@
         },
         {
           "path": "problems/lc-plus-one/README.md",
-          "content": "# [66] Plus One\n**Difficulty:** Easy  |  **Acceptance:** 50.5%  |  **Likes:** 12066 / **Dislikes:** 5620\n**Tags:** `Array`, `Math`\n## Problem\nYou are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.\n\nIncrement the large integer by one and return the resulting array of digits.\n\n&nbsp;\nExample 1:\n\nInput: digits = [1,2,3]\nOutput: [1,2,4]\nExplanation: The array represents the integer 123.\nIncrementing by one gives 123 + 1 = 124.\nThus, the result should be [1,2,4].\n\nExample 2:\n\nInput: digits = [4,3,2,1]\nOutput: [4,3,2,2]\nExplanation: The array represents the integer 4321.\nIncrementing by one gives 4321 + 1 = 4322.\nThus, the result should be [4,3,2,2].\n\nExample 3:\n\nInput: digits = [9]\nOutput: [1,0]\nExplanation: The array represents the integer 9.\nIncrementing by one gives 9 + 1 = 10.\nThus, the result should be [1,0].\n\n&nbsp;\nConstraints:\n\n\t1 <= digits.length <= 100\n\t0 <= digits[i] <= 9\n\tdigits does not contain any leading 0's.\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 19.3 MB (beats 56.7%)\n\n## Similar Problems\n\n- [Multiply Strings](https://leetcode.com/problems/multiply-strings/) — Medium\n- [Add Binary](https://leetcode.com/problems/add-binary/) — Easy\n- [Add to Array-Form of Integer](https://leetcode.com/problems/add-to-array-form-of-integer/) — Easy\n- [Minimum Operations to Reduce an Integer to 0](https://leetcode.com/problems/minimum-operations-to-reduce-an-integer-to-0/) — Medium\n"
+          "content": "# [66] Plus One\n**Difficulty:** Easy  |  **Acceptance:** 50.6%  |  **Likes:** 12117 / **Dislikes:** 5622\n**Tags:** `Array`, `Math`\n## Problem\nYou are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.\n\nIncrement the large integer by one and return the resulting array of digits.\n\n&nbsp;\nExample 1:\n\nInput: digits = [1,2,3]\nOutput: [1,2,4]\nExplanation: The array represents the integer 123.\nIncrementing by one gives 123 + 1 = 124.\nThus, the result should be [1,2,4].\n\nExample 2:\n\nInput: digits = [4,3,2,1]\nOutput: [4,3,2,2]\nExplanation: The array represents the integer 4321.\nIncrementing by one gives 4321 + 1 = 4322.\nThus, the result should be [4,3,2,2].\n\nExample 3:\n\nInput: digits = [9]\nOutput: [1,0]\nExplanation: The array represents the integer 9.\nIncrementing by one gives 9 + 1 = 10.\nThus, the result should be [1,0].\n\n&nbsp;\nConstraints:\n\n\t1 <= digits.length <= 100\n\t0 <= digits[i] <= 9\n\tdigits does not contain any leading 0's.\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 19.3 MB (beats 57.1%)\n- Solve time: 35m 58s\n\n## Similar Problems\n\n- [Multiply Strings](https://leetcode.com/problems/multiply-strings/) — Medium\n- [Add Binary](https://leetcode.com/problems/add-binary/) — Easy\n- [Add to Array-Form of Integer](https://leetcode.com/problems/add-to-array-form-of-integer/) — Easy\n- [Minimum Operations to Reduce an Integer to 0](https://leetcode.com/problems/minimum-operations-to-reduce-an-integer-to-0/) — Medium\n"
         }
       ],
       "lang": {
@@ -4215,11 +4317,11 @@
       "runtime": "0 ms",
       "memory": "19.3 MB",
       "runtimePct": 100,
-      "memoryPct": 56.69069999999999,
+      "memoryPct": 57.0797,
       "timestamp": 1778336710000,
-      "acRate": 50.52800736080081,
-      "likes": 12066,
-      "dislikes": 5620,
+      "acRate": 50.60726491022298,
+      "likes": 12117,
+      "dislikes": 5622,
       "similar": [
         {
           "difficulty": "Medium",
@@ -4247,7 +4349,7 @@
         }
       ],
       "problemStatement": "<p>You are given a <strong>large integer</strong> represented as an integer array <code>digits</code>, where each <code>digits[i]</code> is the <code>i<sup>th</sup></code> digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading <code>0</code>&#39;s.</p>\n\n<p>Increment the large integer by one and return <em>the resulting array of digits</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> digits = [1,2,3]\n<strong>Output:</strong> [1,2,4]\n<strong>Explanation:</strong> The array represents the integer 123.\nIncrementing by one gives 123 + 1 = 124.\nThus, the result should be [1,2,4].\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> digits = [4,3,2,1]\n<strong>Output:</strong> [4,3,2,2]\n<strong>Explanation:</strong> The array represents the integer 4321.\nIncrementing by one gives 4321 + 1 = 4322.\nThus, the result should be [4,3,2,2].\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> digits = [9]\n<strong>Output:</strong> [1,0]\n<strong>Explanation:</strong> The array represents the integer 9.\nIncrementing by one gives 9 + 1 = 10.\nThus, the result should be [1,0].\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= digits.length &lt;= 100</code></li>\n\t<li><code>0 &lt;= digits[i] &lt;= 9</code></li>\n\t<li><code>digits</code> does not contain any leading <code>0</code>&#39;s.</li>\n</ul>\n",
-      "elapsedSeconds": 0,
+      "elapsedSeconds": 2158,
       "hasSimilar": true,
       "submissionsUrl": "https://leetcode.com/problems/plus-one/submissions/",
       "notes": "",
@@ -7082,6 +7184,197 @@
         "problems/lc-to-lower-case/README.md"
       ],
       "notes": "",
+      "methods": [],
+      "manuallyEdited": false
+    },
+    {
+      "id": "lc-two-sum",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Two Sum",
+      "titleSlug": "two-sum",
+      "difficulty": "Easy",
+      "topic": "Array",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 1,
+            "platform": "leetcode",
+            "slug": "two-sum"
+          },
+          {
+            "platform": "geeksforgeeks",
+            "slug": "key-pair5616"
+          }
+        ],
+        "canonicalId": "two-sum",
+        "canonicalTitle": "Two Sum",
+        "confirmedBy": "system-init",
+        "difficulty": "easy",
+        "pattern": "hash-map",
+        "tags": [
+          "array",
+          "hash-table"
+        ],
+        "topic": "arrays",
+        "voteCount": 100
+      },
+      "readmeContent": "# [1] Two Sum\n**Difficulty:** Easy  |  **Acceptance:** 58.2%  |  **Likes:** 70190 / **Dislikes:** 2623\n**Tags:** `Array`, `Hash Table`\n## Problem\nYou are given an array of integers nums&nbsp;and an integer target, return indices of the two numbers such that they add up to target.\n\nYou may assume that each input would have exactly one solution, and you may not use the same element twice.\n\nYou can return the answer in any order.\n\n&nbsp;\nExample 1:\n\nInput: nums = [2,7,11,15], target = 9\nOutput: [0,1]\nExplanation: Because nums[0] + nums[1] == 9, we return [0, 1].\n\nExample 2:\n\nInput: nums = [3,2,4], target = 6\nOutput: [1,2]\n\nExample 3:\n\nInput: nums = [3,3], target = 6\nOutput: [0,1]\n\n&nbsp;\nConstraints:\n\n\t2 <= nums.length <= 104\n\t-109 <= nums[i] <= 109\n\t-109 <= target <= 109\n\tOnly one valid answer exists.\n\n&nbsp;\nFollow-up:&nbsp;Can you come up with an algorithm that is less than O(n2)&nbsp;time complexity?\n## My Submission\n\n- Runtime: 1737 ms (beats 18.6%)\n- Memory: 19.6 MB (beats 95.2%)\n- Solve time: 35m 58s\n\n## Similar Problems\n\n- [3Sum](https://leetcode.com/problems/3sum/) — Medium\n- [4Sum](https://leetcode.com/problems/4sum/) — Medium\n- [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) — Medium\n- [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) — Medium\n- [Two Sum IV - Input is a BST](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/) — Easy\n",
+      "code": "class Solution:\n    def twoSum(self, nums: List[int], target: int) -> List[int]:\n        for i in range(len(nums)):\n            for j in range(i+1,len(nums)):\n                if nums[j]==target-nums[i]:\n                    return [i,j]\n        return []",
+      "files": [
+        {
+          "path": "problems/two-sum/leetcode/lc-two-sum.py",
+          "content": "class Solution:\n    def twoSum(self, nums: List[int], target: int) -> List[int]:\n        for i in range(len(nums)):\n            for j in range(i+1,len(nums)):\n                if nums[j]==target-nums[i]:\n                    return [i,j]\n        return []"
+        },
+        {
+          "path": "problems/two-sum/README.md",
+          "content": "# [1] Two Sum\n**Difficulty:** Easy  |  **Acceptance:** 58.2%  |  **Likes:** 70190 / **Dislikes:** 2623\n**Tags:** `Array`, `Hash Table`\n## Problem\nYou are given an array of integers nums&nbsp;and an integer target, return indices of the two numbers such that they add up to target.\n\nYou may assume that each input would have exactly one solution, and you may not use the same element twice.\n\nYou can return the answer in any order.\n\n&nbsp;\nExample 1:\n\nInput: nums = [2,7,11,15], target = 9\nOutput: [0,1]\nExplanation: Because nums[0] + nums[1] == 9, we return [0, 1].\n\nExample 2:\n\nInput: nums = [3,2,4], target = 6\nOutput: [1,2]\n\nExample 3:\n\nInput: nums = [3,3], target = 6\nOutput: [0,1]\n\n&nbsp;\nConstraints:\n\n\t2 <= nums.length <= 104\n\t-109 <= nums[i] <= 109\n\t-109 <= target <= 109\n\tOnly one valid answer exists.\n\n&nbsp;\nFollow-up:&nbsp;Can you come up with an algorithm that is less than O(n2)&nbsp;time complexity?\n## My Submission\n\n- Runtime: 1737 ms (beats 18.6%)\n- Memory: 19.6 MB (beats 95.2%)\n- Solve time: 35m 58s\n\n## Similar Problems\n\n- [3Sum](https://leetcode.com/problems/3sum/) — Medium\n- [4Sum](https://leetcode.com/problems/4sum/) — Medium\n- [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) — Medium\n- [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) — Medium\n- [Two Sum IV - Input is a BST](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/) — Easy\n"
+        }
+      ],
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "runtime": "1737 ms",
+      "memory": "19.6 MB",
+      "runtimePct": 18.614199999999517,
+      "memoryPct": 95.20279999999998,
+      "timestamp": 1777557008000,
+      "acRate": 58.16944999128045,
+      "likes": 70190,
+      "dislikes": 2623,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "3sum",
+          "title": "3Sum",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "4sum",
+          "title": "4Sum",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "two-sum-ii-input-array-is-sorted",
+          "title": "Two Sum II - Input Array Is Sorted",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "subarray-sum-equals-k",
+          "title": "Subarray Sum Equals K",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "two-sum-iv-input-is-a-bst",
+          "title": "Two Sum IV - Input is a BST",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "max-number-of-k-sum-pairs",
+          "title": "Max Number of K-Sum Pairs",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "count-good-meals",
+          "title": "Count Good Meals",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "count-number-of-pairs-with-absolute-difference-k",
+          "title": "Count Number of Pairs With Absolute Difference K",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "number-of-pairs-of-strings-with-concatenation-equal-to-target",
+          "title": "Number of Pairs of Strings With Concatenation Equal to Target",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "find-all-k-distant-indices-in-an-array",
+          "title": "Find All K-Distant Indices in an Array",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "first-letter-to-appear-twice",
+          "title": "First Letter to Appear Twice",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "number-of-excellent-pairs",
+          "title": "Number of Excellent Pairs",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "number-of-arithmetic-triplets",
+          "title": "Number of Arithmetic Triplets",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "node-with-highest-edge-score",
+          "title": "Node With Highest Edge Score",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "check-distances-between-same-letters",
+          "title": "Check Distances Between Same Letters",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "find-subarrays-with-equal-sum",
+          "title": "Find Subarrays With Equal Sum",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "largest-positive-integer-that-exists-with-its-negative",
+          "title": "Largest Positive Integer That Exists With Its Negative",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "number-of-distinct-averages",
+          "title": "Number of Distinct Averages",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "count-pairs-whose-sum-is-less-than-target",
+          "title": "Count Pairs Whose Sum is Less than Target",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>You are given an array of integers <code>nums</code>&nbsp;and an integer <code>target</code>, return <em>indices of the two numbers such that they add up to <code>target</code></em>.</p>\n\n<p>You may assume that each input would have <strong><em>exactly</em> one solution</strong>, and you may not use the <em>same</em> element twice.</p>\n\n<p>You can return the answer in any order.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [2,7,11,15], target = 9\n<strong>Output:</strong> [0,1]\n<strong>Explanation:</strong> Because nums[0] + nums[1] == 9, we return [0, 1].\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,2,4], target = 6\n<strong>Output:</strong> [1,2]\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,3], target = 6\n<strong>Output:</strong> [0,1]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>2 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>\n\t<li><code>-10<sup>9</sup> &lt;= target &lt;= 10<sup>9</sup></code></li>\n\t<li><strong>Only one valid answer exists.</strong></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow-up:&nbsp;</strong>Can you come up with an algorithm that is less than <code>O(n<sup>2</sup>)</code><font face=\"monospace\">&nbsp;</font>time complexity?",
+      "elapsedSeconds": 2158,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/two-sum/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": true,
+      "duplicateOf": "lc-two-sum::1991850383",
+      "_requestAIReview": true,
+      "platform": "leetcode",
       "methods": [],
       "manuallyEdited": false
     },

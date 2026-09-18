@@ -7,8 +7,9 @@
 | Problem ID | `lc-two-sum` |
 | Topics | Array, Hash Table |
 | Solved | 2026-04-30 |
-| Runtime | 1737 ms (beats 19.649399999999183%) |
-| Memory | 19.6 MB (beats 95.06409999999998%) |
+| Solve Time | 35m 58s |
+| Runtime | 1737 ms (beats 18.614199999999517%) |
+| Memory | 19.6 MB (beats 95.20279999999998%) |
 
 ## Problem Statement
 
@@ -51,29 +52,6 @@ You can return the answer in any order.
  
 
 **Follow-up: **Can you come up with an algorithm that is less than `O(n2)` time complexity?
-
-## Hints
-
-<details>
-<summary>Hint 1</summary>
-
-A really brute force way would be to search for all possible pairs of numbers but that would be too slow. Again, it's best to try out brute force solutions just for completeness. It is from these brute force solutions that you can come up with optimizations.
-
-</details>
-
-<details>
-<summary>Hint 2</summary>
-
-So, if we fix one of the numbers, say `x`, we have to scan the entire array to find the next number `y` which is `value - x` where value is the input parameter. Can we change our array somehow so that this search becomes faster?
-
-</details>
-
-<details>
-<summary>Hint 3</summary>
-
-The second train of thought is, without changing the array, can we use additional space somehow? Like maybe a hash map to speed up the search?
-
-</details>
 
 ## Solutions
 

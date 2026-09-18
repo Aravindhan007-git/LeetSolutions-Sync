@@ -7,8 +7,9 @@
 | Problem ID | `lc-plus-one` |
 | Topics | Array, Math |
 | Solved | 2026-05-09 |
+| Solve Time | 35m 58s |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 19.3 MB (beats 56.69069999999999%) |
+| Memory | 19.3 MB (beats 57.0797%) |
 
 ## Problem Statement
 
