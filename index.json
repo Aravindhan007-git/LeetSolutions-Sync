@@ -1,24 +1,24 @@
 {
-  "updatedAt": "2026-09-18T03:20:32.625Z",
+  "updatedAt": "2026-09-18T03:22:55.894Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 104,
-    "easy": 75,
+    "total": 105,
+    "easy": 76,
     "medium": 25,
     "hard": 4,
     "unknownDifficulty": 0,
     "byPlatform": {
-      "leetcode": 104
+      "leetcode": 105
     },
     "byLang": {
-      "Python3": 94,
+      "Python3": 95,
       "MySQL": 1,
       "C": 9
     },
     "byTopic": {
       "Math": 10,
       "Array": 53,
-      "Stack": 1,
+      "Stack": 2,
       "Dynamic Programming": 1,
       "Database": 1,
       "Linked List": 11,
@@ -447,6 +447,83 @@
       "elapsedSeconds": 2158,
       "hasSimilar": true,
       "submissionsUrl": "https://leetcode.com/problems/binary-tree-inorder-traversal/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "_requestAIReview": true,
+      "platform": "leetcode",
+      "_committedPaths": [
+        "problems/lc-binary-tree-inorder-traversal/lc-binary-tree-inorder-traversal.py",
+        "problems/lc-binary-tree-inorder-traversal/README.md"
+      ],
+      "methods": [],
+      "manuallyEdited": false
+    },
+    {
+      "id": "lc-binary-tree-preorder-traversal",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Binary Tree Preorder Traversal",
+      "titleSlug": "binary-tree-preorder-traversal",
+      "difficulty": "Easy",
+      "topic": "Stack",
+      "tags": [
+        "Stack",
+        "Tree",
+        "Depth-First Search",
+        "Binary Tree"
+      ],
+      "canonical": null,
+      "readmeContent": "# [144] Binary Tree Preorder Traversal\n**Difficulty:** Easy  |  **Acceptance:** 76.7%  |  **Likes:** 9033 / **Dislikes:** 238\n**Tags:** `Stack`, `Tree`, `Depth-First Search`, `Binary Tree`\n## Problem\nGiven the root of a binary tree, return the preorder traversal of its nodes' values.\n\n&nbsp;\nExample 1:\n\nInput: root = [1,null,2,3]\n\nOutput: [1,2,3]\n\nExplanation:\n\nExample 2:\n\nInput: root = [1,2,3,4,5,null,8,null,null,6,7,9]\n\nOutput: [1,2,4,5,6,7,3,8,9]\n\nExplanation:\n\nExample 3:\n\nInput: root = []\n\nOutput: []\n\nExample 4:\n\nInput: root = [1]\n\nOutput: [1]\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in the tree is in the range [0, 100].\n\t-100 <= Node.val <= 100\n\n&nbsp;\nFollow up: Recursive solution is trivial, could you do it iteratively?\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 19.3 MB (beats 69.0%)\n- Solve time: 35m 58s\n\n## Similar Problems\n\n- [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) — Easy\n- [N-ary Tree Preorder Traversal](https://leetcode.com/problems/n-ary-tree-preorder-traversal/) — Easy\n- [Kth Largest Sum in a Binary Tree](https://leetcode.com/problems/kth-largest-sum-in-a-binary-tree/) — Medium\n",
+      "code": "# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def preorderTraversal(self, root: TreeNode | None) -> list[int]:\n        res = []\n        def preorder(root):\n            if root is not None:\n                res.append(root.val)\n                preorder(root.left)\n                preorder(root.right)\n        preorder(root)\n        return res",
+      "files": [
+        {
+          "path": "problems/lc-binary-tree-preorder-traversal/lc-binary-tree-preorder-traversal.py",
+          "content": "# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def preorderTraversal(self, root: TreeNode | None) -> list[int]:\n        res = []\n        def preorder(root):\n            if root is not None:\n                res.append(root.val)\n                preorder(root.left)\n                preorder(root.right)\n        preorder(root)\n        return res"
+        },
+        {
+          "path": "problems/lc-binary-tree-preorder-traversal/README.md",
+          "content": "# [144] Binary Tree Preorder Traversal\n**Difficulty:** Easy  |  **Acceptance:** 76.7%  |  **Likes:** 9033 / **Dislikes:** 238\n**Tags:** `Stack`, `Tree`, `Depth-First Search`, `Binary Tree`\n## Problem\nGiven the root of a binary tree, return the preorder traversal of its nodes' values.\n\n&nbsp;\nExample 1:\n\nInput: root = [1,null,2,3]\n\nOutput: [1,2,3]\n\nExplanation:\n\nExample 2:\n\nInput: root = [1,2,3,4,5,null,8,null,null,6,7,9]\n\nOutput: [1,2,4,5,6,7,3,8,9]\n\nExplanation:\n\nExample 3:\n\nInput: root = []\n\nOutput: []\n\nExample 4:\n\nInput: root = [1]\n\nOutput: [1]\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in the tree is in the range [0, 100].\n\t-100 <= Node.val <= 100\n\n&nbsp;\nFollow up: Recursive solution is trivial, could you do it iteratively?\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 19.3 MB (beats 69.0%)\n- Solve time: 35m 58s\n\n## Similar Problems\n\n- [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) — Easy\n- [N-ary Tree Preorder Traversal](https://leetcode.com/problems/n-ary-tree-preorder-traversal/) — Easy\n- [Kth Largest Sum in a Binary Tree](https://leetcode.com/problems/kth-largest-sum-in-a-binary-tree/) — Medium\n"
+        }
+      ],
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "runtime": "0 ms",
+      "memory": "19.3 MB",
+      "runtimePct": 100,
+      "memoryPct": 69.01310000000001,
+      "timestamp": 1789701683000,
+      "acRate": 76.68548428507894,
+      "likes": 9033,
+      "dislikes": 238,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "binary-tree-inorder-traversal",
+          "title": "Binary Tree Inorder Traversal",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "n-ary-tree-preorder-traversal",
+          "title": "N-ary Tree Preorder Traversal",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "kth-largest-sum-in-a-binary-tree",
+          "title": "Kth Largest Sum in a Binary Tree",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>Given the <code>root</code> of a binary tree, return <em>the preorder traversal of its nodes&#39; values</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">root = [1,null,2,3]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[1,2,3]</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p><img alt=\"\" src=\"https://assets.leetcode.com/uploads/2024/08/29/screenshot-2024-08-29-202743.png\" style=\"width: 200px; height: 264px;\" /></p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">root = [1,2,3,4,5,null,8,null,null,6,7,9]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[1,2,4,5,6,7,3,8,9]</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p><img alt=\"\" src=\"https://assets.leetcode.com/uploads/2024/08/29/tree_2.png\" style=\"width: 350px; height: 286px;\" /></p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">root = []</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[]</span></p>\n</div>\n\n<p><strong class=\"example\">Example 4:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">root = [1]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[1]</span></p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the tree is in the range <code>[0, 100]</code>.</li>\n\t<li><code>-100 &lt;= Node.val &lt;= 100</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong> Recursive solution is trivial, could you do it iteratively?</p>\n",
+      "elapsedSeconds": 2158,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/binary-tree-preorder-traversal/submissions/",
       "notes": "",
       "methodTitle": "",
       "isDuplicate": false,
@@ -7376,7 +7453,11 @@
       "_requestAIReview": true,
       "platform": "leetcode",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/two-sum/leetcode/lc-two-sum.py",
+        "problems/two-sum/leetcode/README.md"
+      ]
     },
     {
       "id": "lc-two-sum-ii-input-array-is-sorted::2033776628",

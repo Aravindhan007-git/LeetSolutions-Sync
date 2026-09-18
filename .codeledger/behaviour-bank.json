@@ -18,6 +18,25 @@
       "Binary Tree"
     ]
   },
+  "leetcode::binary-tree-preorder-traversal": {
+    "difficulty": "Easy",
+    "lang": "Python3",
+    "platform": "leetcode",
+    "slug": "binary-tree-preorder-traversal",
+    "solves": [
+      {
+        "elapsedSeconds": 2158,
+        "lang": "Python3",
+        "ts": 1789701775761
+      }
+    ],
+    "tags": [
+      "Stack",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ]
+  },
   "leetcode::climbing-stairs": {
     "difficulty": "Easy",
     "lang": "Python3",
