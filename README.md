@@ -1,10 +1,10 @@
 <!-- codeledger:gamification:start -->
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/card-light.svg?v=1585-0-105-2026-09-25">
-  <img src="https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/card.svg?v=1585-0-105-2026-09-25" alt="Streak card" width="420">
+  <source media="(prefers-color-scheme: light)" srcset="https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/card-light.svg?v=1585-0-105-2026-09-26">
+  <img src="https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/card.svg?v=1585-0-105-2026-09-26" alt="Streak card" width="420">
 </picture>
 
-![Streak](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/streak.svg?v=1585-0-105-2026-09-25) ![Points](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/points.svg?v=1585-0-105-2026-09-25) ![Level](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/level.svg?v=1585-0-105-2026-09-25) ![Solved by difficulty](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/difficulty.svg?v=1585-0-105-2026-09-25) ![Freezes](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/freezes.svg?v=1585-0-105-2026-09-25)
+![Streak](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/streak.svg?v=1585-0-105-2026-09-26) ![Points](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/points.svg?v=1585-0-105-2026-09-26) ![Level](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/level.svg?v=1585-0-105-2026-09-26) ![Solved by difficulty](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/difficulty.svg?v=1585-0-105-2026-09-26) ![Freezes](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/freezes.svg?v=1585-0-105-2026-09-26)
 
 🩸 First Blood · 🔟 Ten Down · 💯 Century · 🎯 Well Rounded · ⚡ Double Day · 🪃 Comeback · ⭐ Engineer
 <!-- codeledger:gamification:end -->
