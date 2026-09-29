@@ -55,6 +55,26 @@
       "Memoization"
     ]
   },
+  "leetcode::coin-change": {
+    "difficulty": "Medium",
+    "lang": "Python3",
+    "platform": "leetcode",
+    "slug": "coin-change",
+    "solves": [
+      {
+        "elapsedSeconds": 2158,
+        "lang": "Python3",
+        "ts": 1790661688331
+      }
+    ],
+    "tags": [
+      "Dynamic Programming",
+      "Array",
+      "Breadth-First Search",
+      "Knapsack Problem",
+      "Complete Knapsack"
+    ]
+  },
   "leetcode::count-complete-subarrays-in-an-array": {
     "difficulty": "Medium",
     "lang": "Python3",
@@ -151,6 +171,11 @@
         "elapsedSeconds": 0,
         "lang": "Python3",
         "ts": 1788343143503
+      },
+      {
+        "elapsedSeconds": 2158,
+        "lang": "Python3",
+        "ts": 1790306617366
       }
     ],
     "tags": [

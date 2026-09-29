@@ -7,8 +7,9 @@
 | Problem ID | `lc-generate-parentheses` |
 | Topics | String, Dynamic Programming, Backtracking, Bracket Sequences |
 | Solved | 2026-09-02 |
+| Solve Time | 35m 58s |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 19.4 MB (beats 73.62280000000001%) |
+| Memory | 19.4 MB (beats 74.8819%) |
 
 ## Problem Statement
 

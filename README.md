@@ -1,10 +1,10 @@
 <!-- codeledger:gamification:start -->
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/card-light.svg?v=1585-0-105-2026-09-28">
-  <img src="https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/card.svg?v=1585-0-105-2026-09-28" alt="Streak card" width="420">
+  <source media="(prefers-color-scheme: light)" srcset="https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/card-light.svg?v=1610-1-106-2026-09-29">
+  <img src="https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/card.svg?v=1610-1-106-2026-09-29" alt="Streak card" width="420">
 </picture>
 
-![Streak](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/streak.svg?v=1585-0-105-2026-09-28) ![Points](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/points.svg?v=1585-0-105-2026-09-28) ![Level](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/level.svg?v=1585-0-105-2026-09-28) ![Solved by difficulty](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/difficulty.svg?v=1585-0-105-2026-09-28) ![Freezes](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/freezes.svg?v=1585-0-105-2026-09-28)
+![Streak](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/streak.svg?v=1610-1-106-2026-09-29) ![Points](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/points.svg?v=1610-1-106-2026-09-29) ![Level](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/level.svg?v=1610-1-106-2026-09-29) ![Solved by difficulty](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/difficulty.svg?v=1610-1-106-2026-09-29) ![Freezes](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/freezes.svg?v=1610-1-106-2026-09-29)
 
 🩸 First Blood · 🔟 Ten Down · 💯 Century · 🎯 Well Rounded · ⚡ Double Day · 🪃 Comeback · ⭐ Engineer
 <!-- codeledger:gamification:end -->
@@ -17,12 +17,12 @@
 
 # Aravindhan007-git's DSA Solutions
 
-[![Solutions](https://img.shields.io/badge/Solutions-105-06b6d4?style=flat-square&logo=github)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Easy](https://img.shields.io/badge/Easy-76-22c55e?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Medium](https://img.shields.io/badge/Medium-25-f59e0b?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Hard](https://img.shields.io/badge/Hard-4-ef4444?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Languages](https://img.shields.io/badge/Languages-3-8b5cf6?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Platforms](https://img.shields.io/badge/Platforms-1-64748b?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)
+[![Solutions](https://img.shields.io/badge/Solutions-106-06b6d4?style=flat-square&logo=github)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Easy](https://img.shields.io/badge/Easy-76-22c55e?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Medium](https://img.shields.io/badge/Medium-26-f59e0b?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Hard](https://img.shields.io/badge/Hard-4-ef4444?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Languages](https://img.shields.io/badge/Languages-3-8b5cf6?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Platforms](https://img.shields.io/badge/Platforms-1-64748b?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)
 
 > Automatically tracked by [CodeLedger](https://codeledger.vkrishna04.me) — every problem solved, committed to Git.
 
 **[View Live Dashboard →](https://aravindhan007-git.github.io/LeetSolutions-Sync/)**
-*Last updated: Sep 18, 2026*
+*Last updated: Sep 29, 2026*
 
 [![CodeLedger](https://raw.githubusercontent.com/Life-Experimentalist/Code-Ledger/refs/heads/main/src/assets/images/social%20preview.png)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)
 
@@ -34,13 +34,13 @@
 
 | Total | Easy | Medium | Hard |
 |:-----:|:----:|:------:|:----:|
-| **105** | 76 | 25 | 4 |
+| **106** | 76 | 26 | 4 |
 
-**By Platform:** leetcode (105)
+**By Platform:** leetcode (106)
 
-**Top Languages:** Python3 (95) · C (9) · MySQL (1)
+**Top Languages:** Python3 (96) · C (9) · MySQL (1)
 
-**Top Topics:** Array (53) · Linked List (11) · Math (10) · Two Pointers (10) · String (10) · Hash Table (5) · Stack (2) · Dynamic Programming (1) · Database (1) · Backtracking (1)
+**Top Topics:** Array (53) · Linked List (11) · Math (10) · Two Pointers (10) · String (10) · Hash Table (5) · Stack (2) · Dynamic Programming (2) · Database (1) · Backtracking (1)
 
 ---
 
@@ -48,6 +48,7 @@
 
 | Problem | Difficulty | Language | Platform | Date |
 |---------|-----------|----------|----------|------|
+| [Coin Change](https://leetcode.com/problems/coin-change/) | Medium | Python3 | leetcode | Sep 29 |
 | [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) | Easy | Python3 | leetcode | Sep 18 |
 | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | Easy | Python3 | leetcode | Sep 18 |
 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | Easy | Python3 | leetcode | Sep 16 |
@@ -56,7 +57,6 @@
 | [Binary Search](https://leetcode.com/problems/binary-search/) | Easy | Python3 | leetcode | Jun 15 |
 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | Medium | Python3 | leetcode | Jun 15 |
 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Easy | Python3 | leetcode | Jun 15 |
-| [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Easy | Python3 | leetcode | Jun 11 |
 | [Add Digits](https://leetcode.com/problems/add-digits/) | Easy | Python3 | leetcode | May 4 |
 
 ---
@@ -100,6 +100,7 @@ Built with [CodeLedger](https://codeledger.vkrishna04.me) · [⭐ Star the exten
 </div>
 
 <!-- CODELEDGER_AUTO_GENERATED_END -->
+
 
 
 
