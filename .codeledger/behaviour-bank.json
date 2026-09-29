@@ -75,6 +75,25 @@
       "Complete Knapsack"
     ]
   },
+  "leetcode::coin-change-ii": {
+    "difficulty": "Medium",
+    "lang": "Python3",
+    "platform": "leetcode",
+    "slug": "coin-change-ii",
+    "solves": [
+      {
+        "elapsedSeconds": 2158,
+        "lang": "Python3",
+        "ts": 1790664195036
+      }
+    ],
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Knapsack Problem",
+      "Complete Knapsack"
+    ]
+  },
   "leetcode::count-complete-subarrays-in-an-array": {
     "difficulty": "Medium",
     "lang": "Python3",
