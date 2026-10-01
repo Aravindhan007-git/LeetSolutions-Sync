@@ -204,6 +204,23 @@
       "Bracket Sequences"
     ]
   },
+  "leetcode::house-robber": {
+    "difficulty": "Medium",
+    "lang": "Python3",
+    "platform": "leetcode",
+    "slug": "house-robber",
+    "solves": [
+      {
+        "elapsedSeconds": 2158,
+        "lang": "Python3",
+        "ts": 1790824828895
+      }
+    ],
+    "tags": [
+      "Dynamic Programming",
+      "Array"
+    ]
+  },
   "leetcode::intersection-of-two-linked-lists": {
     "difficulty": "Easy",
     "lang": "Python3",
