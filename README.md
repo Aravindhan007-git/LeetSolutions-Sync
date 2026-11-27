@@ -1,10 +1,10 @@
 <!-- codeledger:gamification:start -->
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/card-light.svg?v=1685-0-109-2026-11-27">
-  <img src="https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/card.svg?v=1685-0-109-2026-11-27" alt="Streak card" width="420">
+  <source media="(prefers-color-scheme: light)" srcset="https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/card-light.svg?v=1695-0-110-2026-11-27">
+  <img src="https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/card.svg?v=1695-0-110-2026-11-27" alt="Streak card" width="420">
 </picture>
 
-![Streak](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/streak.svg?v=1685-0-109-2026-11-27) ![Points](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/points.svg?v=1685-0-109-2026-11-27) ![Level](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/level.svg?v=1685-0-109-2026-11-27) ![Solved by difficulty](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/difficulty.svg?v=1685-0-109-2026-11-27) ![Freezes](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/freezes.svg?v=1685-0-109-2026-11-27)
+![Streak](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/streak.svg?v=1695-0-110-2026-11-27) ![Points](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/points.svg?v=1695-0-110-2026-11-27) ![Level](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/level.svg?v=1695-0-110-2026-11-27) ![Solved by difficulty](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/difficulty.svg?v=1695-0-110-2026-11-27) ![Freezes](https://aravindhan007-git.github.io/LeetSolutions-Sync/badges/freezes.svg?v=1695-0-110-2026-11-27)
 
 🩸 First Blood · 🔟 Ten Down · 💯 Century · 🎯 Well Rounded · ⚡ Double Day · 🪃 Comeback · ⭐ Engineer
 <!-- codeledger:gamification:end -->
@@ -17,12 +17,12 @@
 
 # Aravindhan007-git's DSA Solutions
 
-[![Solutions](https://img.shields.io/badge/Solutions-109-06b6d4?style=flat-square&logo=github)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Easy](https://img.shields.io/badge/Easy-76-22c55e?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Medium](https://img.shields.io/badge/Medium-29-f59e0b?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Hard](https://img.shields.io/badge/Hard-4-ef4444?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Languages](https://img.shields.io/badge/Languages-3-8b5cf6?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Platforms](https://img.shields.io/badge/Platforms-1-64748b?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)
+[![Solutions](https://img.shields.io/badge/Solutions-110-06b6d4?style=flat-square&logo=github)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Easy](https://img.shields.io/badge/Easy-77-22c55e?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Medium](https://img.shields.io/badge/Medium-29-f59e0b?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Hard](https://img.shields.io/badge/Hard-4-ef4444?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Languages](https://img.shields.io/badge/Languages-3-8b5cf6?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)  [![Platforms](https://img.shields.io/badge/Platforms-1-64748b?style=flat-square)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)
 
 > Automatically tracked by [CodeLedger](https://codeledger.vkrishna04.me) — every problem solved, committed to Git.
 
 **[View Live Dashboard →](https://aravindhan007-git.github.io/LeetSolutions-Sync/)**
-*Last updated: Oct 1, 2026*
+*Last updated: Nov 27, 2026*
 
 [![CodeLedger](https://raw.githubusercontent.com/Life-Experimentalist/Code-Ledger/refs/heads/main/src/assets/images/social%20preview.png)](https://aravindhan007-git.github.io/LeetSolutions-Sync/)
 
@@ -34,13 +34,13 @@
 
 | Total | Easy | Medium | Hard |
 |:-----:|:----:|:------:|:----:|
-| **109** | 76 | 29 | 4 |
+| **110** | 77 | 29 | 4 |
 
-**By Platform:** leetcode (109)
+**By Platform:** leetcode (110)
 
-**Top Languages:** Python3 (99) · C (9) · MySQL (1)
+**Top Languages:** Python3 (100) · C (9) · MySQL (1)
 
-**Top Topics:** Array (54) · Linked List (11) · Math (10) · Two Pointers (10) · String (10) · Hash Table (5) · Dynamic Programming (4) · Stack (2) · Database (1) · Backtracking (1)
+**Top Topics:** Array (54) · Linked List (11) · Math (10) · Two Pointers (10) · String (10) · Hash Table (5) · Dynamic Programming (4) · Stack (3) · Database (1) · Backtracking (1)
 
 ---
 
@@ -48,7 +48,7 @@
 
 | Problem | Difficulty | Language | Platform | Date |
 |---------|-----------|----------|----------|------|
-| [Coin Change II](https://leetcode.com/problems/coin-change-ii/) | Medium | Python3 | leetcode | Sep 29 |
+| [Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/) | Easy | Python3 | leetcode | Nov 27 |
 | [Coin Change](https://leetcode.com/problems/coin-change/) | Medium | Python3 | leetcode | Sep 29 |
 | [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) | Easy | Python3 | leetcode | Sep 18 |
 | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | Easy | Python3 | leetcode | Sep 18 |
@@ -100,6 +100,7 @@ Built with [CodeLedger](https://codeledger.vkrishna04.me) · [⭐ Star the exten
 </div>
 
 <!-- CODELEDGER_AUTO_GENERATED_END -->
+
 
 
 

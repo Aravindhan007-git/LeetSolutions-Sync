@@ -4,17 +4,17 @@
   "currentStreak": 0,
   "longestStreak": 6,
   "freezes": 0,
-  "totalPoints": 1685,
-  "totalSolves": 109,
+  "totalPoints": 1695,
+  "totalSolves": 110,
   "totalRecalls": 0,
   "byDifficulty": {
     "Medium": 29,
-    "Easy": 76,
+    "Easy": 77,
     "Hard": 4
   },
   "level": 5,
   "levelName": "Engineer",
-  "activeDays": 35,
+  "activeDays": 36,
   "dailyTargetPoints": 25,
   "achievements": [
     "first-blood",

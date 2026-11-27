@@ -18,6 +18,25 @@
       "Binary Tree"
     ]
   },
+  "leetcode::binary-tree-postorder-traversal": {
+    "difficulty": "Easy",
+    "lang": "Python3",
+    "platform": "leetcode",
+    "slug": "binary-tree-postorder-traversal",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python3",
+        "ts": 1795797351962
+      }
+    ],
+    "tags": [
+      "Stack",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ]
+  },
   "leetcode::binary-tree-preorder-traversal": {
     "difficulty": "Easy",
     "lang": "Python3",
@@ -28,6 +47,16 @@
         "elapsedSeconds": 2158,
         "lang": "Python3",
         "ts": 1789701775761
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python3",
+        "ts": 1795797165229
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python3",
+        "ts": 1795797263816
       }
     ],
     "tags": [

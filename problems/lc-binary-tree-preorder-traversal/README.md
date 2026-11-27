@@ -7,9 +7,8 @@
 | Problem ID | `lc-binary-tree-preorder-traversal` |
 | Topics | Stack, Tree, Depth-First Search, Binary Tree |
 | Solved | 2026-09-18 |
-| Solve Time | 35m 58s |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 19.3 MB (beats 69.01310000000001%) |
+| Memory | 19.3 MB (beats 43.50649999999999%) |
 
 ## Problem Statement
 
